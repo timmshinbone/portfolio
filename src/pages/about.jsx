@@ -51,11 +51,11 @@ const About = () => {
                 <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 ">
                     <div id='biography' className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
-                        <p className=' my-4 font-medium'>
+                        <p className='my-4 font-medium'>
                             Hi, I'm Timm Schoenborn, a technical leader with a passion for building innovative web applications. Proven ability to manage projects from concept to launch, with strong software development and architectural design skills. Adept at leading development teams and ensuring projects meet deadlines and client expectations.
                         </p>
                         <p className=' my-4 font-medium'>
-                            I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users, and communicating effectively.
+                            I believe that design is about more than just making things look pretty - it's about solving problems and creating intuitive, enjoyable experiences for users, and communicating effectively.
                         </p>
                         <p className=' my-4 font-medium'>
                             Whether I'm working on a website, mobile app, or other digital product, I bring my commitment to design excellence and user-centered thinking to every project I work on. I look forward to the opportunity to bring my skills and dedication to your next project.
