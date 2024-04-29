@@ -10,7 +10,6 @@ This is a showcase of some of my projects, a few of my articles, and overall emp
 ![Nextjs Portfolio Website Dark Mode](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/mainPageDarkMode.png?raw=true)
 ![Next.js Portfolio Website About Page](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/aboutPageLightMode.png?raw=true)
 ![Next.js Portfolio Website About Page Dark Mode](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/aboutPageDarkMode.png?raw=true)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-dark-desktop.png)
 ![Portfolio Website In Next.js Articles Page](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/articlesPageDarkMode.png?raw=true)
 ![Portfolio Website In Next.js Projects Page](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/projectPage1DarkMode.png?raw=true)
 ![Portfolio Website In Next.js Projects Page 2](https://github.com/timmshinbone/portfolio/blob/main/public/images/readme/projectPage2DarkMode.png?raw=true)
