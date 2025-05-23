@@ -44,10 +44,18 @@ const Experience = () => {
             <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]' style={{scaleY: scrollYProgress}}/>
             <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 <Details 
+                    position='Manager - Software Engineering'
+                    companyLink='https://asmbs.org/'
+                    company='ASMBS'
+                    time='March - May 2025'
+                    address='Newberry, FL'
+                    work='At ASMBS, I led full stack web development initiatives across both their Association Management System (AMS) and Content Management System (CMS). I built and maintained high-performance tools using WordPress, Symfony, PHP, and MariaDB—improving usability, performance, and data management for staff and members alike.'
+                />
+                <Details 
                     position='Lead Instructor - Software Engineer' 
                     companyLink='https://generalassemb.ly/'
                     company='General Assembly'
-                    time='2022-Present' 
+                    time='2022-2024' 
                     address='Remote, US'
                     work="Worked across multiple teams and consulted on hundreds of projects. Trained over 150 students to be efficient junior developers. Developed systems of teaching and boilerplates for projects that improved student understanding, success, and graduation rates by ~50%"
                 />

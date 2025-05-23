@@ -5,7 +5,7 @@ import TransitionEffect from '@/components/TransitionEffect';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
-import placeholder from '../../public/images/articles/computer_and_keyboard_1.jpg';
+// import placeholder from '../../public/images/articles/computer_and_keyboard_1.jpg';
 import gameAndAppImg from '../../public/images/services/gameAndAppConsulting.png';
 import fullStackImg from '../../public/images/services/fullStackDevImage.png';
 import seoImg from '../../public/images/services/SEOoptimizationImg.png';
@@ -143,9 +143,10 @@ export default function HireMe() {
           >
             <h2 className="text-4xl font-bold mb-4 text-center">Book a Call</h2>
             <p className="mb-6 text-center">Use the tool below to schedule a free discovery call or consultation session.</p>
+            <p className="mb-6 text-center">Please add which of my services you are interested in when you add details to the booking.</p>
             <div className="w-full h-[700px]">
               <iframe
-                src="https://calendly.com/your-username"
+                src="https://calendly.com/timmschoenborn/30min"
                 width="100%"
                 height="100%"
                 frameBorder="0"
