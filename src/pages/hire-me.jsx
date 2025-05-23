@@ -6,6 +6,10 @@ import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
 import placeholder from '../../public/images/articles/computer_and_keyboard_1.jpg';
+import gameAndAppImg from '../../public/images/services/gameAndAppConsulting.png';
+import fullStackImg from '../../public/images/services/fullStackDevImage.png';
+import seoImg from '../../public/images/services/SEOoptimizationImg.png';
+import tutorImg from '../../public/images/services/mentorAndTutoringImg.png';
 import Link from 'next/link';
 
 const FramerImage = motion(Image);
@@ -64,7 +68,7 @@ const FeaturedService = ({ title, description, price, image, index }) => (
       <FramerImage
         src={image}
         alt={title}
-        className="w-full h-auto"
+        className="w-full h-[450px] object-cover"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
         priority
@@ -89,25 +93,25 @@ export default function HireMe() {
       title: 'Game & App Consulting',
       description: 'Plan features, review your tech stack, and avoid pitfalls in early-stage game or app development.',
       price: 'Starts around $150/session (negotiable based on project needs)',
-      image: placeholder
+      image: gameAndAppImg
     },
     {
       title: 'Full Stack Development',
       description: 'From websites to mobile apps, I offer complete frontend and backend development using modern frameworks.',
       price: 'Typical range: $2,000–$15,000/project (rates flexible)',
-      image: placeholder
+      image: fullStackImg
     },
     {
       title: 'SEO Optimization',
       description: 'Improve your site’s speed, metadata, accessibility, and visibility on search engines.',
       price: 'Starts at $300/site (negotiable based on complexity)',
-      image: placeholder
+      image: seoImg
     },
     {
       title: 'Tutoring & Mentorship',
       description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
       price: '$50/hr (bundles and student pricing available)',
-      image: placeholder
+      image: tutorImg
     }
   ];
 
