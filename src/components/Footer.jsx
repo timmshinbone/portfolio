@@ -12,7 +12,7 @@ const Footer = () => {
                     <Link href='/' className='hover:underline hover:underline-offset-2' target={'_blank'}>Timm Schoenborn</Link>
                 </div>
                 <Link href='/' className='hover:underline hover:underline-offset-2' target={'_blank'}>Say Hello</Link>
-                <Link href='https://www.timmschoenborn.com/' className='hover:underline hover:underline-offset-2' target={'_blank'}>Click to view my old portfolio</Link>
+                {/* <Link href='https://www.timmschoenborn.com/' className='hover:underline hover:underline-offset-2' target={'_blank'}>Click to view my old portfolio</Link> */}
             </Layout>
         </footer>
     )
