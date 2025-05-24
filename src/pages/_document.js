@@ -4,7 +4,21 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head >
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              const colors = ['purple', 'red', 'orange', 'dark'];
+              const pick = colors[Math.floor(Math.random() * colors.length)];
+              const link = document.createElement('link');
+              link.rel = 'icon';
+              link.type = 'image/svg+xml';
+              link.href = '/favicon-' + pick + '.svg';
+              document.head.appendChild(link);
+            })();
+            `
+        }} />
+      </Head>
       <body>
         <Script id='theme-switcher' strategy='beforeInteractive'>
           {
