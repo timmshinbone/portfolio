@@ -128,9 +128,9 @@ const NavBar = () => {
                         >
                             {
                                 mode === 'dark' ?
-                                    <SunIcon className={'fill-dark md:w-6 sm:w-4'}/>
+                                    <SunIcon className={'fill-dark w-6 h-6 md:w-5 md:h-5 sm:w-4 sm:h-4'}/>
                                 :
-                                    <MoonIcon className={'fill-dark md:w-6 sm:w-4'} />
+                                    <MoonIcon className={'fill-dark w-6 h-6 md:w-5 md:h-5 sm:w-4 sm:h-4'} />
                             }
                         </button>
                     </nav>

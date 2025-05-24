@@ -56,7 +56,7 @@ export default function Home() {
                 <Link href='/TS2024r35um3.pdf' target={"_blank"}
                 className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light md:p-2 md:px-4 md:text-base'>
                   Resume 
-                  <LinkArrow className={'w-6 ml-1 md:w-4 sm:w-2'}/>
+                  <LinkArrow className={'w-5 h-5 ml-2 md:w-4 md:h-4 sm:w-3 sm:h-3'} />
                 </Link>
                 <Link href='mailto:timmschoenborn@gmail.com' target={"_blank"} className='ml-4 text-lg font-medium capitalize text-dark hover:underline dark:text-light md:text-base'>Contact</Link>
               </div>
