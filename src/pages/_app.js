@@ -6,6 +6,12 @@ import Footer from '@/components/Footer'
 import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 
+// STRIPE IMPORTS
+import { Elements } from '@stripe/react-stripe-js'
+import { loadStripe } from '@stripe/stripe-js'
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+
 // initialize font and assign variable+subsets
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,11 +28,28 @@ export default function App({ Component, pageProps }) {
       </Head>
       <NavBar />
       <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>
-        <AnimatePresence mode='wait'>
-          <Component key={router.asPath} {...pageProps} />
+        <AnimatePresence mode="wait">
+          <Elements stripe={stripePromise}>
+            <Component key={router.asPath} {...pageProps} />
+          </Elements>
         </AnimatePresence>
         <Footer />
       </main>
     </>
   )
 }
+
+// // // 3. _app.js - wrap app with Stripe Elements
+// // import '@/styles/globals.css'
+// // import { Elements } from '@stripe/react-stripe-js';
+// // import { loadStripe } from '@stripe/stripe-js';
+
+// // const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+// // export default function App({ Component, pageProps }) {
+// //   return (
+// //     <Elements stripe={stripePromise}>
+// //       <Component {...pageProps} />
+// //     </Elements>
+// //   );
+// // }
