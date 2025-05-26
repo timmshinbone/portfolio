@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import profilePic from "../../public/images/profile/developer-pic-1.png"
-import profPic2 from "../../public/images/profile/designSketch1.jpg"
+import profPic2 from "../../public/images/profile/mainImage.png"
 import HireMe from '@/components/HireMe'
 
 import AnimatedText from '@/components/AnimatedText'
@@ -53,8 +53,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href='/TS2024r35um3.pdf' target={"_blank"}
-                className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light md:p-2 md:px-4 md:text-base'>
+                <Link href='/TS2024r35um3.pdf' target={"_blank"} className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent dark:bg-light dark:text-dark hover:bg-primary dark:hover:bg-primaryDark hover:border-dark dark:hover:border-light transition md:p-2 md:px-4 md:text-base'>
                   Resume 
                   <LinkArrow className={'w-5 h-5 ml-2 md:w-4 md:h-4 sm:w-3 sm:h-3'} />
                 </Link>
