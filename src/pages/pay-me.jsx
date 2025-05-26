@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRef, useEffect } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import Layout from '@/components/Layout';
+import TransitionEffect from '@/components/TransitionEffect';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
 import TipJarForm from '@/components/TipJarForm';
@@ -126,6 +127,7 @@ export default function PayMe() {
       <Head>
         <title>Support or Hire Me | Timm's Portfolio</title>
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText text="Support My Work or Hire Me" className="mb-16 lg:!text-6xl sm:mb-8 sm:!text-4xl xs:!text-3xl" />
