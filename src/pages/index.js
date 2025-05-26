@@ -108,7 +108,7 @@ export default function Home() {
                   Resume
                   <LinkArrow className={'w-5 h-5 ml-2 md:w-4 md:h-4 sm:w-3 sm:h-3'} />
                 </Link>
-                <Link href='mailto:timmschoenborn@gmail.com' target={"_blank"} className='ml-4 text-lg font-medium capitalize text-dark hover:underline dark:text-light md:text-base'>Contact</Link>
+                <Link href='mailto:timmschoenborn@gmail.com' target={"_blank"} className='bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition m-3'>Contact</Link>
               </div>
             </div>
           </article> 
