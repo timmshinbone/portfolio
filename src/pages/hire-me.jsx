@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import { useEffect, useRef } from 'react';
-import { motion, useMotionValue } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
-// import placeholder from '../../public/images/articles/computer_and_keyboard_1.jpg';
 import gameAndAppImg from '../../public/images/services/gameAndAppConsulting.png';
 import fullStackImg from '../../public/images/services/fullStackDevImage.png';
 import seoImg from '../../public/images/services/SEOoptimizationImg.png';
@@ -13,47 +12,6 @@ import tutorImg from '../../public/images/services/mentorAndTutoringImg.png';
 import Link from 'next/link';
 
 const FramerImage = motion(Image);
-
-const MovingImg = ({ title, image }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const imgRef = useRef(null);
-
-  function handleMouse(evt) {
-    imgRef.current.style.display = 'inline-block';
-    x.set(evt.pageX);
-    y.set(-10);
-  }
-
-  function handleMouseLeave() {
-    imgRef.current.style.display = 'none';
-    x.set(0);
-    y.set(0);
-  }
-
-  return (
-    <div
-      onMouseMove={handleMouse}
-      onMouseLeave={handleMouseLeave}
-      className="relative w-full"
-    >
-      <h2 className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
-        {title}
-      </h2>
-      <FramerImage
-        style={{ x, y }}
-        ref={imgRef}
-        src={image}
-        alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
-        priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-      />
-    </div>
-  );
-};
 
 const FeaturedService = ({ title, description, price, image, index }) => (
   <motion.li
@@ -75,8 +33,10 @@ const FeaturedService = ({ title, description, price, image, index }) => (
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
       />
     </Link>
-    <MovingImg title={title} image={image} />
-    <p className="text-sm mb-2 dark:text-light xs:hidden">
+    <h2 className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
+      {title}
+    </h2>
+    <p className="text-sm mb-2 dark:text-light">
       {description}
     </p>
     <span className="text-primary dark:text-primaryDark font-semibold block">{price}</span>
@@ -128,7 +88,7 @@ export default function HireMe() {
         <Layout className="pt-16">
           <AnimatedText text="Build Something Great With Me" className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl" />
 
-          <ul className="grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16">
+          <ul className="grid grid-cols-2 gap-16 lg:grid-cols-1 lg:gap-y-12">
             {services.map((service, index) => (
               <FeaturedService key={index} index={index} {...service} />
             ))}

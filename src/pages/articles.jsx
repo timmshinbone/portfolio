@@ -67,7 +67,6 @@ const Article = ({image, title, date, link}) => {
             className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark text-dark dark:text-light/75 first:mt-0 border border-solid border-dark dark:border-light border-r-4 border-b-4 sm:flex-col'>
             <MovingImg title={title} image={image} link={link} />
             <span className='text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm'>{date}</span>
-
         </motion.li>
     )
 }
@@ -82,7 +81,7 @@ const articles = () => {
         <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden '>
             <Layout className='pt-16'>
-                <AnimatedText text='A Passion for Teaching!' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
+                <AnimatedText text='A Passion for Teaching' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
                 <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
                     <FeaturedArticle
                         title='Understanding the Core of JavaScript'

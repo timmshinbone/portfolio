@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Layout from '@/components/Layout'
 import profilePic from "../../public/images/profile/developer-pic-1.png"
 import profPic2 from "../../public/images/profile/mainImage.png"
-import HireMe from '@/components/HireMe'
+import hireMeImg from "../../public/images/profile/hireMeImage.png"
 import { motion, useMotionValue } from 'framer-motion'
 import { useRef } from 'react'
 import AnimatedText from '@/components/AnimatedText'
@@ -81,15 +81,15 @@ export default function Home() {
         <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
 
-            <Link href="#" className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full'>
+            <Link href="#" className='w-1/2 cursor-pointer overflow-hidden rounded-2xl lg:w-full'>
               <FramerImage
                 src={profPic2}
-                alt="Timm Schoenborn"
-                className='w-full h-auto rounded-lg px-2'
+                alt="Image of blueprint drawing computer"
+                className='w-full h-auto rounded-2xl px-2'
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 priority
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw'
               />
             </Link>
 
@@ -112,9 +112,10 @@ export default function Home() {
               </div>
             </div>
           </article> 
-          <section className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="relative col-span-1 p-6 border border-dark dark:border-light rounded-2xl bg-light dark:bg-dark shadow-md">
-              <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl" />
+          <article className="w-full mt-8 relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+            <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+
+            <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:pt-6">
               <h2 className="text-3xl font-bold mb-4">What I Can Help You With</h2>
               <ul className="text-base space-y-4">
                 <li><strong>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
@@ -126,12 +127,20 @@ export default function Home() {
                 View All Services
               </Link>
             </div>
-          </section>
+
+            <div className="w-1/2 md:w-full mt-6 lg:mt-12">
+              <FramerImage
+                src={hireMeImg}
+                alt="Hire Me image"
+                className='w-full h-auto rounded-2xl px-2'
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+                priority
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw'
+              />
+            </div>
+          </article>
         </Layout>
-        {/* <HireMe/> */}
-        {/* <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
-          <Image src={lightBulb} alt="Timm Schoenborn" className='w-full h-auto'/>
-        </div> */}
       </main>
     </>
   )

@@ -72,7 +72,7 @@ const projects = () => {
         <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
             <Layout className='pt-16'>
-                <AnimatedText text='Analysis Drives Design!' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-4xl xs:text-4xl'/>
+                <AnimatedText text='Analysis Drives Design' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-4xl xs:text-4xl'/>
 
                 <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                     <div className='col-span-12'>
