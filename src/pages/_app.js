@@ -23,8 +23,44 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon-purple.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon-blue.svg" />
+        {/* Global Schema for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Timm Schoenborn",
+              "url": "https://www.timmschoenborn.com",
+              "jobTitle": "Freelance Web Developer & SEO Consultant",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "TRStudios LLC"
+              },
+              "sameAs": [
+                "https://linkedin.com/in/timm-schoenborn",
+                "https://github.com/timmshinbone"
+              ],
+              "address": [
+                {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Gainesville",
+                  "addressRegion": "FL",
+                  "addressCountry": "US"
+                },
+                {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Chicago",
+                  "addressRegion": "IL",
+                  "addressCountry": "US"
+                }
+              ]
+            })
+          }}
+        />
+          
       </Head>
       <NavBar />
       <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>

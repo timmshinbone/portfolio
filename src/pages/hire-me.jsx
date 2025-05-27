@@ -15,7 +15,7 @@ import Link from 'next/link';
 const FramerImage = motion(Image);
 
 
-const FeaturedService = ({ title, description, price, image, index, spotId }) => {
+const FeaturedService = ({ title, description, price, image, index, spotId, serviceLink }) => {
   const { smoothScroll } = useSmoothScroll();
 
   return (
@@ -27,7 +27,7 @@ const FeaturedService = ({ title, description, price, image, index, spotId }) =>
     viewport={{ once: true }}
   >
     <div id={spotId} className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl scroll-mt-16" />
-    <Link href="#" className="w-full inline-block cursor-pointer overflow-hidden rounded-lg">
+    <Link href={serviceLink} className="w-full inline-block cursor-pointer overflow-hidden rounded-lg">
       <FramerImage
         src={image}
         alt={title}
@@ -38,7 +38,7 @@ const FeaturedService = ({ title, description, price, image, index, spotId }) =>
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
       />
     </Link>
-    <h2 onClick={() => smoothScroll('/hire-me', 'book-me')} className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
+    <h2 onClick={() => smoothScroll(`/${serviceLink}`, '')} className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
       {title}
     </h2>
     <p className="text-sm mb-2 dark:text-light">
@@ -75,36 +75,40 @@ export default function HireMe() {
       description: 'Plan features, review your tech stack, and avoid pitfalls in early-stage game or app development.',
       price: 'Starts around $150/session (negotiable based on project needs)',
       image: gameAndAppImg,
-      spotId: 'consult'
+      spotId: 'consult',
+      serviceLink: 'consulting'
     },
     {
       title: 'Full Stack Development',
       description: 'From websites to mobile apps, I offer complete frontend and backend development using modern frameworks.',
       price: 'Typical range: $2,000–$15,000/project (rates flexible)',
       image: fullStackImg,
-      spotId: 'fullstack'
+      spotId: 'fullstack',
+      serviceLink: 'development'
     },
     {
       title: 'SEO Optimization',
       description: 'Improve your site’s speed, metadata, accessibility, and visibility on search engines.',
       price: 'Starts at $300/site (negotiable based on complexity)',
       image: seoImg,
-      spotId: 'seo'
+      spotId: 'seo',
+      serviceLink: 'seo-optimization'
     },
     {
       title: 'Tutoring & Mentorship',
       description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
       price: '$50/hr (bundles and student pricing available)',
       image: tutorImg,
-      spotId: 'tutor'
+      spotId: 'tutor',
+      serviceLink: 'mentorship'
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Hire Me | Timm Schoenborn</title>
-        <meta name="description" content="Hire Timm Schoenborn for game dev, web dev, SEO, tutoring, and more." />
+        <title>Hire a Freelance Web Developer & SEO Consultant | Timm Schoenborn</title>
+        <meta name="description" content="Remote full stack development, SEO consulting, and app strategy from Timm Schoenborn — a seasoned engineer and mentor helping businesses build better tech." />
       </Head>
 
       <TransitionEffect />
