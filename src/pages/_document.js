@@ -8,7 +8,7 @@ export default function Document() {
         <script dangerouslySetInnerHTML={{
           __html: `
             (function() {
-              const colors = ['purple', 'red', 'orange', 'dark'];
+              const colors = ['blue', 'dark', 'blue', 'gold', 'green', 'parchment', 'green', 'viridian', 'gold'];
               const pick = colors[Math.floor(Math.random() * colors.length)];
               const link = document.createElement('link');
               link.rel = 'icon';
