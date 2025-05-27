@@ -92,7 +92,7 @@ export default function HireMe() {
       price: 'Starts at $300/site (negotiable based on complexity)',
       image: seoImg,
       spotId: 'seo',
-      serviceLink: 'seo-optimization'
+      serviceLink: 'seo-services'
     },
     {
       title: 'Tutoring & Mentorship',
