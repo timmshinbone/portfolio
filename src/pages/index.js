@@ -78,7 +78,7 @@ export default function Home() {
       <TransitionEffect/>
       <main className='flex items-center text-dark min-h-screen dark:text-light'>
         <Layout className='pt-0 md:p-16 sm:pt-8'>
-        <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
+          <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
 
             <Link href="#" className='w-1/2 cursor-pointer overflow-hidden rounded-2xl lg:w-full'>
@@ -112,10 +112,22 @@ export default function Home() {
               </div>
             </div>
           </article> 
-          <article className="w-full mt-8 relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+          <article className="w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl mt-12 p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
 
-            <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:pt-6">
+            <div className="w-1/2 md:w-full mt-6 lg:mt-0 lg:mb-6 lg:w-full lg:flex lg:justify-center order-2 lg:order-1">
+              <FramerImage
+                src={hireMeImg}
+                alt="Hire Me image"
+                className="w-full h-auto rounded-2xl px-2 max-w-[500px]"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw"
+              />
+            </div>
+
+            <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:items-center lg:text-center order-1 lg:order-2">
               <h2 className="text-3xl font-bold mb-4">What I Can Help You With</h2>
               <ul className="text-base space-y-4">
                 <li><strong>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
@@ -126,18 +138,6 @@ export default function Home() {
               <Link href="/hire-me" className="mt-6 inline-block bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition">
                 View All Services
               </Link>
-            </div>
-
-            <div className="w-1/2 md:w-full mt-6 lg:mt-12">
-              <FramerImage
-                src={hireMeImg}
-                alt="Hire Me image"
-                className='w-full h-auto rounded-2xl px-2'
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-                priority
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw'
-              />
             </div>
           </article>
         </Layout>
