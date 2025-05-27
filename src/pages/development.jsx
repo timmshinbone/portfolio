@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import { Code, Server, Layers, Settings, Globe, Calendar, Rocket } from 'lucide-react';
@@ -62,7 +63,7 @@ export default function FullStackDevPage() {
             <p>
               Let’s talk through your next big thing. You can <strong>book a free 30-minute discovery call</strong> to walk through your idea, budget, and timeline.
             </p>
-            <p><a href="/hire-me#book-me" className="underline font-semibold">Book your call now →</a></p>
+            <p><Link href="/hire-me#book-me" className="underline font-semibold">Book your call now →</Link></p>
 
             <h4 className="text-xl font-semibold mt-10">SEO Highlights:</h4>
             <ul>

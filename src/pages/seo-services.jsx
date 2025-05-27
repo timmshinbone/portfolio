@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
@@ -66,7 +67,7 @@ export default function SEOConsultingPage() {
             <p>
               Get the clarity and roadmap you need to make real SEO gains. Book a free discovery call to talk goals, traffic, and tactics.
             </p>
-            <p><a href="/hire-me#book-me" className="underline font-semibold">Schedule your strategy call now →</a></p>
+            <p><Link href="/hire-me#book-me" className="underline font-semibold">Schedule your strategy call now →</Link></p>
 
             <h4 className="text-xl font-semibold mt-10">SEO Highlights:</h4>
             <ul>

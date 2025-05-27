@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
@@ -81,7 +82,7 @@ export default function GameAppConsultingPage() {
               Book a Call
             </h3>
             <p>
-              Ready to sketch ideas, define tech scope, or pitch with confidence? Book a consultation below or <a href="/hire-me#book-me" className="underline font-semibold">schedule a 30-min intro call</a>.
+              Ready to sketch ideas, define tech scope, or pitch with confidence? Book a consultation below or <Link href="/hire-me#book-me" className="underline font-semibold">schedule a 30-min intro call</Link>.
             </p>
 
             <h4 className="text-xl font-semibold mt-10">SEO Highlights:</h4>

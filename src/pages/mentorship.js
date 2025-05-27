@@ -5,6 +5,7 @@
 
 // EXAMPLE: pages/mentorship.js
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import { Calendar, BrainCircuit, Code2, Gamepad2, Globe, Rocket, SearchCheck, UserCheck } from 'lucide-react';
@@ -65,7 +66,7 @@ export default function MentorshipPage() {
               <p>
                 Whether you want to polish your portfolio, prep for interviews, or finally launch that app—you can <strong>book a free 30-minute discovery call today</strong>.
               </p>
-              <p><a href="/hire-me#book-me" className="underline font-semibold">Use the tool here to grab a time that works for you →</a></p>
+              <p><Link href="/hire-me#book-me" className="underline font-semibold">Use the tool here to grab a time that works for you →</Link></p>
   
               <h4 className="text-xl font-semibold mt-10">SEO Highlights:</h4>
               <ul>
