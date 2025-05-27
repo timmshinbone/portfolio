@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useSmoothScroll } from '@/components/hooks/useSmoothScroll';
 import TransitionEffect from '@/components/TransitionEffect';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
@@ -13,7 +14,11 @@ import Link from 'next/link';
 
 const FramerImage = motion(Image);
 
-const FeaturedService = ({ title, description, price, image, index }) => (
+
+const FeaturedService = ({ title, description, price, image, index }) => {
+  const { smoothScroll } = useSmoothScroll();
+
+  return (
   <motion.li
     className="relative col-span-1 w-full p-4 bg-light dark:bg-dark border border-solid border-dark dark:border-light rounded-2xl"
     initial={{ opacity: 0, y: 50 }}
@@ -33,7 +38,7 @@ const FeaturedService = ({ title, description, price, image, index }) => (
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
       />
     </Link>
-    <h2 className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
+    <h2 onClick={() => smoothScroll('/hire-me', 'book-me')} className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
       {title}
     </h2>
     <p className="text-sm mb-2 dark:text-light">
@@ -41,11 +46,27 @@ const FeaturedService = ({ title, description, price, image, index }) => (
     </p>
     <span className="text-primary dark:text-primaryDark font-semibold block">{price}</span>
   </motion.li>
-);
+)};
 
 export default function HireMe() {
+
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const el = document.getElementById(hash.substring(1));
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }, 100); // Small delay ensures element is in DOM
+        }
+      }
+    };
+
+    scrollToHash();
   }, []);
 
   const services = [
@@ -93,9 +114,9 @@ export default function HireMe() {
               <FeaturedService key={index} index={index} {...service} />
             ))}
           </ul>
-
           <motion.section
-            className="w-full mt-32 p-6 bg-light dark:bg-dark border border-dark dark:border-light rounded-xl shadow-lg"
+            id="book-me"
+            className="w-full mt-32 p-6 bg-light dark:bg-dark border border-dark dark:border-light rounded-xl shadow-lg scroll-mt-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
