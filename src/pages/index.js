@@ -131,10 +131,10 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:items-center lg:text-center order-1 lg:order-2">
               <h2 className="text-3xl font-bold mb-4">What I Can Help You With</h2>
               <ul className="text-base space-y-4">
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'consult')}>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'seo')}>SEO Optimization</strong><br/>Improve rankings, structure, and speed</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'fullstack')}>Full Stack Development</strong><br/>Websites, apps, APIs, and scalable architecture</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'tutor')}>Mentorship & Tutoring</strong><br/>Learn, grow, and build your dev portfolio</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/consulting', '')}>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/seo-services', '')}>SEO Optimization</strong><br/>Improve rankings, structure, and speed</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/development', '')}>Full Stack Development</strong><br/>Websites, apps, APIs, and scalable architecture</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/mentorship', '')}>Mentorship & Tutoring</strong><br/>Learn, grow, and build your dev portfolio</li>
               </ul>
               <Link href="/hire-me" className="mt-6 inline-block bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition">
                 View All Services
