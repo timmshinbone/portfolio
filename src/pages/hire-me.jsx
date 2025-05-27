@@ -15,7 +15,7 @@ import Link from 'next/link';
 const FramerImage = motion(Image);
 
 
-const FeaturedService = ({ title, description, price, image, index }) => {
+const FeaturedService = ({ title, description, price, image, index, spotId }) => {
   const { smoothScroll } = useSmoothScroll();
 
   return (
@@ -26,7 +26,7 @@ const FeaturedService = ({ title, description, price, image, index }) => {
     transition={{ duration: 0.5 + index * 0.1 }}
     viewport={{ once: true }}
   >
-    <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl" />
+    <div id={spotId} className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl scroll-mt-16" />
     <Link href="#" className="w-full inline-block cursor-pointer overflow-hidden rounded-lg">
       <FramerImage
         src={image}
@@ -74,25 +74,29 @@ export default function HireMe() {
       title: 'Game & App Consulting',
       description: 'Plan features, review your tech stack, and avoid pitfalls in early-stage game or app development.',
       price: 'Starts around $150/session (negotiable based on project needs)',
-      image: gameAndAppImg
+      image: gameAndAppImg,
+      spotId: 'consult'
     },
     {
       title: 'Full Stack Development',
       description: 'From websites to mobile apps, I offer complete frontend and backend development using modern frameworks.',
       price: 'Typical range: $2,000–$15,000/project (rates flexible)',
-      image: fullStackImg
+      image: fullStackImg,
+      spotId: 'fullstack'
     },
     {
       title: 'SEO Optimization',
       description: 'Improve your site’s speed, metadata, accessibility, and visibility on search engines.',
       price: 'Starts at $300/site (negotiable based on complexity)',
-      image: seoImg
+      image: seoImg,
+      spotId: 'seo'
     },
     {
       title: 'Tutoring & Mentorship',
       description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
       price: '$50/hr (bundles and student pricing available)',
-      image: tutorImg
+      image: tutorImg,
+      spotId: 'tutor'
     }
   ];
 

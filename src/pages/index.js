@@ -9,7 +9,7 @@ import { motion, useMotionValue } from 'framer-motion'
 import { useRef } from 'react'
 import AnimatedText from '@/components/AnimatedText'
 import { LinkArrow } from '@/components/Icons'
-// import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
+import { useSmoothScroll } from '@/components/hooks/useSmoothScroll'
 import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image)
@@ -52,6 +52,7 @@ const MovingImg = ({ title, image }) => {
 }
 
 export default function Home() {
+  const { smoothScroll } = useSmoothScroll();
   return (
     <>
       <Head>
@@ -104,11 +105,11 @@ export default function Home() {
                 </Link>
               </div>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href='/TS2024r35um3.pdf' target={"_blank"} className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent dark:bg-light dark:text-dark hover:bg-primary dark:hover:bg-primaryDark hover:border-dark dark:hover:border-light transition md:p-2 md:px-4 md:text-base'>
+                <Link href='/TS2025r35um3.pdf' target={"_blank"} className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent dark:bg-light dark:text-dark hover:bg-primary dark:hover:bg-primaryDark hover:border-dark dark:hover:border-light transition md:p-2 md:px-4 md:text-base'>
                   Resume
                   <LinkArrow className={'w-5 h-5 ml-2 md:w-4 md:h-4 sm:w-3 sm:h-3'} />
                 </Link>
-                <Link href='mailto:timmschoenborn@gmail.com' target={"_blank"} className='bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition m-3'>Contact</Link>
+                <div onClick={() => smoothScroll('/hire-me', 'book-me')} className='bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition m-3'>Contact</div>
               </div>
             </div>
           </article> 
@@ -130,10 +131,10 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:items-center lg:text-center order-1 lg:order-2">
               <h2 className="text-3xl font-bold mb-4">What I Can Help You With</h2>
               <ul className="text-base space-y-4">
-                <li><strong>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
-                <li><strong>SEO Optimization</strong><br/>Improve rankings, structure, and speed</li>
-                <li><strong>Full Stack Development</strong><br/>Websites, apps, APIs, and scalable architecture</li>
-                <li><strong>Mentorship & Tutoring</strong><br/>Learn, grow, and build your dev portfolio</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'consult')}>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'seo')}>SEO Optimization</strong><br/>Improve rankings, structure, and speed</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'fullstack')}>Full Stack Development</strong><br/>Websites, apps, APIs, and scalable architecture</li>
+                <li><strong className="hover:underline" onClick={() => smoothScroll('/hire-me', 'tutor')}>Mentorship & Tutoring</strong><br/>Learn, grow, and build your dev portfolio</li>
               </ul>
               <Link href="/hire-me" className="mt-6 inline-block bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition">
                 View All Services
