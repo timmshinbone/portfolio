@@ -83,7 +83,7 @@ export default function PayMe() {
       description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
       price: '$50/hr (bundles and student pricing available)',
       image: tutorImg,
-      link: 'https://buy.stripe.com/5kQ8wPbeJgEMbqc90o0RG03'
+      link: 'https://buy.stripe.com/fZufZhaaF6088e0ekI0RG04'
     }
   ];
 
