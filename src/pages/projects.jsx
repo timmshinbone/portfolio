@@ -14,6 +14,10 @@ import libApi from '../../public/images/projects/Simple_library_0.jpeg'
 import coldHarshSea from '../../public/images/projects/coldHarshSea.png'
 import avoGatoCollector from '../../public/images/projects/avogatocollector.png'
 import monsterPets from '../../public/images/projects/monPetsSS.png'
+import albersCongress from '../../public/images/projects/albersCongress.png'
+import flatRateDev from '../../public/images/projects/FRDHomepage.jpg'
+import mobileLock from '../../public/images/projects/mobileLockHomepage.jpg'
+import trStudios from '../../public/images/projects/TRStudioslogo-wm-512.png'
 import { motion } from 'framer-motion'
 import TransitionEffect from '@/components/TransitionEffect'
 
@@ -33,7 +37,7 @@ const FeaturedProject = ({type, title, summary, image, link, ghLink}) => {
                 </Link>
                 <p className='my-2 font-medium text-dark dark:text-light/75 sm:text-sm'>{summary}</p>
                 <div className='mt-2 flex items-center '>
-                    <Link href={ghLink} target={'_blank'} className='w-10'>{" "}<GithubIcon/></Link>
+                    <Link href={ghLink} target={'_blank'} className='w-10 hover:opacity-50 transition-opacity duration-200'>{" "}<GithubIcon/></Link>
                     <Link href={link} target={'_blank'} className='ml-4 rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark hover:border border-solid border-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light sm:px-4 sm:text-base'>Visit Project</Link>
                 </div>
             </div>
@@ -41,12 +45,12 @@ const FeaturedProject = ({type, title, summary, image, link, ghLink}) => {
     )
 }
 
-const Project = ({title, type, image, link, ghLink}) => {
+const Project = ({title, type, image, link, ghLink, imageStyle}) => {
     return (
         <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:text-light dark:border-light xs:p-4'>
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]'/>
             <Link href={link} target={'_blank'} className='w-full cursor-pointer overflow-hidden rounded-lg '>
-                <FramerImage src={image} alt={title} className='w-full h-auto' whileHover={{scale: 1.05}} transition={{duration: 0.2}} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'/>
+                <FramerImage src={image} alt={title} className={imageStyle || 'w-full h-auto'} whileHover={{scale: 1.05}} transition={{duration: 0.2}} priority sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'/>
             </Link>
             <div className='w-full flex flex-col items-start justify-between mt-4'>
                 <span className='text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base'>{type}</span>
@@ -55,7 +59,7 @@ const Project = ({title, type, image, link, ghLink}) => {
                 </Link>
                 <div className='w-full mt-2 flex items-center justify-between'>
                     <Link href={link} target={'_blank'} className='rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark hover:border border-solid border-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light md:text-base'>Visit</Link>
-                    <Link href={ghLink} target={'_blank'} className='w-8 md:w-6'><GithubIcon/></Link>
+                    <Link href={ghLink} target={'_blank'} className='w-8 md:w-6 hover:opacity-50 transition-opacity duration-200'><GithubIcon/></Link>
                 </div>
             </div>
         </article>
@@ -75,6 +79,47 @@ const projects = () => {
                 <AnimatedText text='Analysis Drives Design' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-4xl xs:text-4xl'/>
 
                 <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+                    <div className='col-span-12'>
+                        <FeaturedProject
+                            title='Albers for Congress'
+                            summary='A modern political campaign website featuring responsive design, donation integration, and comprehensive information about the candidate and platform.'
+                            link='https://albersforcongress.com/'
+                            type='Featured Client Project'
+                            image={albersCongress}
+                            ghLink='https://github.com/JHBlackburn/AlbersForCongress.Web'
+                        />
+                    </div>
+                    <div className='col-span-6 sm:col-span-12'>
+                        <Project
+                            title='Mobile Locksmith FL'
+                            summary='Professional locksmith service website with service area coverage and customer contact integration.'
+                            link='https://mobilelocksmithfl.com/'
+                            type='Business Website'
+                            image={mobileLock}
+                            ghLink='https://github.com/JHBlackburn/MobileLoc.Web'
+                        />
+                    </div>
+                    <div className='col-span-6 sm:col-span-12'>
+                        <Project
+                            title='Flat Rate Dev'
+                            summary='Development services platform offering transparent, fixed-price web development solutions for businesses.'
+                            link='https://www.flatratedev.com/'
+                            type='Business Website'
+                            image={flatRateDev}
+                            ghLink='https://github.com/JHBlackburn/VoTech.FlatRateDev.Web'
+                            imageStyle='object-cover h-[300px]'
+                        />
+                    </div>
+                    <div className='col-span-12'>
+                        <FeaturedProject
+                            title='TR Studios LLC'
+                            summary='Creative studio portfolio showcasing professional media production, branding, and digital content creation services.'
+                            link='https://www.trstudiosllc.com/'
+                            type='Featured Client Project'
+                            image={trStudios}
+                            ghLink='https://github.com/timmshinbone/trstudioswebsite'
+                        />
+                    </div>
                     <div className='col-span-12'>
                         <FeaturedProject
                             title='Cold Harsh Sea'
