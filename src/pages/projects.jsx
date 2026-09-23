@@ -19,7 +19,6 @@ import flatRateDev from '../../public/images/projects/FRDHomepage.jpg'
 import mobileLock from '../../public/images/projects/mobileLockHomepage.jpg'
 import trStudios from '../../public/images/projects/TRStudioslogo-wm-512.png'
 import { motion } from 'framer-motion'
-import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image)
 
@@ -73,7 +72,6 @@ const projects = () => {
             <title>Timm Schoenborn | Projects Page</title>
             <meta name='projects' content='Some kinda description'/>
         </Head>
-        <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
             <Layout className='pt-16'>
                 <AnimatedText text='Analysis Drives Design' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-4xl xs:text-4xl'/>

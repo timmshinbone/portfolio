@@ -11,7 +11,6 @@ import art3Img from '../../public/images/articles/computer_and_keyboard_1.jpg'
 import art4Img from '../../public/images/articles/buildings_cartoon.jpeg'
 import art5Img from '../../public/images/articles/Default_a_computer_and_a_notepad_3.jpg'
 import art6Img from '../../public/images/articles/mongooseArticleImage.jpeg'
-import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image)
 
@@ -78,7 +77,6 @@ const articles = () => {
             <title>Timm Schoenborn | Articles Page</title>
             <meta name='description' content='Some kinda description'/>
         </Head>
-        <TransitionEffect />
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden '>
             <Layout className='pt-16'>
                 <AnimatedText text='A Passion for Teaching' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>

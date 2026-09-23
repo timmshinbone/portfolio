@@ -1,150 +1,175 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Logo from "./Logo";
 import { useRouter } from "next/router";
-import { LinkedInIcon, GithubIcon, SunIcon, MoonIcon} from "./Icons";
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
+const NavLink = ({ href, title, onClick }) => {
+  const router = useRouter();
+  const active = router.asPath === href;
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`font-serif text-[11px] tracking-[0.08em] uppercase transition-colors ${
+        active
+          ? "text-primary dark:text-primaryDark"
+          : "text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light"
+      }`}
+    >
+      {title}
+    </Link>
+  );
+};
 
-const CustomLink = ({href, title, className=""}) => {
-    const router = useRouter();
-    
-    return (
-        <Link href={href} className={`${className} relative group`}>
-            {title}
-            <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'} dark:bg-light`}>&nbsp;</span>
-        </Link>
-    )
-}
+const ThickThinRule = () => (
+  <div
+    className="text-dark dark:text-light"
+    style={{
+      height: "5px",
+      borderTop: "2px solid currentColor",
+      borderBottom: "1px solid currentColor",
+      borderLeft: 0,
+      borderRight: 0,
+    }}
+  />
+);
 
-const CustomMobileLink = ({href, title, className="", toggle}) => {
-    const router = useRouter();
-
-    const handleClick = () => {
-        toggle()
-        router.push(href)
-    }
-    
-    return (
-        <button onClick={handleClick} href={href} className={`${className} relative group text-light dark:text-dark my-2 `}>
-            {title}
-            <span className={`h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'} `}>&nbsp;</span>
-        </button>
-    )
-}
+const ThinRule = () => (
+  <div
+    className="text-dark dark:text-light"
+    style={{
+      height: 0,
+      borderTop: "1px solid currentColor",
+      borderLeft: 0,
+      borderRight: 0,
+    }}
+  />
+);
 
 const NavBar = () => {
-    const [mode, setMode] = useThemeSwitcher()
-    const [isOpen, setIsOpen] = useState(false)
+  const [mode, setMode] = useThemeSwitcher();
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = () => {
-        setIsOpen(!isOpen)
-    }
+  const close = () => setIsOpen(false);
+  const toggleEdition = () => setMode(mode === "light" ? "dark" : "light");
 
-    return (
-        <header className='bg-light w-full px-32 py-8 font-medium flex items-center justify-between dark:bg-dark dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
-            <button id='custom-burger' className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick} >
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+  return (
+    <header className="bg-light dark:bg-dark w-full relative z-10">
+      <div className="max-w-[1180px] mx-auto px-[clamp(20px,5vw,64px)]">
+        <div className="pt-10">
+
+          {/* Nameplate */}
+          <Link
+            href="/"
+            className="inline-block font-serif font-semibold leading-[0.95] tracking-[-0.025em] text-dark dark:text-light text-[clamp(28px,3.5vw,56px)] hover:text-primary dark:hover:text-primaryDark transition-colors"
+          >
+            Timm Schoenborn
+          </Link>
+
+          {/* Thick-thin rule */}
+          <div className="mt-5">
+            <ThickThinRule />
+          </div>
+
+          {/* Desktop link row — hidden at lg (≤1023px) */}
+          <div className="flex items-center justify-between py-[14px] lg:hidden">
+            <nav className="flex items-center gap-7">
+              <NavLink href="/projects" title="Work" />
+              <NavLink href="/about" title="About" />
+              <NavLink href="/hire-me" title="Hire Me" />
+              <NavLink href="/pay-me" title="Pay Me" />
+            </nav>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://www.linkedin.com/in/timm-schoenborn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/timmshinbone"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+              >
+                GitHub
+              </a>
+              <button
+                onClick={toggleEdition}
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-primary dark:text-primaryDark hover:underline hover:underline-offset-2 transition-colors"
+              >
+                {mode === "light" ? "Night edition" : "Day edition"}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile row — only visible at lg (≤1023px) */}
+          <div className="hidden lg:flex items-center justify-between py-[14px]">
+            <div className="flex items-center gap-6 flex-wrap">
+              <NavLink href="/projects" title="Work" onClick={close} />
+              <NavLink href="/about" title="About" onClick={close} />
+              <NavLink href="/hire-me" title="Hire Me" onClick={close} />
+              <NavLink href="/pay-me" title="Pay Me" onClick={close} />
+            </div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+            >
+              {isOpen ? "Close" : "More"}
             </button>
+          </div>
 
-            <div className="w-full flex justify-between items-center lg:hidden">
-                <nav>
-                    <CustomLink title='Home' href='/' className='m-4'/>
-                    <CustomLink title='About' href='/about' className='mx-4'/>
-                    <CustomLink title='Projects' className='mx-4' href='/projects'/>
-                    <CustomLink title='Hire Me' className='ml-4' href='/hire-me'/>
-                    <CustomLink title='Pay Me' className='ml-4' href='/pay-me'/>
-                </nav>
+          <ThinRule />
+        </div>
+      </div>
 
-                <nav className='flex items-center justify-center flex-wrap'>
-                    <motion.a href='https://www.linkedin.com/in/timm-schoenborn/' target={'_blank'}
-                    whileHover={{y:-2, scale:1.3}}
-                    whileTap={{scale:0.9}}
-                    className='w-8 mx-3'
-                    >
-                        <LinkedInIcon />
-                    </motion.a>
-                    
-                    
-                    <motion.a href='https://github.com/timmshinbone' target={'_blank'}
-                    whileHover={{y:-2, scale:1.3}}
-                    whileTap={{scale:0.9}}
-                    className='w-8 mx-3'
-                    >
-                        <GithubIcon />
-                    </motion.a>
-
-                    <button
-                        onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-                        className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
-                    >
-                        {
-                            mode === 'dark' ?
-                                <SunIcon className={'fill-dark'}/>
-                            :
-                                <MoonIcon className={'fill-dark'} />
-                        }
-                    </button>
-                </nav>
+      {/* Mobile sheet — social links + theme toggle */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            id="mobile-menu"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.18 }}
+            className="w-full bg-light dark:bg-dark border-b border-dark/10 dark:border-light/10"
+          >
+            <div className="max-w-[1180px] mx-auto px-[clamp(20px,5vw,64px)] py-6 flex flex-wrap items-center gap-6">
+              <a
+                href="https://www.linkedin.com/in/timm-schoenborn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={close}
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/timmshinbone"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={close}
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+              >
+                GitHub
+              </a>
+              <button
+                onClick={() => { toggleEdition(); close(); }}
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-primary dark:text-primaryDark hover:underline hover:underline-offset-2 transition-colors"
+              >
+                {mode === "light" ? "Night edition" : "Day edition"}
+              </button>
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+};
 
-            {
-                isOpen ?
-                <motion.div 
-                initial={{scale:0, opacity:0, x:"-50%", y:"-50%"}}
-                animate={{scale:1, opacity:1}}
-                transition={{duration: .25}}
-                className="min-w-[70vw] flex flex-col  justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32">
-                    <nav className="flex items-center flex-col justify-center">
-                        <CustomMobileLink title='Home' href='/' className='' toggle={handleClick}/>
-                        <CustomMobileLink title='About' href='/about' className='' toggle={handleClick}/>
-                        <CustomMobileLink title='Projects' className='' href='/projects' toggle={handleClick}/>
-                        <CustomMobileLink title='Hire Me' className='' href='/hire-me' toggle={handleClick}/>
-                        <CustomMobileLink title='Pay Me' className='' href='/pay-me' toggle={handleClick}/>
-                    </nav>
-
-                    <nav className='flex items-center justify-center flex-wrap mt-2'>
-                        <motion.a href='https://www.linkedin.com/in/timm-schoenborn/' target={'_blank'}
-                        whileHover={{y:-2, scale:1.3}}
-                        whileTap={{scale:0.9}}
-                        className='w-8 mx-3 sm:mx-1'
-                        >
-                            <LinkedInIcon />
-                        </motion.a>
-                        
-                        
-                        <motion.a href='https://github.com/timmshinbone' target={'_blank'}
-                        whileHover={{y:-2, scale:1.3}}
-                        whileTap={{scale:0.9}}
-                        className='w-8 mx-3 sm:mx-1 bg-light dark:bg-dark rounded-full'
-                        >
-                            <GithubIcon />
-                        </motion.a>
-
-                        <button
-                            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
-                            className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark sm:mx-1'}`}
-                        >
-                            {
-                                mode === 'dark' ?
-                                    <SunIcon className={'fill-dark w-6 h-6 md:w-5 md:h-5 sm:w-4 sm:h-4'}/>
-                                :
-                                    <MoonIcon className={'fill-dark w-6 h-6 md:w-5 md:h-5 sm:w-4 sm:h-4'} />
-                            }
-                        </button>
-                    </nav>
-                </motion.div>
-                : null
-            }
-
-            <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-                <Logo />
-            </div>
-        </header>
-    )
-}
-
-export default NavBar
+export default NavBar;
