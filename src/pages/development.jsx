@@ -1,11 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from '@/components/Layout';
-import { Code, Server, Layers, Settings, Globe, Calendar, Rocket } from 'lucide-react';
-import AnimatedText from '@/components/AnimatedText';
-import ServiceCardLarge from '@/components/ServiceCardLarge';
-import fullStackImg from '../../public/images/services/fullStackDevImage.png';
+import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '@/components/Layout'
 
 export default function FullStackDevPage() {
   return (
@@ -18,67 +13,128 @@ export default function FullStackDevPage() {
         />
       </Head>
 
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
-        <Layout className="pt-16">
-          <AnimatedText text="Modern Apps. Built Right." className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl" />
+      <main className="text-dark dark:text-light">
+        <Layout className="py-10">
 
-          <ServiceCardLarge
-            title="Full Stack Web & App Development"
-            price="Project-Based | Starting at $2,000"
-            image={fullStackImg}
-          />
+          {/* ── Header ──────────────────────────────────── */}
+          <header className="pb-8">
+            <p className="font-serif text-[13px] tracking-[0.08em] uppercase m-0 mb-7">
+              <Link href="/hire-me" className="text-[#006786] dark:text-[#62c5ee]">
+                ← Hire Me
+              </Link>
+            </p>
+            <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-[14px]">
+              Full Stack Development
+            </span>
+            <h1
+              className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
+              style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
+            >
+              Modern Apps. Built Right.
+            </h1>
+          </header>
 
-          <section className="max-w-4xl w-full mt-12 prose prose-lg dark:prose-invert">
-            <h2 className="flex items-center gap-2 text-3xl font-bold">
-              <Rocket className="w-6 h-6" />
+          {/* ── Price + CTA ─────────────────────────────── */}
+          <section className="py-7 border-t border-b border-dark/15 dark:border-light/15">
+            <p className="font-serif font-semibold text-[22px] text-[#006786] dark:text-[#62c5ee] m-0 mb-5">
+              Project-Based | Starting at $2,000
+            </p>
+            <Link
+              href="/hire-me#book-me"
+              className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors"
+            >
+              Book a free discovery call
+            </Link>
+          </section>
+
+          {/* ── Complete Development Solutions ──────────── */}
+          <section className="pt-10 pb-7">
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
+              style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
+            >
               Complete Development Solutions
             </h2>
-            <p>
-              I specialize in delivering high-performance full stack web and app experiences—from sleek landing pages to complex SaaS platforms. Whether you need help planning architecture, setting up cloud deployments, or refining frontend UI/UX, I bring a decade of hands-on engineering and product experience.
+            <p
+              className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85"
+              style={{ maxWidth: '72ch' }}
+            >
+              I specialize in delivering high-performance full stack web and app experiences — from sleek landing pages to complex SaaS platforms. Whether you need help planning architecture, setting up cloud deployments, or refining frontend UI/UX, I bring a decade of hands-on engineering and product experience.
             </p>
+          </section>
 
-            <h3 className="flex items-center gap-2 text-2xl font-semibold mt-10">
-              <Code className="w-6 h-6" /> What I Build
-            </h3>
-            <ul>
-              <li><Layers className="inline mr-2 w-4 h-4" /> React/Next.js frontends with Tailwind, Framer Motion, and accessibility in mind</li>
-              <li><Server className="inline mr-2 w-4 h-4" /> Scalable APIs using Node.js, Express, PostgreSQL, or Supabase</li>
-              <li><Settings className="inline mr-2 w-4 h-4" /> Full stack apps with secure authentication, file storage, Stripe payments, and more</li>
-              <li><Globe className="inline mr-2 w-4 h-4" /> Optimized deployment pipelines: Vercel, Netlify, or custom servers</li>
-            </ul>
-
-            <h3 className="flex items-center gap-2 text-2xl font-semibold mt-10">
-              <Rocket className="w-6 h-6" /> Why Work With Me?
-            </h3>
-            <ul>
-              <li><Code className="inline mr-2 w-4 h-4" /> Developer & Designer in One — Clean UI meets clean code</li>
-              <li><Layers className="inline mr-2 w-4 h-4" /> Architect First — I help clients avoid technical debt before it happens</li>
-              <li><Settings className="inline mr-2 w-4 h-4" /> Real World Experience — I’ve launched apps, dashboards, and tools for real businesses</li>
-              <li><Globe className="inline mr-2 w-4 h-4" /> Remote Ready — Async, Slack-friendly, and timezone-savvy</li>
-            </ul>
-
-            <h3 className="flex items-center gap-2 text-2xl font-semibold mt-10">
-              <Calendar className="w-6 h-6" /> Ready to Build Something?
-            </h3>
-            <p>
-              Let’s talk through your next big thing. You can <strong>book a free 30-minute discovery call</strong> to walk through your idea, budget, and timeline.
-            </p>
-            <p><Link href="/hire-me#book-me" className="underline font-semibold">Book your call now →</Link></p>
-
-            <h4 className="text-xl font-semibold mt-10">SEO Highlights:</h4>
-            <ul>
-              <li>custom web development services</li>
-              <li>freelance full stack developer</li>
-              <li>Next.js app development</li>
-              <li>frontend + backend engineer portfolio</li>
-              <li>node.js and PostgreSQL freelancer</li>
-              <li>react and tailwind website expert</li>
-              <li>remote app developer for hire</li>
-              <li>build MVP with Supabase & Stripe</li>
+          {/* ── What I Build ────────────────────────────── */}
+          <section className="pb-7">
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
+              style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
+            >
+              What I Build
+            </h2>
+            <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                React/Next.js frontends with Tailwind and accessibility in mind
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Scalable APIs using Node.js, Express, PostgreSQL, or Supabase
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Full stack apps with secure authentication, file storage, Stripe payments, and more
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Optimized deployment pipelines: Vercel, Netlify, or custom servers
+              </li>
             </ul>
           </section>
+
+          {/* ── Why Work With Me ────────────────────────── */}
+          <section className="pb-7">
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
+              style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
+            >
+              Why Work With Me?
+            </h2>
+            <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Developer &amp; designer in one — clean UI meets clean code
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Architect first — I help clients avoid technical debt before it happens
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Real world experience — I&apos;ve launched apps, dashboards, and tools for real businesses
+              </li>
+              <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
+                Remote ready — async, Slack-friendly, and timezone-savvy
+              </li>
+            </ul>
+          </section>
+
+          {/* ── CTA ─────────────────────────────────────── */}
+          <section className="pb-10">
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
+              style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
+            >
+              Ready to Build Something?
+            </h2>
+            <p
+              className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85"
+              style={{ maxWidth: '64ch' }}
+            >
+              Let&apos;s talk through your next big thing. You can book a free 30-minute discovery call to walk through your idea, budget, and timeline.
+            </p>
+            <Link
+              href="/hire-me#book-me"
+              className="font-serif text-[16px] text-[#006786] dark:text-[#62c5ee] hover:underline"
+            >
+              Book your call now →
+            </Link>
+          </section>
+
         </Layout>
       </main>
     </>
-  );
+  )
 }
