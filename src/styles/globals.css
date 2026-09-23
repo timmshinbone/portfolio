@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Halftone image treatment: grayscale at rest, CMYK plate-offset on hover (item 3) */
+  .halftone-wrap {
+    filter: grayscale(85%) contrast(1.05);
+    transition: filter 200ms ease-out, box-shadow 200ms ease-out;
+  }
+  .halftone-wrap:hover {
+    filter: grayscale(0);
+    box-shadow:
+      3px 2px 0 0 rgb(0 103 134 / 0.35),
+      -2px -1px 0 0 rgb(214 0 108 / 0.25);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .halftone-wrap {
+      transition: none;
+    }
+  }
+}
+
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
