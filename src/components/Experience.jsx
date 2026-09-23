@@ -1,100 +1,89 @@
-import React, {useRef} from 'react'
-import { motion, useScroll } from 'framer-motion'
-import LiIcon from './LiIcon'
+import React from 'react'
 
-const Details = ({position, company, companyLink, time, address, work}) => {
-    const ref = useRef(null)
-    return(
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
-            <LiIcon reference={ref}/>
-            <motion.div
-                initial={{y:50}}
-                whileInView={{y:0}}
-                transition={{duration: 0.5, type: 'spring'}}
-            >
-                <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg '>
-                    {position}&nbsp;
-                    <a href={companyLink} target={'_blank'} className='text-primary dark:text-primaryDark capitalize'>
-                        @{company}
-                    </a>
-                </h3>
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
-                    {time} | {address}
-                </span>
-                <p className='font-medium w-full md:text-sm'>
-                    {work}
-                </p>
-            </motion.div>
-        </li>
-    )
-}
+const jobs = [
+  {
+    role: 'Founder & Lead Developer',
+    company: 'TRStudios LLC',
+    location: 'Highland Park, IL',
+    time: '2024 – Present',
+    bullets: [
+      'Own design, implementation, QA and launch for production React, Next.js and TypeScript products across political campaigns, legal, home services and consumer wellness.',
+      'Ship through Git-based CI/CD with preview deployments; write Playwright suites and run accessibility and SEO testing before every launch.',
+    ],
+  },
+  {
+    role: 'Lead Full Stack Developer (Contract)',
+    company: 'ASMBS — American Society for Metabolic and Bariatric Surgery',
+    location: '',
+    time: '2025',
+    bullets: [
+      'Built member-facing interfaces and admin tooling for a national medical association, working with staff directly to turn requirements into shipped features.',
+    ],
+  },
+  {
+    role: 'Supervisor of Engineering & Lead Instructor',
+    company: 'General Assembly',
+    location: 'Chicago, IL / Remote',
+    time: '2019 – 2024',
+    bullets: [
+      'Supervised a team of 6–10 instructors and teaching assistants across concurrent remote cohorts: onboarding, scheduling, performance feedback and escalations.',
+      'Taught daily cohorts of 15–25 and mentored 150+ developers into the industry; ran Agile ceremonies and milestone planning, and shipped internal tooling.',
+    ],
+  },
+  {
+    role: 'Print, Signage & Branded Environments',
+    company: 'Chicago, IL · Digital printing, sign fabrication & environmental design',
+    location: '',
+    time: '2012 – 2019',
+    bullets: [
+      'Branded Environments Designer, Perkins & Will (2016–19) — designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers.',
+      'Project Manager, FastSigns (2014–16) — led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
+      'Production Manager, Quartet Digital Printing (2012–15) — managed staff, inventory and equipment; raised output and cut costs for Fortune 500 and university clients.',
+    ],
+  },
+  {
+    role: 'Manager, Coffee Stand & Book Buying',
+    company: 'Independent bookstore · Gainesville, FL',
+    location: '',
+    time: 'Early career',
+    bullets: [
+      'Ran the café and the used-book buy/sell desk through peak semester rushes — staffing, inventory, pricing and cash handling — first experience owning a small operation end to end.',
+    ],
+  },
+]
 
-const Experience = () => {
-    const ref = useRef(null)
-    const {scrollYProgress} = useScroll({
-        target: ref, 
-        offset: ['start end', 'center start']
-    })
-  return (
-    <div className='my-64'>
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-            Experience
-        </h2>
-        <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
-            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]' style={{scaleY: scrollYProgress}}/>
-            <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
-                <Details 
-                    position='Manager - Software Engineering'
-                    companyLink='https://asmbs.org/'
-                    company='ASMBS'
-                    time='March - May 2025'
-                    address='Newberry, FL'
-                    work='At ASMBS, I led full stack web development initiatives across both their Association Management System (AMS) and Content Management System (CMS). I built and maintained high-performance tools using WordPress, Symfony, PHP, and MariaDB—improving usability, performance, and data management for staff and members alike.'
-                />
-                <Details 
-                    position='Lead Instructor - Software Engineer' 
-                    companyLink='https://generalassemb.ly/'
-                    company='General Assembly'
-                    time='2022-2024' 
-                    address='Remote, US'
-                    work="Worked across multiple teams and consulted on hundreds of projects. Trained over 150 students to be efficient junior developers. Developed systems of teaching and boilerplates for projects that improved student understanding, success, and graduation rates by ~50%"
-                />
-                <Details 
-                    position='Instructional Associate - Software Engineer' 
-                    companyLink='https://generalassemb.ly/'
-                    company='General Assembly'
-                    time='2020-2021' 
-                    address='Chicago, IL / Remote, US'
-                    work="Pioneered emergency remote protocols at the start of the Covid-19 pandemic, and regularly improved remote processes throughout my tenure. Assisted and taught lectures, worked with students from many varied backgrounds, levels of experience and education. Improved workflow of projects by training dozens of junior level engineers."
-                />
-                <Details 
-                    position='Branded Environments Designer' 
-                    companyLink='https://perkinswill.com/'
-                    company='Perkins&Will'
-                    time='2016-2019' 
-                    address='Chicago, IL'
-                    work="Worked with a team of world class design professionals, engineers, architects, and developers to complete brand projects of various scopes. Designed, planned, and implemented complex signage solutions for a multitude of projects around the world."
-                />
-                <Details 
-                    position='Project Manager' 
-                    companyLink='https://www.fastsigns.com/e-ohio-chicago-il/'
-                    company='FastSigns'
-                    time='2014-2016' 
-                    address='Chicago, IL'
-                    work="Led cross-functional teams to deliver projects on time, within budget, and meeting all client requirements. Managed project scope, schedule, and resources, ensuring effective communication and client satisfaction."
-                />
-                <Details 
-                    position='Production Manager' 
-                    companyLink='https://quartetdigitalprinting.com/'
-                    company='Quartet Digital Printing'
-                    time='2012-2015' 
-                    address='Evanston/Chicago, IL'
-                    work="Optimized production processes to achieve increased output and reduced costs. Managed staff, inventory, and equipment to ensure efficient operations and meet quality standards. Worked closely with representatives of Fortune 500 companies as well as top universities to improve performance and client satisfaction."
-                />
-            </ul>
-        </div>   
+const JobEntry = ({ role, company, location, time, bullets }) => (
+  <article className="mb-8 last:mb-0">
+    <div className="flex items-baseline justify-between gap-4 flex-wrap">
+      <h3 className="font-serif font-semibold text-[15px] leading-[20px] m-0 text-dark dark:text-light">
+        {role}
+      </h3>
+      <span className="font-serif text-[11px] tracking-[0.04em] text-dark/60 dark:text-light/60 whitespace-nowrap flex-shrink-0">
+        {time}
+      </span>
     </div>
-  )
-}
+    <p className="font-serif italic text-[13px] leading-[18px] text-dark/70 dark:text-light/70 mt-0.5 mb-2 m-0">
+      {company}{location ? ` · ${location}` : ''}
+    </p>
+    <ul className="m-0 pl-4 grid gap-1">
+      {bullets.map((b, i) => (
+        <li key={i} className="font-serif text-[14px] leading-[22px] text-dark/85 dark:text-light/85">
+          {b}
+        </li>
+      ))}
+    </ul>
+  </article>
+)
+
+const Experience = () => (
+  <section className="mt-14 mb-10">
+    <h2 className="font-serif font-semibold text-[11px] tracking-[0.1em] uppercase text-[#006786] dark:text-[#62c5ee] mb-6">
+      Experience
+    </h2>
+    {jobs.map((job) => (
+      <JobEntry key={job.role} {...job} />
+    ))}
+  </section>
+)
 
 export default Experience

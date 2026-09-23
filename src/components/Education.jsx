@@ -1,67 +1,57 @@
-import React, {useRef} from 'react'
-import { motion, useScroll } from 'framer-motion'
-import LiIcon from './LiIcon'
+import React from 'react'
 
-const Details = ({type, time, place, info}) => {
-    const ref = useRef(null)
-    return(
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
-            <LiIcon reference={ref}/>
-            <motion.div
-                initial={{y:50}}
-                whileInView={{y:0}}
-                transition={{duration: 0.5, type: 'spring'}}
-            >
-                <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>
-                    {type}&nbsp;
-                </h3>
-                <span className='capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'>
-                    {time} | {place}
-                </span>
-                <p className='font-medium w-full md:text-sm'>
-                    {info}
-                </p>
-            </motion.div>
-        </li>
-    )
-}
+const degrees = [
+  {
+    credential: 'B.S. Architectural Design',
+    school: 'University of Florida',
+    location: 'Gainesville, FL',
+    time: '2009 – 2012',
+    note: 'Foundation in design principles, project management, and building systems for physical and digital scopes.',
+  },
+  {
+    credential: 'Software Engineering Immersive',
+    school: 'General Assembly',
+    location: 'Chicago, IL',
+    time: '2019',
+    note: 'Intensive full-stack program; practical skills in JavaScript, React, Node, Python, and Agile development.',
+  },
+  {
+    credential: 'A.A. Architecture / Computer Science',
+    school: 'Santa Fe College',
+    location: 'Gainesville, FL',
+    time: '2007 – 2009',
+    note: 'Core computer science principles alongside design communication and creative problem-solving.',
+  },
+]
 
-const Education = () => {
-    const ref = useRef(null)
-    const {scrollYProgress} = useScroll({
-        target: ref, 
-        offset: ['start end', 'center start']
-    })
-  return (
-    <div className='my-64'>
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-            Education
-        </h2>
-        <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
-            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]' style={{scaleY: scrollYProgress}}/>
-            <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
-                <Details 
-                    type='Certificate of Completion - Software Engineering Bootcamp ' 
-                    time='2019'
-                    place='General Assembly - Chicago, IL'
-                    info='Completed an intensive software engineering bootcamp at General Assembly, gaining practical skills in multiple programming languages, AGILE software development methodologies, and full-stack development.' 
-                />
-                <Details 
-                    type='Bachelor Of Science - Architecture' 
-                    time='2009-2012'
-                    place='University of Florida - Gainesville, FL'
-                    info='Developed a strong foundation in design principles, project management, and building systems for both physical and digital project scopes.' 
-                />
-                <Details 
-                    type='Associate of Arts - Architecture/Computer Science' 
-                    time='2007-2009'
-                    place='Santa Fe College - Gainesville, FL'
-                    info='Focused efforts on fostering a unique blend of creative problem-solving and technical expertise in both design and digital projects. Studied core computer science principles as well as communication via design.' 
-                />
-            </ul>
-        </div>   
+const DegreeEntry = ({ credential, school, location, time, note }) => (
+  <article className="mb-6 last:mb-0">
+    <div className="flex items-baseline justify-between gap-4 flex-wrap">
+      <h3 className="font-serif font-semibold text-[15px] leading-[20px] m-0 text-dark dark:text-light">
+        {credential}
+      </h3>
+      <span className="font-serif text-[11px] tracking-[0.04em] text-dark/60 dark:text-light/60 whitespace-nowrap flex-shrink-0">
+        {time}
+      </span>
     </div>
-  )
-}
+    <p className="font-serif italic text-[13px] leading-[18px] text-dark/70 dark:text-light/70 mt-0.5 mb-1 m-0">
+      {school} · {location}
+    </p>
+    <p className="font-serif text-[14px] leading-[22px] text-dark/80 dark:text-light/80 m-0">
+      {note}
+    </p>
+  </article>
+)
+
+const Education = () => (
+  <section className="mt-14 mb-10">
+    <h2 className="font-serif font-semibold text-[11px] tracking-[0.1em] uppercase text-[#006786] dark:text-[#62c5ee] mb-6">
+      Education
+    </h2>
+    {degrees.map((d) => (
+      <DegreeEntry key={d.credential} {...d} />
+    ))}
+  </section>
+)
 
 export default Education
