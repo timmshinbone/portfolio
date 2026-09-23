@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import profPic2 from "../../public/images/profile/mainImage.png"
@@ -10,52 +9,109 @@ import AnimatedText from '@/components/AnimatedText'
 import { LinkArrow } from '@/components/Icons'
 import { useSmoothScroll } from '@/components/hooks/useSmoothScroll'
 
-const FramerImage = motion(Image)
-
-const MovingImg = ({ title, image }) => {
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const imgRef = useRef(null)
-
-  function handleMouse(evt) {
-    imgRef.current.style.display = 'inline-block'
-    x.set(evt.pageX)
-    y.set(-10)
-  }
-
-  function handleMouseLeave() {
-    imgRef.current.style.display = 'none'
-    x.set(0)
-    y.set(0)
-  }
-
-  return (
-    <div onMouseMove={handleMouse} onMouseLeave={handleMouseLeave} className="relative w-full">
-      <h2 className="capitalize text-2xl font-bold my-2 hover:underline underline-offset-2 mt-4 dark:text-light xs:text-lg">
-        Turning Vision Into Reality With Code And Design.
-      </h2>
-      <FramerImage
-        style={{ x, y }}
-        ref={imgRef}
-        src={image}
-        alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
-        priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-      />
+const VideoSlot = () => (
+  <figure className="m-0">
+    <div
+      className="relative bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm overflow-hidden"
+      style={{ aspectRatio: '16 / 9' }}
+    >
+      {/* Replace this div with <video poster="..." controls> when the intro file is ready.
+          Place the video at public/videos/intro.mp4 and poster at public/images/intro-poster.jpg */}
+      <div className="absolute inset-0 grid place-content-center justify-items-center gap-4 text-center p-6">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 256 256"
+          fill="none"
+          aria-hidden="true"
+          className="text-[#d6006c] dark:text-[#ff90b1]"
+        >
+          <circle cx="128" cy="128" r="96" fill="currentColor" fillOpacity="0.18" />
+          <circle cx="128" cy="128" r="96" stroke="currentColor" strokeWidth="12" />
+          <path d="M108 88l56 40-56 40z" fill="currentColor" />
+        </svg>
+        <span className="font-serif text-[13px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70">
+          Ninety seconds, in my own voice
+        </span>
+      </div>
     </div>
-  )
-}
+    <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-4">
+      Who I am, what I do, and what I&apos;m looking for next.
+    </figcaption>
+  </figure>
+)
+
+const caseStudies = [
+  {
+    slug: 'flatratedev',
+    kicker: 'Platform · Case study',
+    title: 'FlatRateDev',
+    body: 'A productized web-build service: fixed-scope packages, a pricing comparison built in Chart.js, and Playwright coverage over the whole funnel.',
+    meta: 'Product · Design · Build',
+  },
+  {
+    slug: 'albers',
+    kicker: 'Campaign · Case study',
+    title: 'A congressional race',
+    body: 'A campaign site built to an immovable deadline, tested end to end, and handed to a non-technical team who had to run it alone.',
+    meta: 'Delivery · Stakeholders',
+  },
+  {
+    slug: 'asmbs',
+    kicker: 'Association · Case study',
+    title: 'ASMBS',
+    body: 'Member-facing interfaces and admin tooling for a national medical society, built with staff directly rather than through a spec.',
+    meta: 'Requirements · Full stack',
+  },
+  {
+    slug: 'mobile-locksmith',
+    kicker: 'Local business · Case study',
+    title: 'Mobile Locksmith FL',
+    body: 'A search-first site for a local service business, where the only goal is turning a stressed visitor on a phone into a call.',
+    meta: 'Design · SEO · Performance',
+  },
+  {
+    slug: 'trstudios',
+    kicker: 'Studio · Case study',
+    title: 'TRStudios',
+    body: 'Building the business behind the builds: defined offers, a repeatable delivery process and a pipeline of in-house products.',
+    meta: 'Business · Process · Roadmap',
+  },
+  {
+    slug: 'teaching',
+    kicker: 'People · Case study',
+    title: 'Teaching toolkit',
+    body: 'Boilerplates and teaching APIs that removed setup from project weeks and helped 150+ developers ship their first real apps.',
+    meta: 'Leadership · Systems',
+  },
+]
+
+const WorkCard = ({ slug, kicker, title, body, meta }) => (
+  <Link
+    href={`/projects/${slug}`}
+    className="flex flex-col gap-2.5 p-4 rounded-sm shadow-[0_1px_2px_rgb(45_43_43/.14)] hover:shadow-[0_3px_10px_rgb(45_43_43/.16)] transition-shadow bg-[#eae9e9] dark:bg-[#2d2b2b] text-dark dark:text-light"
+    style={{ textDecoration: 'none' }}
+  >
+    <span className="font-serif text-[10px] tracking-[0.1em] uppercase text-[#006786] dark:text-[#62c5ee]">
+      {kicker}
+    </span>
+    <h3 className="font-serif font-semibold text-[17px] leading-[1.2] m-0">
+      {title}
+    </h3>
+    <p className="font-serif text-[13px] opacity-80 flex-1 m-0">{body}</p>
+    <p className="font-serif text-[11px] text-dark/50 dark:text-light/50 m-0">{meta}</p>
+  </Link>
+)
 
 export default function Home() {
-  const { smoothScroll } = useSmoothScroll();
   return (
     <>
       <Head>
         <title>Full Stack Developer | Hire Timm Schoenborn</title>
-        <meta name="description" content="Timm Schoenborn is a full stack developer offering web, app, and SEO services. Book a consultation today." />
+        <meta
+          name="description"
+          content="Timm Schoenborn is a full stack developer offering web, app, and SEO services. Book a consultation today."
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -72,72 +128,185 @@ export default function Home() {
             })
           }}
         />
-
       </Head>
       <main className='flex items-center text-dark min-h-screen dark:text-light'>
         <Layout className='pt-0 md:p-16 sm:pt-8'>
           <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
 
-            <Link href="#" className='w-1/2 cursor-pointer overflow-hidden rounded-2xl lg:w-full'>
-              <FramerImage
-                src={profPic2}
-                alt="Image of blueprint drawing computer"
-                className='w-full h-auto rounded-2xl px-2'
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-                priority
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw'
-              />
-            </Link>
+      <main className="text-dark dark:text-light">
+        <Layout>
 
-            <div className='w-1/2 flex flex-col items-start justify-center pl-6 lg:w-full lg:pl-0 lg:pt-6'>
-              <AnimatedText text='Turning Vision Into Reality With Code And Design.' className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'/>
-              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
-                I’m a freelance full stack developer and SEO consultant helping small businesses and startups build better websites, apps, and search visibility. Let's create something great together.
+          {/* ── Intro ─────────────────────────────────────── */}
+          <section
+            className="items-start pt-14 pb-10"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '42px clamp(32px, 5vw, 84px)',
+              alignItems: 'start',
+            }}
+          >
+            <div>
+              <h2 className="font-serif font-semibold leading-[1.1] tracking-[-0.02em] m-0"
+                  style={{ fontSize: 'clamp(26px, 3.8vw, 42px)' }}>
+                A generalist on purpose, not by accident.
+              </h2>
+              <p className="font-serif text-[17px] leading-[30px] mt-8 mb-0 max-w-[46ch]">
+                Architecture taught me systems. Engineering taught me what things cost. Teaching and
+                supervising a hundred and fifty developers taught me people. Running my own studio
+                taught me delivery. I&apos;d like to bring all four to one team.
               </p>
-              <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/hire-me" className='bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition'>
-                  Let&apos;s Work Together
-                </Link>
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a
+                  href="mailto:timmschoenborn@gmail.com"
+                  className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors"
+                >
+                  Let&apos;s talk
+                </a>
+                <a
+                  href="/TS2025R35um3.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] text-[#006786] dark:text-[#62c5ee] px-[5px] py-2.5 hover:bg-[#006786]/10 dark:hover:bg-[#62c5ee]/10 rounded-sm transition-colors"
+                >
+                  Read the résumé
+                </a>
               </div>
-              <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href='/TS2025R35um3.pdf' target={"_blank"} className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold border-2 border-solid border-transparent dark:bg-light dark:text-dark hover:bg-primary dark:hover:bg-primaryDark hover:border-dark dark:hover:border-light transition md:p-2 md:px-4 md:text-base'>
-                  Resume
-                  <LinkArrow className={'w-5 h-5 ml-2 md:w-4 md:h-4 sm:w-3 sm:h-3'} />
-                </Link>
-                <div onClick={() => smoothScroll('/hire-me', 'book-me')} className='bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition m-3'>Contact</div>
-              </div>
-            </div>
-          </article> 
-          <article className="w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl mt-12 p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
-            <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
-
-            <div className="w-1/2 md:w-full mt-6 lg:mt-0 lg:mb-6 lg:w-full lg:flex lg:justify-center order-2 lg:order-1">
-              <FramerImage
-                src={hireMeImg}
-                alt="Hire Me image"
-                className="w-full h-auto rounded-2xl px-2 max-w-[500px]"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw"
-              />
             </div>
 
-            <div className="w-1/2 flex flex-col items-start justify-center pr-6 lg:w-full lg:pr-0 lg:items-center lg:text-center order-1 lg:order-2">
-              <h2 className="text-3xl font-bold mb-4">What I Can Help You With</h2>
-              <ul className="text-base space-y-4">
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/consulting', '')}>Game & App Consultation</strong><br/>Early-stage planning and wireframing</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/seo-services', '')}>SEO Optimization</strong><br/>Improve rankings, structure, and speed</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/development', '')}>Full Stack Development</strong><br/>Websites, apps, APIs, and scalable architecture</li>
-                <li><strong className="hover:underline" onClick={() => smoothScroll('/mentorship', '')}>Mentorship & Tutoring</strong><br/>Learn, grow, and build your dev portfolio</li>
-              </ul>
-              <Link href="/hire-me" className="mt-6 inline-block bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition">
-                View All Services
-              </Link>
+            <VideoSlot />
+          </section>
+
+          {/* ── Arc ───────────────────────────────────────── */}
+          <section id="arc" className="py-10">
+            <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-4">
+              The long way round
+            </span>
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8 max-w-[30ch]"
+              style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
+            >
+              How five disciplines ended up in one résumé
+            </h2>
+            <div
+              style={{
+                columnWidth: '30ch',
+                columnGap: 'clamp(32px, 4vw, 64px)',
+                maxWidth: '1000px',
+              }}
+            >
+              <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  The drawing board.
+                </strong>{' '}
+                I earned a B.S. in Architectural Design at the University of Florida and spent years
+                as a professional designer — print, signage and wayfinding systems, including work at
+                Perkins &amp; Will. Designing for real spaces used by real people leaves you with
+                habits: build the system underneath first, sweat every detail, and never forget
+                somebody has to live with what you made.
+              </p>
+              <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  The keyboard.
+                </strong>{' '}
+                In 2019 I went through General Assembly&apos;s Software Engineering Immersive so I
+                could build the things I had been drawing. That year taught me what work actually
+                costs — how to estimate it, how to cut scope honestly, and why any plan that ignores
+                the build is just a wish with a deadline attached.
+              </p>
+              <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  The room.
+                </strong>{' '}
+                Then five years at General Assembly, first as Lead Engineering Instructor and then as
+                Supervisor of Engineering. I set the standards our remote teams worked to, ran code
+                review every week, mentored more than 150 developers into the industry, and supervised
+                six to ten instructors — onboarding, scheduling, feedback, escalations, and the
+                ceremonies that kept concurrent cohorts moving. Watching those developers land jobs is
+                still the part I&apos;m proudest of.
+              </p>
+              <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  The whole thing.
+                </strong>{' '}
+                Since 2024 TRStudios has meant owning every part of a project: scoping with the
+                client, designing it, building it in React, Next.js and TypeScript, testing it,
+                launching it, and answering for it afterwards — campaign sites, legal and home
+                services, consumer wellness, and a contract as lead full-stack developer for a
+                national medical association. Nothing sharpens product judgment faster than being the
+                person the client calls.
+              </p>
+              <p className="font-serif text-[16px] leading-[28px] mb-0 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  After hours.
+                </strong>{' '}
+                I publish games under my own studio, weatherstew — a children&apos;s game on Google
+                Play built end to end in Godot, and Cold Harsh Sea 2.0 in development for Steam. Same
+                muscle as the day job, used for the fun of it.
+              </p>
             </div>
-          </article>
+          </section>
+
+          {/* ── Selected work ─────────────────────────────── */}
+          <section id="work" className="py-10">
+            <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-4">
+              Selected work
+            </span>
+            <h2
+              className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8"
+              style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
+            >
+              Things I owned end to end
+            </h2>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                gap: '20px',
+              }}
+            >
+              {caseStudies.map((cs) => (
+                <WorkCard key={cs.slug} {...cs} />
+              ))}
+            </div>
+          </section>
+
+          {/* ── Pull quote + contact ───────────────────────── */}
+          <section id="next" className="py-10 pb-14">
+            <figure className="m-0 mb-10">
+              <blockquote
+                className="font-serif italic font-normal leading-[42px] tracking-[-0.01em] max-w-[36ch] m-0"
+                style={{ fontSize: 'clamp(20px, 2.6vw, 30px)' }}
+              >
+                &ldquo;After years of doing every job myself, what I want is to do one job well,
+                with people I like.&rdquo;
+              </blockquote>
+            </figure>
+            <h3 className="font-serif font-semibold text-[22px] leading-[28px] m-0">
+              What I&apos;m looking for
+            </h3>
+            <p className="font-serif text-[16px] leading-[28px] text-dark/80 dark:text-light/80 mt-5 mb-0 max-w-[58ch]">
+              A product, project or design leadership role on a team I can grow with for the long
+              haul. Software, construction, manufacturing — I care more about the problem and the
+              people than the industry. Remote, or anywhere in Chicagoland.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-7">
+              <a
+                href="mailto:timmschoenborn@gmail.com"
+                className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors"
+              >
+                timmschoenborn@gmail.com
+              </a>
+              <a
+                href="tel:+13524276997"
+                className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] border border-dark/20 dark:border-light/20 text-dark dark:text-light px-[18px] py-2.5 rounded-sm hover:bg-dark/5 dark:hover:bg-light/5 transition-colors"
+              >
+                (352) 427-6997
+              </a>
+            </div>
+          </section>
+
         </Layout>
       </main>
     </>
