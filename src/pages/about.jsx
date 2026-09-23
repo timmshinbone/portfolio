@@ -5,7 +5,7 @@ import AnimatedText from '@/components/AnimatedText'
 import { useSmoothScroll } from '@/components/hooks/useSmoothScroll';
 import Layout from '@/components/Layout'
 import Image from 'next/image'
-import profilePic from '../../public/images/profile/developer-pic-2.jpg'
+import profilePic from '../../public/images/profile/mainImage.png'
 import profilePic2 from '../../public/images/profile/medhairDevAIGen.jpg'
 import myHobbies from '../../public/images/profile/myHobbies.png'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
