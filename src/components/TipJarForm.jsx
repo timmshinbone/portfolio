@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 export default function TipJarForm() {
   const [amount, setAmount] = useState('');
@@ -32,31 +31,39 @@ export default function TipJarForm() {
   };
 
   return (
-    <motion.div className="relative w-full p-6 bg-light dark:bg-dark border border-dark dark:border-light rounded-2xl shadow-md mt-16">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl" />
-      <h2 className="text-2xl font-bold mb-2 text-dark dark:text-light">Tip Jar</h2>
-      <p className="text-base mb-4 dark:text-light/90">
-        Want to just say thanks or show support? Drop a tip in the jar
+    <div className="w-full bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm p-6">
+      <h2
+        className="font-serif font-bold text-dark dark:text-light tracking-[-0.015em] mb-2"
+        style={{ fontSize: 'clamp(20px, 2.4vw, 24px)', lineHeight: 1.2 }}
+      >
+        Tip Jar
+      </h2>
+      <p className="font-serif text-[15px] leading-[24px] mb-5 text-dark/80 dark:text-light/80">
+        Want to just say thanks or show support? Drop a tip in the jar.
       </p>
-      <form onSubmit={handleRedirect} className="space-y-4">
+      <form onSubmit={handleRedirect} className="flex flex-col gap-4" style={{ maxWidth: '360px' }}>
         <input
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Enter amount (USD)"
-          className="w-full p-2 border rounded-md text-dark dark:text-dark"
+          className="w-full font-serif text-[15px] px-3 py-2 border border-dark dark:border-light rounded-sm text-dark dark:text-light bg-[#f3f2f2] dark:bg-[#201e1d]"
           min="1"
           required
         />
         <button
           type="submit"
           disabled={isProcessing}
-          className="bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-primary dark:hover:bg-primaryDark border-2 border-transparent hover:border-dark dark:hover:border-light transition"
+          className="inline-flex items-center justify-center self-start font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors disabled:opacity-60"
         >
-          {isProcessing ? 'Redirecting...' : 'Send Tip'}
+          {isProcessing ? 'Redirecting…' : 'Send Tip'}
         </button>
       </form>
-      {message && <p className="mt-4 text-primary dark:text-primaryDark font-semibold">{message}</p>}
-    </motion.div>
+      {message && (
+        <p className="font-serif text-[14px] mt-4 text-[#006786] dark:text-[#62c5ee] font-semibold">
+          {message}
+        </p>
+      )}
+    </div>
   );
 }
