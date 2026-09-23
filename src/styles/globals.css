@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-light text-ink dark:bg-dark dark:text-light;
+    font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: theme('colors.accent.100');
+    color: theme('colors.ink');
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.700');
+    outline-offset: 2px;
+  }
+
+  a {
+    color: theme('colors.accent.700');
+    text-underline-offset: 3px;
+  }
+
+  .dark a {
+    color: theme('colors.accent.400');
+  }
+}

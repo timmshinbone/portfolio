@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import {Montserrat} from 'next/font/google'
+import { Source_Serif_4 } from 'next/font/google'
 import Head from 'next/head'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
@@ -12,10 +12,11 @@ import { loadStripe } from '@stripe/stripe-js'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
-// initialize font and assign variable+subsets
-const montserrat = Montserrat({
+const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-mont" 
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 })
 // used to initialize pages
 export default function App({ Component, pageProps }) {
@@ -63,7 +64,7 @@ export default function App({ Component, pageProps }) {
           
       </Head>
       <NavBar />
-      <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}>
+      <main className={`${sourceSerif4.variable} font-serif bg-light dark:bg-dark w-full min-h-screen`}>
         <AnimatePresence mode="wait">
           <Elements stripe={stripePromise}>
             <Component key={router.asPath} {...pageProps} />

@@ -4,68 +4,85 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: { 
-        mont: ['var(--font-mont)', ...fontFamily.sans]
+      fontFamily: {
+        serif: ['var(--font-serif)', ...fontFamily.serif],
+        mont: ['var(--font-mont)', ...fontFamily.sans], // legacy alias
       },
       colors: {
-        dark: "#2B2B2B",
-        light: "#F3E9D2",
-        primary: "#5C887A", // 240,86,199 d_pink
-        primaryDark: "#A2C5D7", // 80,230,217 e_blue
+        // Broadsheet semantic tokens
+        paper:   '#f3f2f2',
+        surface: '#eae9e9',
+        ink:     '#201e1d',
+        // Legacy aliases so existing bg-light / text-dark / text-primary classes keep working
+        light:       '#f3f2f2',  // = paper
+        dark:        '#201e1d',  // = ink
+        primary:     '#006786',  // = accent-700
+        primaryDark: '#62c5ee',  // = accent-400
+        // Accent (cyan) 100–900
+        accent: {
+          100: '#e9f8ff',
+          200: '#cbeeff',
+          300: '#99e0ff',
+          400: '#62c5ee',
+          500: '#38a6cf',
+          600: '#1186ac',
+          700: '#006786',
+          800: '#004961',
+          900: '#0a303e',
+        },
+        // Accent-2 (magenta) 100–900
+        accent2: {
+          100: '#fff1f4',
+          200: '#ffdee6',
+          300: '#ffc0d0',
+          400: '#ff90b1',
+          500: '#ff458e',
+          600: '#d82071',
+          700: '#aa0b56',
+          800: '#790e3d',
+          900: '#4b1528',
+        },
+        // Neutral 100–900
+        neutral: {
+          100: '#f8f4f4',
+          200: '#eae7e7',
+          300: '#d7d3d3',
+          400: '#bab6b6',
+          500: '#9b9797',
+          600: '#7d7979',
+          700: '#605d5d',
+          800: '#444141',
+          900: '#2d2b2b',
+        },
+        'process-yellow': '#edbb00',
+      },
+      borderRadius: {
+        DEFAULT: '2px',
+        sm: '1px',
+        md: '2px',
+        lg: '4px',
+      },
+      boxShadow: {
+        sm:  '0 1px 2px rgb(45 43 43 / .14)',
+        md:  '0 3px 10px rgb(45 43 43 / .16)',
+        lg:  '0 12px 32px rgb(45 43 43 / .22)',
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
       },
-      backgroundImage: {
-        circularLight:
-            "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 100px)",
-    
-        circularDark:
-            "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 100px)",
-    
-        circularLightLg:
-            "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px)",
-    
-        circularDarkLg:
-            "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 80px)",
-    
-        circularLightMd:
-            "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px)",
-    
-        circularDarkMd:
-            "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 6px,#1b1b1b 60px)",
-    
-        circularLightSm:
-            "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)",
-    
-        circularDarkSm:
-            "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 40px)",
-      },
     },
     screens: {
       "2xl": { max: "1535px" },
-      // => @media (max-width: 1535px) { ... }
-
-      xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
-
-      lg: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
-
-      md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: "639px" },
-      // => @media (max-width: 639px) { ... }
-
-      xs: { max: "479px" },
-      // => @media (max-width: 479px) { ... }
+      xl:   { max: "1279px" },
+      lg:   { max: "1023px" },
+      md:   { max: "767px"  },
+      sm:   { max: "639px"  },
+      xs:   { max: "479px"  },
     },
   },
   plugins: [],
