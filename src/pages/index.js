@@ -1,13 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import profPic2 from "../../public/images/profile/mainImage.png"
-import hireMeImg from "../../public/images/profile/hireMeImage.png"
-import { motion, useMotionValue } from 'framer-motion'
-import { useRef } from 'react'
-import AnimatedText from '@/components/AnimatedText'
-import { LinkArrow } from '@/components/Icons'
-import { useSmoothScroll } from '@/components/hooks/useSmoothScroll'
 
 const VideoSlot = () => (
   <figure className="m-0">
@@ -129,11 +122,6 @@ export default function Home() {
           }}
         />
       </Head>
-      <main className='flex items-center text-dark min-h-screen dark:text-light'>
-        <Layout className='pt-0 md:p-16 sm:pt-8'>
-          <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
-
       <main className="text-dark dark:text-light">
         <Layout>
 
