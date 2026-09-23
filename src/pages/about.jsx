@@ -5,14 +5,13 @@ import AnimatedText from '@/components/AnimatedText'
 import { useSmoothScroll } from '@/components/hooks/useSmoothScroll';
 import Layout from '@/components/Layout'
 import Image from 'next/image'
-import profilePic from '../../public/images/profile/developer-pic-2.jpg'
+import profilePic from '../../public/images/profile/mainImage.png'
 import profilePic2 from '../../public/images/profile/medhairDevAIGen.jpg'
 import myHobbies from '../../public/images/profile/myHobbies.png'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
-import TransitionEffect from '@/components/TransitionEffect'
 
 const AnimatedNumbers = ({value}) => {
     const ref = useRef(null)
@@ -64,7 +63,6 @@ const About = () => {
             }}
             />
             </Head>
-            <TransitionEffect />
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-16'>
                     <AnimatedText text='Dedication to Design' className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'/>

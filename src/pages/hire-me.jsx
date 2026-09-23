@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSmoothScroll } from '@/components/hooks/useSmoothScroll';
-import TransitionEffect from '@/components/TransitionEffect';
 import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import Image from 'next/image';
@@ -110,8 +109,6 @@ export default function HireMe() {
         <title>Hire a Freelance Web Developer & SEO Consultant | Timm Schoenborn</title>
         <meta name="description" content="Remote full stack development, SEO consulting, and app strategy from Timm Schoenborn — a seasoned engineer and mentor helping businesses build better tech." />
       </Head>
-
-      <TransitionEffect />
 
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
         <Layout className="pt-16">

@@ -9,7 +9,6 @@ import { useRef } from 'react'
 import AnimatedText from '@/components/AnimatedText'
 import { LinkArrow } from '@/components/Icons'
 import { useSmoothScroll } from '@/components/hooks/useSmoothScroll'
-import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image)
 
@@ -75,7 +74,6 @@ export default function Home() {
         />
 
       </Head>
-      <TransitionEffect/>
       <main className='flex items-center text-dark min-h-screen dark:text-light'>
         <Layout className='pt-0 md:p-16 sm:pt-8'>
           <article className='w-full relative flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:text-light dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
