@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { caseStudies, getCaseStudy } from '@/data/caseStudies'
+import { motion, useReducedMotion } from 'framer-motion'
+
+const EMAIL = 'timmschoenborn@gmail.com'
 
 const ThickThinRule = () => (
   <div
@@ -20,7 +23,7 @@ const HairlineRule = () => (
 
 const ImgPlaceholder = ({ ratio = '16/9' }) => (
   <div
-    className="bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm relative grid place-items-center"
+    className="halftone-wrap bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm relative grid place-items-center"
     style={{ aspectRatio: ratio }}
     aria-hidden="true"
   >
@@ -30,13 +33,57 @@ const ImgPlaceholder = ({ ratio = '16/9' }) => (
   </div>
 )
 
+// Small-caps "Fig. N" label used in figcaptions (item 9)
+const FigLabel = ({ n }) => (
+  <span
+    className="font-serif text-[10px] tracking-[0.1em] uppercase text-dark/55 dark:text-light/55 mr-2"
+    style={{ fontVariant: 'small-caps' }}
+  >
+    Fig. {n}
+  </span>
+)
+
 export default function CaseStudy({ study }) {
+  const prefersReduced = useReducedMotion()
+
+  // Reading progress bar (item 7)
+  const [progress, setProgress] = useState(0)
+  useEffect(() => {
+    const onScroll = () => {
+      const { scrollY } = window
+      const { scrollHeight, clientHeight } = document.documentElement
+      const max = scrollHeight - clientHeight
+      setProgress(max > 0 ? (scrollY / max) * 100 : 0)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Click-to-copy email state (item 8)
+  const [copied, setCopied] = useState(false)
+  const copyEmail = () => {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
+
   return (
     <>
       <Head>
         <title>{study.title} | Timm Schoenborn</title>
         <meta name="description" content={study.dek} />
       </Head>
+
+      {/* Reading progress bar — 2px cyan line at top of viewport (item 7) */}
+      <div
+        aria-hidden="true"
+        className="fixed top-0 left-0 z-[60] h-[2px] bg-[#006786] dark:bg-[#62c5ee] pointer-events-none"
+        style={{
+          width: `${progress}%`,
+          transition: prefersReduced ? 'none' : 'width 80ms linear',
+        }}
+      />
 
       <main className="text-dark dark:text-light">
         <Layout>
@@ -51,12 +98,15 @@ export default function CaseStudy({ study }) {
             <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-[14px]">
               {study.kicker}
             </span>
-            <h1
+            {/* layoutId morphs from the projects card title (item 4) */}
+            <motion.h1
+              layout
+              layoutId={prefersReduced ? undefined : `case-study-title-${study.slug}`}
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
               style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
             >
               {study.title}
-            </h1>
+            </motion.h1>
             <p className="font-serif text-[18px] leading-[30px] max-w-[58ch] mt-[30px] mb-0">
               {study.dek}
             </p>
@@ -94,6 +144,7 @@ export default function CaseStudy({ study }) {
           <figure className="m-0 mt-[28px]">
             <ImgPlaceholder ratio="16/9" />
             <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px] max-w-[56ch]">
+              <FigLabel n={1} />
               {study.heroCaption}
             </figcaption>
           </figure>
@@ -157,7 +208,7 @@ export default function CaseStudy({ study }) {
             </div>
           </section>
 
-          {/* ── Three 4:3 figures ───────────────────────────── */}
+          {/* ── Three 4:3 figures — auto Fig. N numbering (item 9) ── */}
           <section className="pt-[28px] pb-[42px]">
             <div
               style={{
@@ -170,6 +221,7 @@ export default function CaseStudy({ study }) {
                 <figure key={i} className="m-0">
                   <ImgPlaceholder ratio="4/3" />
                   <figcaption className="font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 mt-3">
+                    <FigLabel n={i + 2} />
                     {caption}
                   </figcaption>
                 </figure>
@@ -260,12 +312,20 @@ export default function CaseStudy({ study }) {
                   Visit the live site
                 </a>
               )}
-              <a
-                href="mailto:timmschoenborn@gmail.com"
+              {/* Click-to-copy email (item 8) */}
+              <button
+                onClick={copyEmail}
                 className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors"
+                aria-label={copied ? 'Email copied to clipboard' : `Copy email address ${EMAIL}`}
               >
-                timmschoenborn@gmail.com
-              </a>
+                {copied ? (
+                  <em className="not-italic font-normal text-[12px] tracking-[0.04em]">
+                    Copied
+                  </em>
+                ) : (
+                  EMAIL
+                )}
+              </button>
               <Link
                 href="/projects"
                 className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] text-[#006786] dark:text-[#62c5ee] px-[5px] py-2.5 hover:bg-[#006786]/10 dark:hover:bg-[#62c5ee]/10 rounded-sm transition-colors"

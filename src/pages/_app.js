@@ -3,7 +3,8 @@ import { Source_Serif_4 } from 'next/font/google'
 import Head from 'next/head'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
-import { AnimatePresence } from 'framer-motion'
+import CmdPalette from '@/components/CmdPalette'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 // STRIPE IMPORTS
@@ -64,11 +65,20 @@ export default function App({ Component, pageProps }) {
           
       </Head>
       <NavBar />
+      <CmdPalette />
       <main className={`${sourceSerif4.variable} font-serif bg-light dark:bg-dark w-full min-h-screen`}>
         <AnimatePresence mode="wait">
-          <Elements stripe={stripePromise}>
-            <Component key={router.asPath} {...pageProps} />
-          </Elements>
+          <motion.div
+            key={router.asPath}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <Elements stripe={stripePromise}>
+              <Component {...pageProps} />
+            </Elements>
+          </motion.div>
         </AnimatePresence>
         <Footer />
       </main>

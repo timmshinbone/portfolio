@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { caseStudies } from '@/data/caseStudies'
+import { motion, useReducedMotion } from 'framer-motion'
 
 const repos = [
   {
@@ -50,21 +51,28 @@ const repos = [
   },
 ]
 
-const CaseStudyCard = ({ slug, kicker, title, dek }) => (
-  <Link
-    href={`/projects/${slug}`}
-    className="flex flex-col gap-2.5 p-4 rounded-sm shadow-[0_1px_2px_rgb(45_43_43/.14)] hover:shadow-[0_3px_10px_rgb(45_43_43/.16)] transition-shadow bg-[#eae9e9] dark:bg-[#2d2b2b] text-dark dark:text-light"
-    style={{ textDecoration: 'none' }}
-  >
-    <span className="font-serif text-[10px] tracking-[0.1em] uppercase text-[#006786] dark:text-[#62c5ee]">
-      {kicker}
-    </span>
-    <h2 className="font-serif font-semibold text-[17px] leading-[1.2] m-0">
-      {title}
-    </h2>
-    <p className="font-serif text-[13px] opacity-80 flex-1 m-0 line-clamp-3">{dek}</p>
-  </Link>
-)
+const CaseStudyCard = ({ slug, kicker, title, dek }) => {
+  const prefersReduced = useReducedMotion()
+  return (
+    <Link
+      href={`/projects/${slug}`}
+      className="flex flex-col gap-2.5 p-4 rounded-sm shadow-[0_1px_2px_rgb(45_43_43/.14)] hover:shadow-[0_3px_10px_rgb(45_43_43/.16)] transition-shadow bg-[#eae9e9] dark:bg-[#2d2b2b] text-dark dark:text-light"
+      style={{ textDecoration: 'none' }}
+    >
+      <span className="font-serif text-[10px] tracking-[0.1em] uppercase text-[#006786] dark:text-[#62c5ee]">
+        {kicker}
+      </span>
+      <motion.h2
+        layout
+        layoutId={prefersReduced ? undefined : `case-study-title-${slug}`}
+        className="font-serif font-semibold text-[17px] leading-[1.2] m-0"
+      >
+        {title}
+      </motion.h2>
+      <p className="font-serif text-[13px] opacity-80 flex-1 m-0 line-clamp-3">{dek}</p>
+    </Link>
+  )
+}
 
 const RepoRow = ({ title, type, liveUrl, ghUrl }) => (
   <li className="flex items-baseline justify-between gap-4 flex-wrap py-3 border-b border-dark/10 dark:border-light/10 last:border-0">
