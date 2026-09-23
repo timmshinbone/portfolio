@@ -1,0 +1,295 @@
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import Layout from '@/components/Layout'
+import { caseStudies, getCaseStudy } from '@/data/caseStudies'
+
+const ThickThinRule = () => (
+  <div
+    className="text-dark dark:text-light"
+    style={{ height: 5, border: 0, margin: 0, borderTop: '2px solid currentColor', borderBottom: '1px solid currentColor' }}
+  />
+)
+
+const HairlineRule = () => (
+  <div
+    className="text-dark dark:text-light"
+    style={{ height: 0, border: 0, borderTop: '1px solid currentColor' }}
+  />
+)
+
+const ImgPlaceholder = ({ ratio = '16/9' }) => (
+  <div
+    className="bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm relative grid place-items-center"
+    style={{ aspectRatio: ratio }}
+    aria-hidden="true"
+  >
+    <span className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/30 dark:text-light/30">
+      Image
+    </span>
+  </div>
+)
+
+export default function CaseStudy({ study }) {
+  return (
+    <>
+      <Head>
+        <title>{study.title} | Timm Schoenborn</title>
+        <meta name="description" content={study.dek} />
+      </Head>
+
+      <main className="text-dark dark:text-light">
+        <Layout>
+
+          {/* ── Header ──────────────────────────────────────── */}
+          <header className="pt-[42px]">
+            <p className="m-0 mb-7 font-serif text-[13px] tracking-[0.08em] uppercase">
+              <Link href="/projects" className="text-[#006786] dark:text-[#62c5ee]">
+                ← Work
+              </Link>
+            </p>
+            <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-[14px]">
+              {study.kicker}
+            </span>
+            <h1
+              className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
+              style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
+            >
+              {study.title}
+            </h1>
+            <p className="font-serif text-[18px] leading-[30px] max-w-[58ch] mt-[30px] mb-0">
+              {study.dek}
+            </p>
+          </header>
+
+          {/* ── Facts row ───────────────────────────────────── */}
+          <section aria-label="Project facts" className="pt-[42px] pb-[28px]">
+            <ThickThinRule />
+            <div
+              className="py-[18px]"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
+                gap: '20px 40px',
+              }}
+            >
+              {[
+                { label: 'My role', value: study.facts.role },
+                { label: 'Timeline', value: study.facts.timeline },
+                { label: 'Build', value: study.facts.build },
+                { label: 'Outcome', value: study.facts.outcome },
+              ].map(({ label, value }) => (
+                <p key={label} className="m-0">
+                  <span className="block font-serif text-[11px] tracking-[0.1em] uppercase text-dark/65 dark:text-light/65 mb-1">
+                    {label}
+                  </span>
+                  <span className="font-serif text-[15.5px] leading-[24px]">{value}</span>
+                </p>
+              ))}
+            </div>
+            <HairlineRule />
+          </section>
+
+          {/* ── 16:9 Hero ───────────────────────────────────── */}
+          <figure className="m-0 mt-[28px]">
+            <ImgPlaceholder ratio="16/9" />
+            <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px] max-w-[56ch]">
+              {study.heroCaption}
+            </figcaption>
+          </figure>
+
+          {/* ── Problem ─────────────────────────────────────── */}
+          <section className="pt-[56px] pb-[28px]">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '34px clamp(32px, 5vw, 84px)',
+                alignItems: 'start',
+              }}
+            >
+              <div>
+                <h2
+                  className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 max-w-[22ch]"
+                  style={{ fontSize: 'clamp(26px, 3vw, 34px)' }}
+                >
+                  {study.problemHead}
+                </h2>
+              </div>
+              <div style={{ display: 'grid', gap: '28px' }}>
+                {study.problem.map((p, i) => (
+                  <p key={i} className="font-serif text-[16px] leading-[28px] m-0">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── What I actually did ─────────────────────────── */}
+          <section className="pt-[28px] pb-[28px]">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '34px clamp(32px, 5vw, 84px)',
+                alignItems: 'start',
+              }}
+            >
+              <div>
+                <h2
+                  className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 max-w-[22ch]"
+                  style={{ fontSize: 'clamp(26px, 3vw, 34px)' }}
+                >
+                  What I actually did
+                </h2>
+              </div>
+              <div style={{ display: 'grid', gap: '28px' }}>
+                {study.whatIDid.map(({ head, body }) => (
+                  <p key={head} className="font-serif text-[16px] leading-[28px] m-0">
+                    <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                      {head}
+                    </strong>{' '}
+                    {body}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── Three 4:3 figures ───────────────────────────── */}
+          <section className="pt-[28px] pb-[42px]">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '24px',
+              }}
+            >
+              {study.figures.map(({ caption }, i) => (
+                <figure key={i} className="m-0">
+                  <ImgPlaceholder ratio="4/3" />
+                  <figcaption className="font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 mt-3">
+                    {caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Results row ─────────────────────────────────── */}
+          <section aria-label="Results" className="pt-[28px] pb-[42px]">
+            <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-5">
+              Results
+            </span>
+            <HairlineRule />
+            <div
+              className="mt-5"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+                gap: '24px 48px',
+              }}
+            >
+              {study.results.map(({ stat, label }) => (
+                <p key={label} className="m-0">
+                  <span
+                    className="block font-serif font-semibold leading-none text-[#006786] dark:text-[#62c5ee]"
+                    style={{ fontSize: '34px' }}
+                  >
+                    {stat}
+                  </span>
+                  <span className="block font-serif text-[15px] leading-[24px] mt-2.5">
+                    {label}
+                  </span>
+                </p>
+              ))}
+            </div>
+            <div className="mt-5">
+              <HairlineRule />
+            </div>
+          </section>
+
+          {/* ── What I'd do differently ─────────────────────── */}
+          <section className="pt-[28px] pb-[42px]">
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '34px clamp(32px, 5vw, 84px)',
+                alignItems: 'start',
+              }}
+            >
+              <div>
+                <h2
+                  className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 max-w-[22ch]"
+                  style={{ fontSize: 'clamp(26px, 3vw, 34px)' }}
+                >
+                  What I&apos;d do differently
+                </h2>
+              </div>
+              <div style={{ display: 'grid', gap: '28px' }}>
+                {study.differently.map((p, i) => (
+                  <p key={i} className="font-serif text-[16px] leading-[28px] m-0">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── Next + CTA ──────────────────────────────────── */}
+          <section className="pt-[28px] pb-[56px]">
+            <h3 className="font-serif font-semibold text-[24px] leading-[30px] m-0 max-w-[28ch]">
+              Next:{' '}
+              <Link
+                href={`/projects/${study.nextSlug}`}
+                className="text-[#006786] dark:text-[#62c5ee]"
+              >
+                {study.nextLabel}
+              </Link>
+            </h3>
+            <div className="flex gap-[15px] flex-wrap mt-6">
+              {study.liveUrl && (
+                <a
+                  href={study.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] border border-dark/20 dark:border-light/20 text-dark dark:text-light px-[18px] py-2.5 rounded-sm hover:bg-dark/5 dark:hover:bg-light/5 transition-colors"
+                >
+                  Visit the live site
+                </a>
+              )}
+              <a
+                href="mailto:timmschoenborn@gmail.com"
+                className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors"
+              >
+                timmschoenborn@gmail.com
+              </a>
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] text-[#006786] dark:text-[#62c5ee] px-[5px] py-2.5 hover:bg-[#006786]/10 dark:hover:bg-[#62c5ee]/10 rounded-sm transition-colors"
+              >
+                ← All work
+              </Link>
+            </div>
+          </section>
+
+        </Layout>
+      </main>
+    </>
+  )
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: caseStudies.map(c => ({ params: { slug: c.slug } })),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const study = getCaseStudy(params.slug)
+  if (!study) return { notFound: true }
+  return { props: { study } }
+}
