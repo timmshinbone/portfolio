@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import profilePic from "../../public/images/profile/developer-pic-1.png"
 import profPic2 from "../../public/images/profile/mainImage.png"
 import hireMeImg from "../../public/images/profile/hireMeImage.png"
 import { motion, useMotionValue } from 'framer-motion'
