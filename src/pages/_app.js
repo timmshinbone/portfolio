@@ -7,12 +7,6 @@ import CmdPalette from '@/components/CmdPalette'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
-// STRIPE IMPORTS
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-
 const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
   weight: ["400", "600"],
@@ -75,9 +69,7 @@ export default function App({ Component, pageProps }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            <Elements stripe={stripePromise}>
-              <Component {...pageProps} />
-            </Elements>
+            <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>
         <Footer />
@@ -86,17 +78,3 @@ export default function App({ Component, pageProps }) {
   )
 }
 
-// // // 3. _app.js - wrap app with Stripe Elements
-// // import '@/styles/globals.css'
-// // import { Elements } from '@stripe/react-stripe-js';
-// // import { loadStripe } from '@stripe/stripe-js';
-
-// // const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
-
-// // export default function App({ Component, pageProps }) {
-// //   return (
-// //     <Elements stripe={stripePromise}>
-// //       <Component {...pageProps} />
-// //     </Elements>
-// //   );
-// // }
