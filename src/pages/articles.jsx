@@ -75,7 +75,7 @@ const articles = () => {
     <>
         <Head>
             <title>Timm Schoenborn | Articles Page</title>
-            <meta name='description' content='Some kinda description'/>
+            <meta name="description" content="Articles on JavaScript, React, Next.js, and full stack web development by Timm Schoenborn." />
         </Head>
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden '>
             <Layout className='pt-16'>
