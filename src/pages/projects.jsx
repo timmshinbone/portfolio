@@ -112,7 +112,7 @@ const projects = () => {
     <>
       <Head>
         <title>Timm Schoenborn | Projects Page</title>
-        <meta name='projects' content='Some kinda description'/>
+        <meta name="description" content="Full stack projects and case studies by Timm Schoenborn — web apps, marketing sites, developer tooling, and teaching resources." />
       </Head>
       <main className="text-dark dark:text-light">
         <Layout className="pt-10 pb-16">
