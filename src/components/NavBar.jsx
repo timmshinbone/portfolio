@@ -25,6 +25,11 @@ const NavLink = ({ href, title, onClick }) => {
 // DateLine: newspaper-style dateline showing today's date and availability
 const DateLine = () => {
   const [dateText, setDateText] = useState("");
+  const [isMac, setIsMac] = useState(null);
+
+  useEffect(() => {
+    setIsMac(/Mac|iPhone|iPad/.test(navigator.platform));
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -45,17 +50,43 @@ const DateLine = () => {
   }, []);
 
   if (!dateText) return null;
+
+  const openPalette = () => {
+    window.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "k",
+        metaKey: isMac === true,
+        ctrlKey: isMac === false,
+        bubbles: true,
+      })
+    );
+  };
+
   return (
-    <div className="flex items-center gap-5 mt-2 mb-1">
-      <span className="font-serif text-[10px] tracking-[0.08em] uppercase text-dark/45 dark:text-light/45 select-none">
-        {dateText}
-      </span>
-      <span
-        className="font-serif text-[10px] tracking-[0.08em] uppercase text-[#006786] dark:text-[#62c5ee] select-none"
-        aria-label="Currently available for work"
-      >
-        Available for work
-      </span>
+    <div className="flex items-center justify-between mt-2 mb-1">
+      <div className="flex items-center gap-5">
+        <span className="font-serif text-[10px] tracking-[0.08em] uppercase text-dark/45 dark:text-light/45 select-none">
+          {dateText}
+        </span>
+        <span
+          className="font-serif text-[10px] tracking-[0.08em] uppercase text-[#006786] dark:text-[#62c5ee] select-none"
+          aria-label="Currently available for work"
+        >
+          Available for work
+        </span>
+      </div>
+      {isMac !== null && (
+        <button
+          onClick={openPalette}
+          aria-label={`Search this site — press ${isMac ? "Command K" : "Control K"}`}
+          className="hidden sm:inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
+        >
+          Search
+          <kbd className="font-serif not-italic text-[9px] leading-none px-[5px] py-[2px] border border-current rounded-[2px] tracking-normal normal-case">
+            {isMac ? "⌘K" : "Ctrl K"}
+          </kbd>
+        </button>
+      )}
     </div>
   );
 };
