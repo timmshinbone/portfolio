@@ -3,6 +3,10 @@ import { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import TipJarForm from '@/components/TipJarForm';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 const ThickThinRule = () => (
   <hr
@@ -67,7 +71,9 @@ export default function PayMe() {
           <ThickThinRule />
 
           <section className="mt-10 mb-16">
-            <TipJarForm />
+            <Elements stripe={stripePromise}>
+              <TipJarForm />
+            </Elements>
           </section>
 
           <div className="mb-8">

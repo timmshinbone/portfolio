@@ -14,7 +14,7 @@ const NavLink = ({ href, title, onClick }) => {
       className={`font-serif text-[11px] tracking-[0.08em] uppercase transition-colors ${
         active
           ? "text-primary dark:text-primaryDark"
-          : "text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light"
+          : "text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light"
       }`}
     >
       {title}
@@ -181,7 +181,7 @@ const NavBar = () => {
                 href="https://www.linkedin.com/in/timm-schoenborn/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light transition-colors"
               >
                 LinkedIn
               </a>
@@ -189,7 +189,7 @@ const NavBar = () => {
                 href="https://github.com/timmshinbone"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light transition-colors"
               >
                 GitHub
               </a>
@@ -215,7 +215,7 @@ const NavBar = () => {
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
-              className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+              className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light transition-colors"
             >
               {isOpen ? "Close" : "More"}
             </button>
@@ -253,7 +253,7 @@ const NavBar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}
-                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light transition-colors"
               >
                 LinkedIn
               </a>
@@ -262,7 +262,7 @@ const NavBar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}
-                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/60 dark:text-light/60 hover:text-dark dark:hover:text-light transition-colors"
+                className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 hover:text-dark dark:hover:text-light transition-colors"
               >
                 GitHub
               </a>
