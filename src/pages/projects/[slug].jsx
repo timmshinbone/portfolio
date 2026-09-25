@@ -71,7 +71,7 @@ export default function CaseStudy({ study }) {
   return (
     <>
       <Head>
-        <title>{study.title} | Timm Schoenborn</title>
+        <title>{`${study.title} | Timm Schoenborn`}</title>
         <meta name="description" content={study.dek} />
       </Head>
 

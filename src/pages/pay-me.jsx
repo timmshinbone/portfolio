@@ -57,7 +57,7 @@ export default function PayMe() {
   return (
     <>
       <Head>
-        <title>Support or Hire Me | Timm&apos;s Portfolio</title>
+        <title>Support or Hire Me | Timm's Portfolio</title>
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
         <Layout className="pt-16">
