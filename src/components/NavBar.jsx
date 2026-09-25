@@ -25,7 +25,7 @@ const NavLink = ({ href, title, onClick }) => {
 // DateLine: newspaper-style dateline showing today's date and availability
 const DateLine = () => {
   const [dateText, setDateText] = useState("");
-  const [isMac, setIsMac] = useState(null);
+  const [isMac, setIsMac] = useState(false);
 
   useEffect(() => {
     setIsMac(/Mac|iPhone|iPad/.test(navigator.platform));
@@ -75,18 +75,16 @@ const DateLine = () => {
           Available for work
         </span>
       </div>
-      {isMac !== null && (
-        <button
-          onClick={openPalette}
-          aria-label={`Search this site — press ${isMac ? "Command K" : "Control K"}`}
-          className="hidden sm:inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
-        >
-          Search
-          <kbd className="font-serif not-italic text-[9px] leading-none px-[5px] py-[2px] border border-current rounded-[2px] tracking-normal normal-case">
-            {isMac ? "⌘K" : "Ctrl K"}
-          </kbd>
-        </button>
-      )}
+      <button
+        onClick={openPalette}
+        aria-label={`Search this site — press ${isMac ? "Command K" : "Control K"}`}
+        className="hidden sm:inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
+      >
+        Search
+        <kbd className="font-serif not-italic text-[9px] leading-none px-[5px] py-[2px] border border-current rounded-[2px] tracking-normal normal-case">
+          {isMac ? "⌘K" : "Ctrl K"}
+        </kbd>
+      </button>
     </div>
   );
 };
