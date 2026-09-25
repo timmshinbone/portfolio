@@ -78,7 +78,7 @@ const DateLine = () => {
       <button
         onClick={openPalette}
         aria-label={`Search this site — press ${isMac ? "Command K" : "Control K"}`}
-        className="hidden sm:inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
+        className="inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
       >
         Search
         <kbd className="font-serif not-italic text-[9px] leading-none px-[5px] py-[2px] border border-current rounded-[2px] tracking-normal normal-case">
