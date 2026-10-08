@@ -70,7 +70,7 @@ const HeroMedia = ({ video, image, alt }) => {
           muted
           loop
           playsInline
-          aria-hidden="true"
+          controls
           className="absolute inset-0 w-full h-full object-cover object-top"
           src={video}
         />
