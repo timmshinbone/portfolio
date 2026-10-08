@@ -101,9 +101,107 @@ export const caseStudies = [
     differently: [
       '[ Placeholder: an honest lesson — e.g. I\'d push for a written system map in week one; most of my time went to rediscovering how the two systems depended on each other. ]',
     ],
+    nextSlug: 'print-production',
+    nextLabel: 'Print production',
+    liveUrl: 'https://asmbs.org/',
+  },
+  {
+    slug: 'print-production',
+    kicker: 'Case study · Production & operations',
+    title: 'Print production: running the floor at a print shop of about 15 people',
+    dek: 'At Quartet Digital Printing I was the production manager and the project manager for a crew of about 15. We did high-volume printing for colleges and Evanston businesses, plus large-format printing, bindery and finishing. My job was getting every order through the shop and out the door on time.',
+    facts: {
+      role: 'Production manager & project manager',
+      timeline: '2012 – 2015 · Chicago, IL',
+      build: 'High-volume digital print · large format · bindery & finishing',
+      outcome: 'Raised output and cut costs for university and Fortune 500 clients',
+    },
+    heroCaption: 'High-volume print, large format and bindery, all in one shop.',
+    problemHead: 'A lot of small deadlines at once',
+    problem: [
+      'A print shop working for colleges and local businesses always has a lot of jobs open at the same time, each with its own stock, finishing and due date, and all of them compete for the same equipment and the same people. A rush for one client turns into a delay for another unless somebody is sequencing the work.',
+      'That made the job mostly a scheduling problem: knowing what each order needed, in what order, from whom, and when it had to leave the shop.',
+    ],
+    whatIDid: [
+      {
+        head: 'Managed the crew.',
+        body: 'Ran a team of about 15 across printing, large format and bindery: who was on which job, what came next, and what moved when a job changed.',
+      },
+      {
+        head: 'Scheduled the work.',
+        body: "Sequenced high-volume runs for colleges and Evanston businesses around the large-format and finishing jobs that needed the same people and equipment, so one client's rush order didn't push everyone else late.",
+      },
+      {
+        head: 'Managed the projects.',
+        body: 'I was also the project manager, so I carried jobs from the first request to the finished piece and was the person clients called when something changed.',
+      },
+      {
+        head: 'Watched the costs.',
+        body: 'Managed staff, inventory and equipment, and raised output while cutting costs for the university and Fortune 500 clients the shop served.',
+      },
+    ],
+    figures: [
+      { caption: 'Large-format work, printed and finished in the shop.' },
+      { caption: 'Bindery and finishing, the last stop before a job went out.' },
+      { caption: 'High-volume work for colleges and Evanston businesses.' },
+    ],
+    results: [
+      { stat: '[ 00 ]', label: 'Jobs through the shop in a typical month' },
+      { stat: '[ 0 days ]', label: 'Typical turnaround on a standard order' },
+      { stat: '[ 00% ]', label: 'Increase in output while I ran production' },
+    ],
+    differently: [
+      '[ Placeholder: an honest lesson from the shop, for example something you would schedule, track or staff differently now. ]',
+    ],
+    nextSlug: 'northwestern-signage',
+    nextLabel: 'Northwestern University signage',
+  },
+  {
+    slug: 'northwestern-signage',
+    kicker: 'Case study · Project management',
+    title: 'Northwestern University signage: big college buildings, managed from a small sign shop',
+    dek: "At FastSigns, a small sign shop, I was the project manager on signage for large college buildings, including Northwestern University's projects. I kept scope, schedule and the client lined up from start to finish.",
+    facts: {
+      role: 'Project manager',
+      timeline: '2014 – 2016 · Chicago, IL',
+      build: 'Signage for large college buildings',
+      outcome: 'Projects delivered on time and on budget',
+    },
+    heroCaption: 'Building signage for Northwestern University.',
+    problemHead: 'Big buildings, small shop',
+    problem: [
+      'A large college building needs a lot of signage, all of it consistent, and all of it ready by the date the building needs it.',
+      'A small sign shop takes that on with a small team. That puts the weight on project management: scope agreed up front, a schedule the shop can actually hit, and one person the university can call.',
+    ],
+    whatIDid: [
+      {
+        head: 'Managed the Northwestern projects.',
+        body: "I managed Northwestern University's signage projects for the shop, from scope through delivery.",
+      },
+      {
+        head: 'Ran the schedule.',
+        body: 'Led cross-functional teams on scope, schedule and resources for each job, so projects landed on time and on budget.',
+      },
+      {
+        head: 'Took it to the design side.',
+        body: 'After the sign shop I joined Perkins & Will as a Branded Environments Designer. I designed signage systems for projects worldwide alongside architects and engineers, and managed projects there too, this time from the design side of the same work.',
+      },
+    ],
+    figures: [
+      { caption: 'Signage in a Northwestern University building.' },
+      { caption: 'Sign work at building scale, run from a small shop.' },
+      { caption: 'Perkins & Will: signage systems from the design side.' },
+    ],
+    results: [
+      { stat: '[ 00 ]', label: 'Northwestern buildings or projects I managed' },
+      { stat: '[ 000 ]', label: 'Signs in the largest single package' },
+      { stat: '[ 0 ]', label: 'People on the shop team' },
+    ],
+    differently: [
+      '[ Placeholder: an honest lesson, for example how you would scope or schedule a large building package differently now. ]',
+    ],
     nextSlug: 'hhh',
     nextLabel: 'Healthy Homemade Habits',
-    liveUrl: 'https://asmbs.org/',
   },
   {
     slug: 'hhh',

@@ -90,7 +90,8 @@ const About = () => {
               </h1>
               <p className="font-serif text-[16px] leading-[28px] m-0 max-w-[58ch] text-dark/90 dark:text-light/90">
                 I&apos;m a generalist by accumulation: an architect who became a designer, a designer
-                who ran print and signage production, and an engineer who spent five years leading the
+                who ran production at a print shop of about 15 people and managed Northwestern
+                University&apos;s signage projects at a sign shop, and an engineer who spent five years leading the
                 people who build software. Today I run my own studio, where I scope, design, ship
                 and answer for client products end to end. I also run{' '}
                 <strong className="font-semibold">weatherstew</strong>, an indie game studio with a

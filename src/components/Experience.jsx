@@ -36,9 +36,9 @@ const jobs = [
     location: '',
     time: '2012 – 2019',
     bullets: [
-      'Branded Environments Designer, Perkins & Will (2016–19): designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers.',
-      'Project Manager, FastSigns (2014–16): led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
-      'Production Manager, Quartet Digital Printing (2012–15): managed staff, inventory and equipment; raised output and cut costs for Fortune 500 and university clients.',
+      'Branded Environments Designer, Perkins & Will (2016–19): designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers, and managed projects from the design side.',
+      'Project Manager, FastSigns (2014–16): managed signage projects for large college buildings, including Northwestern University projects; led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
+      'Production and Project Manager, Quartet Digital Printing (2012–15): ran production for a crew of about 15 doing high-volume printing for colleges and Evanston businesses, plus large-format, bindery and finishing work; managed staff, inventory and equipment, and raised output and cut costs for Fortune 500 and university clients.',
     ],
   },
   {

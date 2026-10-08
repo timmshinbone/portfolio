@@ -50,6 +50,20 @@ const caseStudies = [
     meta: 'Requirements · Full stack',
   },
   {
+    slug: 'print-production',
+    kicker: 'Production · Case study',
+    title: 'Print production',
+    body: 'Running production for a print shop of about 15 people: high-volume work for colleges and Evanston businesses, plus large format and bindery.',
+    meta: 'Operations · People · Scheduling',
+  },
+  {
+    slug: 'northwestern-signage',
+    kicker: 'Signage · Case study',
+    title: 'Northwestern University signage',
+    body: 'Project managing signage for Northwestern University and other large college buildings, from a small sign shop.',
+    meta: 'Project management · Clients',
+  },
+  {
     slug: 'hhh',
     kicker: 'Content platform · Case study',
     title: 'Healthy Homemade Habits',
@@ -204,6 +218,17 @@ export default function Home() {
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
+                  The shop floor.
+                </strong>{' '}
+                Before Perkins &amp; Will I worked on the production side. At a print shop I was
+                production manager and project manager for a crew of about 15, running high-volume work
+                for colleges and Evanston businesses alongside large-format printing, bindery and
+                finishing. At a small sign shop I managed signage projects for big college buildings,
+                including Northwestern University&apos;s. That&apos;s where I learned to manage people,
+                schedules and clients, and I still run software projects that way.
+              </p>
+              <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
+                <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
                   The keyboard.
                 </strong>{' '}
                 In 2019 I went through General Assembly&apos;s Software Engineering Immersive so I
@@ -285,7 +310,7 @@ export default function Home() {
             <p className="font-serif text-[16px] leading-[28px] text-dark/80 dark:text-light/80 mt-5 mb-0 max-w-[58ch]">
               A product, project or design leadership role on a team I can grow with for the long
               haul. It could be in software, construction or manufacturing. I care more about the problem and the
-              people than the industry. Remote, or anywhere in Chicagoland.
+              people than the industry. In person or hybrid in the Fox Cities and central Wisconsin, or remote.
             </p>
             <div className="flex flex-wrap gap-4 mt-7">
               <a

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { caseStudies, getCaseStudy } from '@/data/caseStudies'
@@ -21,15 +22,25 @@ const HairlineRule = () => (
   />
 )
 
-const ImgPlaceholder = ({ ratio = '16/9' }) => (
+const ImgPlaceholder = ({ ratio = '16/9', src, alt = '' }) => (
   <div
-    className="halftone-wrap bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm relative grid place-items-center"
+    className="halftone-wrap bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm relative overflow-hidden grid place-items-center"
     style={{ aspectRatio: ratio }}
-    aria-hidden="true"
+    aria-hidden={src ? undefined : true}
   >
-    <span className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/30 dark:text-light/30">
-      Image
-    </span>
+    {src ? (
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover object-top"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+      />
+    ) : (
+      <span className="font-serif text-[11px] tracking-[0.08em] uppercase text-dark/30 dark:text-light/30">
+        Image
+      </span>
+    )}
   </div>
 )
 
@@ -43,8 +54,14 @@ const FigLabel = ({ n }) => (
   </span>
 )
 
+// Hide unfilled "[ ... ]" placeholders on the live page
+const isPlaceholder = (s) => typeof s === 'string' && s.trim().startsWith('[')
+
 export default function CaseStudy({ study }) {
   const prefersReduced = useReducedMotion()
+  const problem = study.problem.filter((p) => !isPlaceholder(p))
+  const results = study.results.filter((r) => !isPlaceholder(r.stat))
+  const differently = study.differently.filter((p) => !isPlaceholder(p))
 
   // Reading progress bar (item 7)
   const [progress, setProgress] = useState(0)
@@ -128,7 +145,7 @@ export default function CaseStudy({ study }) {
                 { label: 'Timeline', value: study.facts.timeline },
                 { label: 'Build', value: study.facts.build },
                 { label: 'Outcome', value: study.facts.outcome },
-              ].map(({ label, value }) => (
+              ].filter(({ value }) => value && !isPlaceholder(value)).map(({ label, value }) => (
                 <p key={label} className="m-0">
                   <span className="block font-serif text-[11px] tracking-[0.1em] uppercase text-dark/65 dark:text-light/65 mb-1">
                     {label}
@@ -142,7 +159,7 @@ export default function CaseStudy({ study }) {
 
           {/* ── 16:9 Hero ───────────────────────────────────── */}
           <figure className="m-0 mt-[28px]">
-            <ImgPlaceholder ratio="16/9" />
+            <ImgPlaceholder ratio="16/9" src={study.heroImage} alt={study.heroCaption} />
             <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px] max-w-[56ch]">
               <FigLabel n={1} />
               {study.heroCaption}
@@ -168,7 +185,7 @@ export default function CaseStudy({ study }) {
                 </h2>
               </div>
               <div style={{ display: 'grid', gap: '28px' }}>
-                {study.problem.map((p, i) => (
+                {problem.map((p, i) => (
                   <p key={i} className="font-serif text-[16px] leading-[28px] m-0">
                     {p}
                   </p>
@@ -217,9 +234,9 @@ export default function CaseStudy({ study }) {
                 gap: '24px',
               }}
             >
-              {study.figures.map(({ caption }, i) => (
+              {study.figures.map(({ src, caption }, i) => (
                 <figure key={i} className="m-0">
-                  <ImgPlaceholder ratio="4/3" />
+                  <ImgPlaceholder ratio="4/3" src={src} alt={caption} />
                   <figcaption className="font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 mt-3">
                     <FigLabel n={i + 2} />
                     {caption}
@@ -230,7 +247,7 @@ export default function CaseStudy({ study }) {
           </section>
 
           {/* ── Results row ─────────────────────────────────── */}
-          <section aria-label="Results" className="pt-[28px] pb-[42px]">
+          <section aria-label="Results" className="pt-[28px] pb-[42px]" hidden={results.length === 0}>
             <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-5">
               Results
             </span>
@@ -243,7 +260,7 @@ export default function CaseStudy({ study }) {
                 gap: '24px 48px',
               }}
             >
-              {study.results.map(({ stat, label }) => (
+              {results.map(({ stat, label }) => (
                 <p key={label} className="m-0">
                   <span
                     className="block font-serif font-semibold leading-none text-[#006786] dark:text-[#62c5ee]"
@@ -263,7 +280,7 @@ export default function CaseStudy({ study }) {
           </section>
 
           {/* ── What I'd do differently ─────────────────────── */}
-          <section className="pt-[28px] pb-[42px]">
+          <section className="pt-[28px] pb-[42px]" hidden={differently.length === 0}>
             <div
               style={{
                 display: 'grid',
@@ -281,7 +298,7 @@ export default function CaseStudy({ study }) {
                 </h2>
               </div>
               <div style={{ display: 'grid', gap: '28px' }}>
-                {study.differently.map((p, i) => (
+                {differently.map((p, i) => (
                   <p key={i} className="font-serif text-[16px] leading-[28px] m-0">
                     {p}
                   </p>
