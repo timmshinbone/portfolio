@@ -91,8 +91,8 @@ const About = () => {
               <p className="font-serif text-[16px] leading-[28px] m-0 max-w-[58ch] text-dark/90 dark:text-light/90">
                 I&apos;m a generalist by accumulation: an architect who became a designer, a designer
                 who ran print and signage production, and an engineer who spent five years leading the
-                people who build software. Today I run my own studio — scoping, designing, shipping
-                and answering for client products end to end — plus{' '}
+                people who build software. Today I run my own studio, where I scope, design, ship
+                and answer for client products end to end. I also run{' '}
                 <strong className="font-semibold">weatherstew</strong>, an indie game studio with a
                 published title. I&apos;m looking for a product, project or design leadership role
                 where all of those jobs count as one.
@@ -114,7 +114,7 @@ const About = () => {
                 sizes="240px"
               />
               <figcaption className="font-serif text-[12px] leading-[18px] text-dark/60 dark:text-light/60 mt-2">
-                A glimpse into my world outside of work.
+                Some of what I do outside of work.
               </figcaption>
             </figure>
           </section>

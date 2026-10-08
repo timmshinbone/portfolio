@@ -77,7 +77,7 @@ const DateLine = () => {
       </div>
       <button
         onClick={openPalette}
-        aria-label={`Search this site — press ${isMac ? "Command K" : "Control K"}`}
+        aria-label={`Search this site (press ${isMac ? "Command K" : "Control K"})`}
         className="inline-flex items-center gap-1.5 font-serif text-[10px] tracking-[0.08em] uppercase text-dark/40 dark:text-light/40 hover:text-dark/70 dark:hover:text-light/70 transition-colors select-none"
       >
         Search

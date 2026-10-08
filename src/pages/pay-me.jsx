@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: 'Full Stack Development',
-    description: 'From websites to mobile apps, I offer complete frontend and backend development using modern frameworks.',
+    description: 'Websites and mobile apps, frontend and backend, built with React, Next.js and Node.',
     price: 'Typical range: $2,000–15,000/project (flexible)',
     link: 'https://buy.stripe.com/28EaEXfuZewEam8gsQ0RG01'
   },
@@ -43,7 +43,7 @@ const services = [
   },
   {
     title: 'Tutoring & Mentorship',
-    description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
+    description: 'One-on-one help learning JavaScript, React, WordPress or game development.',
     price: '$50/hr (bundles and student pricing available)',
     link: 'https://buy.stripe.com/fZufZhaaF6088e0ekI0RG04'
   },

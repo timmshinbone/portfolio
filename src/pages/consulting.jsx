@@ -9,7 +9,7 @@ export default function GameAppConsultingPage() {
         <title>Game &amp; App Consulting | Timm Schoenborn</title>
         <meta
           name="description"
-          content="Get expert game and app consulting for early-stage projects. From wireframes to launch, Timm Schoenborn offers technical strategy and creative direction."
+          content="Game and app consulting for early-stage projects. Timm Schoenborn helps with technical planning and creative direction, from wireframes to launch."
         />
       </Head>
 
@@ -53,14 +53,14 @@ export default function GameAppConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Strategic Planning for Games &amp; Apps
+              Plan the Game or App Before You Build It
             </h2>
             <div style={{ maxWidth: '72ch' }}>
               <p className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85">
-                Whether you&apos;re building a mobile app, browser game, or launching a startup MVP, strategic planning can save thousands in dev costs and wasted time. As a full stack developer and creative consultant, I help small teams and solo creators move from idea to reality — efficiently.
+                Planning a mobile app, a browser game or a startup MVP before anyone writes code can save thousands in development costs, plus a lot of wasted time. I&apos;m a full stack developer and creative consultant, and I help small teams and solo creators get from an idea to a plan they can actually build.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
-                I&apos;ve helped indie devs, entrepreneurs, and agencies prototype games, map product logic, and build technical systems that scale. If you&apos;re stuck trying to decide what tools to use, how to scope your build, or how to go from notes to roadmap — I can help.
+                I&apos;ve helped indie devs, entrepreneurs, and agencies prototype games, map product logic, and build technical systems that scale. If you&apos;re stuck on which tools to use, how to scope the build, or how to turn a pile of notes into a roadmap, that&apos;s the kind of thing I help with.
               </p>
             </div>
           </section>
@@ -71,7 +71,7 @@ export default function GameAppConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              What We&apos;ll Cover Together
+              What We Can Cover
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
@@ -105,7 +105,7 @@ export default function GameAppConsultingPage() {
                 10+ years building apps, games, and educational tools
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Clear planning, fast execution, zero jargon
+                Plain-language planning and a quick turnaround
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
                 Collaborative whiteboard and prototyping sessions
@@ -128,7 +128,7 @@ export default function GameAppConsultingPage() {
               className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '64ch' }}
             >
-              Ready to sketch ideas, define tech scope, or pitch with confidence? Book a consultation below or schedule a 30-minute intro call.
+              If you want to sketch out ideas, pin down the technical scope, or get ready to pitch, book a consultation or start with a 30-minute intro call.
             </p>
             <Link
               href="/hire-me#book-me"

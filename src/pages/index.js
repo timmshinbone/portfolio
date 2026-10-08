@@ -36,6 +36,27 @@ const VideoSlot = () => (
 
 const caseStudies = [
   {
+    slug: 'mobile-locksmith',
+    kicker: 'Local business · Case study',
+    title: 'Mobile Locksmith FL',
+    body: 'A search-first site for a local service business, where the only goal is turning a stressed visitor on a phone into a call.',
+    meta: 'Design · SEO · Performance',
+  },
+  {
+    slug: 'asmbs',
+    kicker: 'Association · Case study',
+    title: 'ASMBS',
+    body: 'Member-facing interfaces and admin tooling for a national medical society, built directly with staff, without a spec to work from.',
+    meta: 'Requirements · Full stack',
+  },
+  {
+    slug: 'hhh',
+    kicker: 'Content platform · Case study',
+    title: 'Healthy Homemade Habits',
+    body: 'A recipe and wellness site my wife runs independently, built so a non-technical content creator never has to call the developer.',
+    meta: 'Design · Build · CMS',
+  },
+  {
     slug: 'flatratedev',
     kicker: 'Platform · Case study',
     title: 'FlatRateDev',
@@ -48,20 +69,6 @@ const caseStudies = [
     title: 'A congressional race',
     body: 'A campaign site built to an immovable deadline, tested end to end, and handed to a non-technical team who had to run it alone.',
     meta: 'Delivery · Stakeholders',
-  },
-  {
-    slug: 'asmbs',
-    kicker: 'Association · Case study',
-    title: 'ASMBS',
-    body: 'Member-facing interfaces and admin tooling for a national medical society, built with staff directly rather than through a spec.',
-    meta: 'Requirements · Full stack',
-  },
-  {
-    slug: 'mobile-locksmith',
-    kicker: 'Local business · Case study',
-    title: 'Mobile Locksmith FL',
-    body: 'A search-first site for a local service business, where the only goal is turning a stressed visitor on a phone into a call.',
-    meta: 'Design · SEO · Performance',
   },
   {
     slug: 'trstudios',
@@ -138,12 +145,13 @@ export default function Home() {
             <div>
               <h2 className="font-serif font-semibold leading-[1.1] tracking-[-0.02em] m-0"
                   style={{ fontSize: 'clamp(26px, 3.8vw, 42px)' }}>
-                A generalist on purpose, not by accident.
+                A generalist, on purpose.
               </h2>
               <p className="font-serif text-[17px] leading-[30px] mt-8 mb-0 max-w-[46ch]">
-                Architecture taught me systems. Engineering taught me what things cost. Teaching and
-                supervising a hundred and fifty developers taught me people. Running my own studio
-                taught me delivery. I&apos;d like to bring all four to one team.
+                Architecture taught me to think in systems, and engineering taught me what things
+                cost. Teaching and supervising a hundred and fifty developers taught me about people,
+                and running my own studio taught me how to deliver. I&apos;d like to bring all four
+                to one team.
               </p>
               <div className="flex flex-wrap gap-4 mt-8">
                 <a
@@ -189,7 +197,7 @@ export default function Home() {
                   The drawing board.
                 </strong>{' '}
                 I earned a B.S. in Architectural Design at the University of Florida and spent years
-                as a professional designer — print, signage and wayfinding systems, including work at
+                as a professional designer doing print, signage and wayfinding systems, including work at
                 Perkins &amp; Will. Designing for real spaces used by real people leaves you with
                 habits: build the system underneath first, sweat every detail, and never forget
                 somebody has to live with what you made.
@@ -200,7 +208,7 @@ export default function Home() {
                 </strong>{' '}
                 In 2019 I went through General Assembly&apos;s Software Engineering Immersive so I
                 could build the things I had been drawing. That year taught me what work actually
-                costs — how to estimate it, how to cut scope honestly, and why any plan that ignores
+                costs: how to estimate it, how to cut scope honestly, and why any plan that ignores
                 the build is just a wish with a deadline attached.
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
@@ -210,7 +218,7 @@ export default function Home() {
                 Then five years at General Assembly, first as Lead Engineering Instructor and then as
                 Supervisor of Engineering. I set the standards our remote teams worked to, ran code
                 review every week, mentored more than 150 developers into the industry, and supervised
-                six to ten instructors — onboarding, scheduling, feedback, escalations, and the
+                six to ten instructors, which meant onboarding, scheduling, feedback, escalations, and the
                 ceremonies that kept concurrent cohorts moving. Watching those developers land jobs is
                 still the part I&apos;m proudest of.
               </p>
@@ -220,7 +228,7 @@ export default function Home() {
                 </strong>{' '}
                 Since 2024 TRStudios has meant owning every part of a project: scoping with the
                 client, designing it, building it in React, Next.js and TypeScript, testing it,
-                launching it, and answering for it afterwards — campaign sites, legal and home
+                launching it, and answering for it afterwards. The work so far includes campaign sites, legal and home
                 services, consumer wellness, and a contract as lead full-stack developer for a
                 national medical association. Nothing sharpens product judgment faster than being the
                 person the client calls.
@@ -229,7 +237,7 @@ export default function Home() {
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
                   After hours.
                 </strong>{' '}
-                I publish games under my own studio, weatherstew — a children&apos;s game on Google
+                I publish games under my own studio, weatherstew: a children&apos;s game on Google
                 Play built end to end in Godot, and Cold Harsh Sea 2.0 in development for Steam. Same
                 muscle as the day job, used for the fun of it.
               </p>
@@ -276,7 +284,7 @@ export default function Home() {
             </h3>
             <p className="font-serif text-[16px] leading-[28px] text-dark/80 dark:text-light/80 mt-5 mb-0 max-w-[58ch]">
               A product, project or design leadership role on a team I can grow with for the long
-              haul. Software, construction, manufacturing — I care more about the problem and the
+              haul. It could be in software, construction or manufacturing. I care more about the problem and the
               people than the industry. Remote, or anywhere in Chicagoland.
             </p>
             <div className="flex flex-wrap gap-4 mt-7">

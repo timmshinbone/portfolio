@@ -19,7 +19,7 @@ function buildCommands(copied) {
       href: "/hire-me#book-me",
     },
     {
-      label: copied ? "Copied!" : `Copy email — ${EMAIL}`,
+      label: copied ? "Copied!" : `Copy email: ${EMAIL}`,
       sub: "Clipboard",
       action: "copy",
     },

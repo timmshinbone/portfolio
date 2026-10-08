@@ -9,7 +9,7 @@ export default function SEOConsultingPage() {
         <title>SEO Consulting &amp; Optimization | Timm Schoenborn</title>
         <meta
           name="description"
-          content="Professional SEO services by Timm Schoenborn. Improve search visibility, performance, and structure for better Google rankings."
+          content="SEO services from Timm Schoenborn: technical audits, page speed, and site structure work to help your site rank better on Google."
         />
       </Head>
 
@@ -30,7 +30,7 @@ export default function SEOConsultingPage() {
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
               style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
             >
-              Drive More Traffic With Smarter SEO
+              Getting Your Site Found on Google
             </h1>
           </header>
 
@@ -53,17 +53,17 @@ export default function SEOConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Technical SEO Tailored to You
+              Technical and On-Page SEO
             </h2>
             <div style={{ maxWidth: '72ch' }}>
               <p className="font-serif text-[16px] leading-[28px] italic m-0 mb-4 text-dark/80 dark:text-light/80">
-                Boost your visibility. Fix slow pages. Outrank your competitors.
+                I look at why your pages load slowly or rank poorly, and then I fix it.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85">
-                I help startups, agencies, and growing businesses improve their site&apos;s technical and on-page SEO — from audit to implementation. With real-world experience in performance tuning, accessibility, semantic markup, and mobile-first optimizations, I&apos;ll help your site stand out in a crowded search landscape.
+                I work with startups, agencies, and growing businesses on technical and on-page SEO, starting with an audit and carrying through to the fixes themselves. The work draws on what I&apos;ve done in performance tuning, accessibility, semantic markup, and mobile-first optimization.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
-                Whether you&apos;re launching a new product, rebuilding your site, or stuck on Core Web Vitals, I&apos;ll identify what&apos;s holding you back and show you how to fix it.
+                If you&apos;re launching a new product, rebuilding your site, or stuck on Core Web Vitals, I&apos;ll find what&apos;s slowing you down and show you how to fix it.
               </p>
             </div>
           </section>
@@ -101,20 +101,20 @@ export default function SEOConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Why It Works
+              How I Work
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Clear reporting, prioritized tasks, no fluff
+                Clear reports, with tasks in priority order
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                No lock-in — actionable insights you can implement yourself or with me
+                No lock-in: you can make the fixes yourself or have me do them
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
                 Includes performance, structure, UX and technical SEO fixes
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Remote-friendly, async-friendly, documentation provided
+                Remote and async work, with written documentation
               </li>
             </ul>
           </section>
@@ -125,19 +125,19 @@ export default function SEOConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Let&apos;s Optimize
+              Where to Start
             </h2>
             <p
               className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '64ch' }}
             >
-              Get the clarity and roadmap you need to make real SEO gains. Book a free discovery call to talk goals, traffic, and tactics.
+              Book a free discovery call and we&apos;ll talk through your goals, your current traffic, and what to fix first.
             </p>
             <Link
               href="/hire-me#book-me"
               className="font-serif text-[16px] text-[#006786] dark:text-[#62c5ee] hover:underline"
             >
-              Schedule your strategy call now →
+              Schedule a strategy call →
             </Link>
           </section>
 

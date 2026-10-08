@@ -9,7 +9,7 @@ export default function FullStackDevPage() {
         <title>Full Stack Development | Timm Schoenborn</title>
         <meta
           name="description"
-          content="Custom full stack development with Timm Schoenborn. From scalable APIs to responsive UI design—modern web and app solutions tailored to your business."
+          content="Custom full stack development with Timm Schoenborn. I build APIs, responsive front ends, and complete web and mobile apps for businesses."
         />
       </Head>
 
@@ -30,7 +30,7 @@ export default function FullStackDevPage() {
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
               style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
             >
-              Modern Apps. Built Right.
+              Websites and Apps, Front to Back
             </h1>
           </header>
 
@@ -53,13 +53,13 @@ export default function FullStackDevPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Complete Development Solutions
+              Start to Finish
             </h2>
             <p
               className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '72ch' }}
             >
-              I specialize in delivering high-performance full stack web and app experiences — from sleek landing pages to complex SaaS platforms. Whether you need help planning architecture, setting up cloud deployments, or refining frontend UI/UX, I bring a decade of hands-on engineering and product experience.
+              I build full stack websites and apps, from single landing pages to complex SaaS platforms. I can plan the architecture, set up cloud deployments, or refine the UI and UX on the front end, and I bring a decade of hands-on engineering and product experience to it.
             </p>
           </section>
 
@@ -93,20 +93,20 @@ export default function FullStackDevPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Why Work With Me?
+              How I Work
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Developer &amp; designer in one — clean UI meets clean code
+                I design and develop, so one person owns both the interface and the code
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Architect first — I help clients avoid technical debt before it happens
+                I plan the architecture first, which keeps technical debt from piling up later
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Real world experience — I&apos;ve launched apps, dashboards, and tools for real businesses
+                I&apos;ve launched apps, dashboards, and tools for working businesses
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Remote ready — async, Slack-friendly, and timezone-savvy
+                I work remotely and asynchronously, on Slack, across time zones
               </li>
             </ul>
           </section>
@@ -117,19 +117,19 @@ export default function FullStackDevPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Ready to Build Something?
+              Start With a Call
             </h2>
             <p
               className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '64ch' }}
             >
-              Let&apos;s talk through your next big thing. You can book a free 30-minute discovery call to walk through your idea, budget, and timeline.
+              Book a free 30-minute discovery call and we&apos;ll go over your idea, your budget and your timeline.
             </p>
             <Link
               href="/hire-me#book-me"
               className="font-serif text-[16px] text-[#006786] dark:text-[#62c5ee] hover:underline"
             >
-              Book your call now →
+              Book a discovery call →
             </Link>
           </section>
 

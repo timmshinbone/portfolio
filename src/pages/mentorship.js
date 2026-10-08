@@ -9,7 +9,7 @@ export default function MentorshipPage() {
         <title>Mentorship &amp; Code Tutoring | Timm Schoenborn</title>
         <meta
           name="description"
-          content="Personalized JavaScript, React, Next.js, and game dev mentorship with Timm Schoenborn. Book a remote session today."
+          content="One-on-one JavaScript, React, Next.js, and game dev mentorship with Timm Schoenborn, a former General Assembly lead instructor. Sessions are remote."
         />
       </Head>
 
@@ -30,7 +30,7 @@ export default function MentorshipPage() {
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
               style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
             >
-              Level Up With Personal Mentorship
+              One-on-One Help Learning to Code
             </h1>
           </header>
 
@@ -53,17 +53,17 @@ export default function MentorshipPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Personalized Mentorship &amp; Code Tutoring
+              Who This Is For
             </h2>
             <div style={{ maxWidth: '72ch' }}>
               <p className="font-serif text-[16px] leading-[28px] italic m-0 mb-4 text-dark/80 dark:text-light/80">
-                Accelerate your journey in web development, app creation, or game design with a mentor who&apos;s been there.
+                Help with web development, app building or game design from someone who&apos;s done the work and taught it.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85">
-                Are you a self-taught developer stuck in tutorial hell? A bootcamp grad trying to land that first job? A designer or entrepreneur looking to level up your technical fluency? You don&apos;t need another YouTube playlist — you need a personalized plan, real accountability, and an expert in your corner.
+                This is for self-taught developers who&apos;ve done the tutorials and want to build something of their own, bootcamp grads looking for a first job, and designers or founders who want to get more comfortable with the technical side. We&apos;ll make a plan around your goals, and I&apos;ll keep you to it.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
-                With over a decade of experience in web development, full stack architecture, and software education, I&apos;ve helped more than 150+ developers sharpen their skills and break into the tech industry. Whether you&apos;re learning JavaScript, React, Next.js, or diving into game engines like Unity, Unreal, or Godot, I&apos;ll meet you exactly where you are and get you where you want to go — faster.
+                I&apos;ve spent over a decade in web development, full stack architecture, and software education, and I&apos;ve helped more than 150 developers improve their skills and get into the tech industry. I can help with JavaScript, React and Next.js, and with game engines like Unity, Unreal and Godot. We start from what you already know.
               </p>
             </div>
           </section>
@@ -74,7 +74,7 @@ export default function MentorshipPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              What You&apos;ll Learn (Tailored To You)
+              What We Can Work On
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
@@ -90,7 +90,7 @@ export default function MentorshipPage() {
                 Career Coaching: portfolios, GitHub reviews, job search strategy, mock interviews
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                SEO &amp; Performance Optimization: build faster, rank higher, reach more users
+                SEO &amp; Performance Optimization: faster pages and better search rankings
               </li>
             </ul>
           </section>
@@ -101,23 +101,23 @@ export default function MentorshipPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Why Choose Me?
+              My Background
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Experienced educator — former lead instructor at General Assembly, trained 150+ developers
+                Former lead instructor at General Assembly, where I trained 150+ developers
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Results-driven — students now working at top tech companies
+                Former students of mine now work at well-known tech companies
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Project-based learning — we&apos;ll build real apps, not just watch videos
+                Project-based: we&apos;ll spend our time building real apps
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Flexible format — one-off sessions or structured multi-week curriculum
+                Book a one-off session or a structured multi-week curriculum
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Remote first — learn from anywhere in the world, on your schedule
+                Remote, so you can join from anywhere and pick times that suit you
               </li>
             </ul>
           </section>
@@ -128,19 +128,19 @@ export default function MentorshipPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-4"
               style={{ fontSize: 'clamp(18px, 2.2vw, 22px)' }}
             >
-              Ready to Start?
+              Getting Started
             </h2>
             <p
               className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '64ch' }}
             >
-              Whether you want to polish your portfolio, prep for interviews, or finally launch that app — you can book a free 30-minute discovery call today.
+              If you want to polish a portfolio, prepare for interviews or finally ship that app, start with a free 30-minute discovery call.
             </p>
             <Link
               href="/hire-me#book-me"
               className="font-serif text-[16px] text-[#006786] dark:text-[#62c5ee] hover:underline"
             >
-              Grab a time that works for you →
+              Pick a time on my calendar →
             </Link>
           </section>
 

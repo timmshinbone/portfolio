@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: 'Full Stack Development',
-    description: 'From websites to mobile apps, I offer complete frontend and backend development using modern frameworks.',
+    description: 'Websites and mobile apps, frontend and backend, built with React, Next.js and Node.',
     price: 'Typical range: $2,000–$15,000/project (rates flexible)',
     serviceLink: 'development',
   },
@@ -24,7 +24,7 @@ const services = [
   },
   {
     title: 'Tutoring & Mentorship',
-    description: 'Learn JavaScript, React, WordPress, or game dev principles with personalized support.',
+    description: 'One-on-one help learning JavaScript, React, WordPress or game development.',
     price: '$50/hr (bundles and student pricing available)',
     serviceLink: 'mentorship',
   },
@@ -52,7 +52,7 @@ export default function HireMe() {
     <>
       <Head>
         <title>Hire a Freelance Web Developer &amp; SEO Consultant | Timm Schoenborn</title>
-        <meta name="description" content="Remote full stack development, SEO consulting, and app strategy from Timm Schoenborn — a seasoned engineer and mentor helping businesses build better tech." />
+        <meta name="description" content="Remote full stack development, SEO consulting, and app strategy from Timm Schoenborn, an experienced engineer and former coding instructor." />
       </Head>
 
       <main className="text-dark dark:text-light">
@@ -64,10 +64,10 @@ export default function HireMe() {
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 mb-6 max-w-[24ch]"
               style={{ fontSize: 'clamp(34px, 5.4vw, 68px)' }}
             >
-              Build Something Great With Me
+              Services and Rates
             </h1>
             <p className="font-serif text-[18px] leading-[30px] max-w-[52ch] m-0 text-dark/80 dark:text-light/80">
-              Remote full stack development, SEO consulting, and app strategy from a seasoned engineer and mentor.
+              Remote full stack development, SEO consulting, app strategy and tutoring. Rates are below, and discovery calls are free.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function HireMe() {
               Use the tool below to schedule a free discovery call or consultation session.
             </p>
             <p className="font-serif text-[16px] leading-[28px] max-w-[52ch] m-0 mb-6 text-dark/80 dark:text-light/80">
-              Please add which of my services you are interested in when you add details to the booking.
+              When you book, add a note saying which service you&apos;re interested in.
             </p>
             <div
               className="bg-[#eae9e9] dark:bg-[#2d2b2b] rounded-sm overflow-hidden"

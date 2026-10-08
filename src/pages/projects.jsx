@@ -8,45 +8,45 @@ import { motion, useReducedMotion } from 'framer-motion'
 const repos = [
   {
     title: 'Cold Harsh Sea',
-    type: 'Game — proof of concept',
+    type: 'Game · proof of concept',
     liveUrl: 'https://timmshinbone.github.io/cold_harsh_sea/',
     ghUrl: 'https://github.com/timmshinbone/cold_harsh_sea',
   },
   {
     title: 'Monster Pets',
-    type: 'Teaching — MERN stack lesson app',
+    type: 'Teaching · MERN stack lesson app',
     liveUrl: 'https://monster-pets.netlify.app/',
     ghUrl: 'https://github.com/sei-ec-remote/monster-pets-client',
   },
   {
     title: 'AvoGatoCollector',
-    type: 'Teaching — Django collection tracker',
+    type: 'Teaching · Django collection tracker',
     liveUrl: 'https://avogatocollector.onrender.com/cats/2',
     ghUrl: 'https://github.com/timmshinbone/avocado_catcollector/tree/main',
   },
   {
     title: 'Library API',
-    type: 'Teaching API — seed scripts, curl scripts, endpoint tables',
+    type: 'Teaching API · seed scripts, curl scripts, endpoint tables',
     ghUrl: 'https://github.com/sei-ec-remote/library-api',
   },
   {
     title: 'React Auth Boilerplate',
-    type: 'Boilerplate — React with authentication',
+    type: 'Boilerplate · React with authentication',
     ghUrl: 'https://github.com/timmshinbone/react-auth-boilerplate',
   },
   {
     title: 'Express + Mongoose + LiquidJS Boilerplate',
-    type: 'Boilerplate — full stack with Shopify templating',
+    type: 'Boilerplate · full stack with Shopify templating',
     ghUrl: 'https://github.com/timmshinbone/mongoose-liquid-express-boilerplate',
   },
   {
     title: 'Express + Mongoose Auth API',
-    type: 'Boilerplate — Node/Express REST API with auth',
+    type: 'Boilerplate · Node/Express REST API with auth',
     ghUrl: 'https://github.com/timmshinbone/express-mongoose-auth-api-boilerplate',
   },
   {
     title: 'Django REST Framework API',
-    type: 'Boilerplate — Python/Django REST with auth',
+    type: 'Boilerplate · Python/Django REST with auth',
     ghUrl: 'https://github.com/timmshinbone/django-auth-api-boilerplate',
   },
 ]
@@ -112,7 +112,7 @@ const projects = () => {
     <>
       <Head>
         <title>Timm Schoenborn | Projects Page</title>
-        <meta name="description" content="Full stack projects and case studies by Timm Schoenborn — web apps, marketing sites, developer tooling, and teaching resources." />
+        <meta name="description" content="Full stack projects and case studies by Timm Schoenborn, including web apps, marketing sites, developer tooling, and teaching resources." />
       </Head>
       <main className="text-dark dark:text-light">
         <Layout className="pt-10 pb-16">

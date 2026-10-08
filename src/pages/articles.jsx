@@ -79,7 +79,7 @@ const articles = () => {
         </Head>
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden '>
             <Layout className='pt-16'>
-                <AnimatedText text='A Passion for Teaching' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
+                <AnimatedText text='Written to Teach' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
                 <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
                     <FeaturedArticle
                         title='Understanding the Core of JavaScript'
@@ -90,20 +90,20 @@ const articles = () => {
                     />
                     <FeaturedArticle
                         title='Simplifying JavaScript: The Power and Elegance of Arrow Functions'
-                        summary='The Arrow Function has become a staple for developers aiming to write cleaner, more concise code. Whether you’re a seasoned developer or taking your first steps into the realm of programming, understanding arrow functions is akin to discovering a hidden shortcut in your favorite video game.'
+                        summary="Arrow functions have become a staple for developers who want cleaner, shorter code. New to programming or not, learning them well is a bit like finding a hidden shortcut in your favorite video game."
                         image={art2Img}
                         link='https://medium.com/@timmschoenborn/simplifying-javascript-the-power-and-elegance-of-arrow-functions-f18e9634ec85'
                     />
                     <FeaturedArticle
                         title='From Foundations to Pixels: Architecting Web Development Principles'
-                        summary="Let’s embark on a journey to uncover how the timeless wisdom of architectural design shapes the virtual spaces we inhabit."
+                        summary="How the principles I learned studying architecture carry over into building for the web."
                         time='5 min read'
                         image={art4Img}
                         link='https://medium.com/@timmschoenborn/from-foundations-to-pixels-architecting-web-development-principles-780258fdb56f'
                     />
                     <FeaturedArticle
                         title='Crafting Your Digital Backbone: A Starter’s Guide to Planning a SQL Database for Your Small Web API'
-                        summary='Navigating the realms of digital architecture can sometimes feel like trying to decode an ancient manuscript. However, at the heart of many web applications and services lies a surprisingly understandable and manageable component: the SQL database.'
+                        summary='Back-end architecture can be hard to make sense of at first. The SQL database behind many web apps and services is more approachable than it looks, and this guide walks through planning one for a small web API.'
                         image={art5Img}
                         link='https://medium.com/@timmschoenborn/crafting-your-digital-backbone-a-starters-guide-to-planning-a-sql-database-for-your-small-web-api-b3a7c74e1519'
                     />

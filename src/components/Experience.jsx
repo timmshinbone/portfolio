@@ -13,7 +13,7 @@ const jobs = [
   },
   {
     role: 'Lead Full Stack Developer (Contract)',
-    company: 'ASMBS — American Society for Metabolic and Bariatric Surgery',
+    company: 'ASMBS (American Society for Metabolic and Bariatric Surgery)',
     location: '',
     time: '2025',
     bullets: [
@@ -36,9 +36,9 @@ const jobs = [
     location: '',
     time: '2012 – 2019',
     bullets: [
-      'Branded Environments Designer, Perkins & Will (2016–19) — designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers.',
-      'Project Manager, FastSigns (2014–16) — led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
-      'Production Manager, Quartet Digital Printing (2012–15) — managed staff, inventory and equipment; raised output and cut costs for Fortune 500 and university clients.',
+      'Branded Environments Designer, Perkins & Will (2016–19): designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers.',
+      'Project Manager, FastSigns (2014–16): led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
+      'Production Manager, Quartet Digital Printing (2012–15): managed staff, inventory and equipment; raised output and cut costs for Fortune 500 and university clients.',
     ],
   },
   {
@@ -47,7 +47,7 @@ const jobs = [
     location: '',
     time: 'Early career',
     bullets: [
-      'Ran the café and the used-book buy/sell desk through peak semester rushes — staffing, inventory, pricing and cash handling — first experience owning a small operation end to end.',
+      'Ran the café and the used-book buy/sell desk through peak semester rushes, covering staffing, inventory, pricing and cash handling. It was my first experience owning a small operation end to end.',
     ],
   },
 ]
