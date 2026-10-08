@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
 import { caseStudies, getCaseStudy } from '@/data/caseStudies'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 
 const EMAIL = 'timmschoenborn@gmail.com'
 
@@ -57,6 +57,104 @@ const FigLabel = ({ n }) => (
 // Hide unfilled "[ ... ]" placeholders on the live page
 const isPlaceholder = (s) => typeof s === 'string' && s.trim().startsWith('[')
 
+// Hero: autoplaying video if present, static image fallback, no grayscale treatment
+const HeroMedia = ({ video, image, alt }) => {
+  if (video) {
+    return (
+      <div
+        className="rounded-sm overflow-hidden relative bg-[#eae9e9] dark:bg-[#2d2b2b]"
+        style={{ aspectRatio: '16 / 9' }}
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          src={video}
+        />
+      </div>
+    )
+  }
+  if (image) {
+    return (
+      <div
+        className="rounded-sm overflow-hidden relative bg-[#eae9e9] dark:bg-[#2d2b2b]"
+        style={{ aspectRatio: '16 / 9' }}
+      >
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          className="object-cover object-top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+          priority
+        />
+      </div>
+    )
+  }
+  return <ImgPlaceholder ratio="16/9" alt={alt} />
+}
+
+// Modal that plays the vertical mobile walkthrough video
+const MobileVideoModal = ({ videoUrl, onClose, prefersReduced }) => {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        key="mobile-modal-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={prefersReduced ? { duration: 0 } : { duration: 0.18 }}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+        onClick={onClose}
+      >
+        <motion.div
+          key="mobile-modal-content"
+          initial={prefersReduced ? false : { scale: 0.96, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={prefersReduced ? false : { scale: 0.96, opacity: 0 }}
+          transition={{ duration: 0.18 }}
+          className="relative flex-shrink-0"
+          style={{ aspectRatio: '9 / 16', maxHeight: '85dvh', maxWidth: 'min(100%, 420px)' }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            playsInline
+            controls
+            className="w-full h-full rounded-sm object-cover bg-black"
+            src={videoUrl}
+          />
+          <button
+            onClick={onClose}
+            aria-label="Close video"
+            className="absolute top-2.5 right-2.5 w-8 h-8 flex items-center justify-center rounded-full bg-black/60 text-white text-[13px] font-sans font-bold hover:bg-black/80 transition-colors"
+          >
+            ✕
+          </button>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
 export default function CaseStudy({ study }) {
   const prefersReduced = useReducedMotion()
   const problem = study.problem.filter((p) => !isPlaceholder(p))
@@ -75,6 +173,9 @@ export default function CaseStudy({ study }) {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Mobile video modal state
+  const [mobileModalOpen, setMobileModalOpen] = useState(false)
 
   // Click-to-copy email state (item 8)
   const [copied, setCopied] = useState(false)
@@ -159,12 +260,34 @@ export default function CaseStudy({ study }) {
 
           {/* ── 16:9 Hero ───────────────────────────────────── */}
           <figure className="m-0 mt-[28px]">
-            <ImgPlaceholder ratio="16/9" src={study.heroImage} alt={study.heroCaption} />
+            <HeroMedia
+              video={study.heroVideo}
+              image={study.heroImage}
+              alt={study.heroCaption}
+            />
             <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px] max-w-[56ch]">
               <FigLabel n={1} />
               {study.heroCaption}
             </figcaption>
+            {study.mobileVideo && (
+              <p className="m-0 mt-3">
+                <button
+                  onClick={() => setMobileModalOpen(true)}
+                  className="font-serif text-[14px] text-[#006786] dark:text-[#62c5ee] hover:underline underline-offset-2"
+                >
+                  Want to see what it looks like on mobile? Quick walkthrough →
+                </button>
+              </p>
+            )}
           </figure>
+
+          {mobileModalOpen && (
+            <MobileVideoModal
+              videoUrl={study.mobileVideo}
+              onClose={() => setMobileModalOpen(false)}
+              prefersReduced={prefersReduced}
+            />
+          )}
 
           {/* ── Problem ─────────────────────────────────────── */}
           <section className="pt-[56px] pb-[28px]">
@@ -236,8 +359,8 @@ export default function CaseStudy({ study }) {
             >
               {study.figures.map(({ src, caption }, i) => (
                 <figure key={i} className="m-0">
-                  <ImgPlaceholder ratio="4/3" src={src} alt={caption} />
-                  <figcaption className="font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 mt-3">
+                  {src && <ImgPlaceholder ratio="4/3" src={src} alt={caption} />}
+                  <figcaption className={`font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 ${src ? 'mt-3' : ''}`}>
                     <FigLabel n={i + 2} />
                     {caption}
                   </figcaption>

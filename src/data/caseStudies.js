@@ -11,6 +11,8 @@ export const caseStudies = [
       outcome: '+40% calls from organic search in year one',
     },
     heroImage: '/images/projects/mobileLocksmith/01-home-desktop-hero.png',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/walkthrough-mobile.mp4',
     heroCaption: 'The phone number is the product. Everything else on the page supports it.',
     problemHead: 'The customer is standing outside',
     problem: [
@@ -64,6 +66,8 @@ export const caseStudies = [
       outcome: '12 features shipped across both systems',
     },
     heroImage: '/images/projects/asmbs/01-home-desktop-hero.png',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/asmbs-walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/asmbs-walkthrough-mobile.mp4',
     heroCaption: 'Member-facing tools sit on top of years of association data. The job was making them usable without breaking any of it.',
     problemHead: 'Two systems, one staff, no spec',
     problem: [
@@ -215,6 +219,8 @@ export const caseStudies = [
       outcome: '2,400 monthly visits and growing',
     },
     heroImage: '/images/projects/hhh/01-home-desktop-hero.png',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/hhh-walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/hhh-walkthrough-mobile.mp4',
     heroCaption: 'A content-first home page that puts recipes, habits and guides in front of someone who just wants to eat better.',
     problemHead: 'The constraint was the collaborator',
     problem: [
@@ -268,6 +274,8 @@ export const caseStudies = [
       outcome: '6 builds delivered, zero post-launch scope disputes',
     },
     heroImage: '/images/projects/FRDHomepage.jpg',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/frd-walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/frd-walkthrough-mobile.mp4',
     heroCaption: 'The pricing page does the selling: three fixed packages, and a comparison that shows what the same build costs elsewhere.',
     problemHead: 'The hard part was pricing',
     problem: [
@@ -322,6 +330,8 @@ export const caseStudies = [
       outcome: '$24k raised through the site',
     },
     heroImage: '/images/projects/albersCongress.png',
+    // heroVideo: 'https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto,f_auto,w_1280,vc_auto/portfolio/albers-desktop.mp4',
+    // mobileVideo: 'https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto,f_auto,w_390,vc_auto/portfolio/albers-mobile.mp4',
     heroCaption: 'Donate is never more than one tap away, on every page and at every screen size.',
     problemHead: 'The deadline was the spec',
     problem: [
@@ -375,6 +385,8 @@ export const caseStudies = [
       outcome: '11 client projects delivered',
     },
     heroImage: '/images/projects/trstudiosllc/01-home-desktop-hero.png',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/trs-walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/trs-walkthrough-mobile.mp4',
     heroCaption: 'One studio, three offers: custom development, workshops and consultation.',
     problemHead: "Freelance doesn't scale; a studio might",
     problem: [
