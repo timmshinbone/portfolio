@@ -13,11 +13,11 @@ export const caseStudies = [
     heroImage: '/images/projects/mobileLocksmith/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/walkthrough-mobile.mp4',
-    heroCaption: 'The phone number is the product. Everything else on the page supports it.',
+    heroCaption: 'A short walkthrough of Mobile Locksmith FL - visit the live site at the link below.',
     problemHead: 'The customer is standing outside',
     problem: [
       'Nobody browses a locksmith\'s website. They search on a phone, often at night, and pick whichever result looks trustworthy and loads first. That makes speed, local search ranking and a visible phone number the whole brief.',
-      '[ Placeholder: where the business was before — no site, poor ranking, calls coming only through a directory. ]',
+      '[ Placeholder: where the business was before - no site, poor ranking, calls coming only through a directory. ]',
     ],
     whatIDid: [
       {
@@ -48,7 +48,7 @@ export const caseStudies = [
       { stat: '#3', label: 'Local ranking for "locksmith near me"' },
     ],
     differently: [
-      '[ Placeholder: an honest lesson — e.g. I\'d add call tracking at launch, so the result is measured rather than reported by the owner. ]',
+      '[ Placeholder: an honest lesson - e.g. I\'d add call tracking at launch, so the result is measured rather than reported by the owner. ]',
     ],
     nextSlug: 'asmbs',
     nextLabel: 'ASMBS member tools',
@@ -68,11 +68,11 @@ export const caseStudies = [
     heroImage: '/images/projects/asmbs/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/asmbs-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/asmbs-walkthrough-mobile.mp4',
-    heroCaption: 'Member-facing tools sit on top of years of association data. The job was making them usable without breaking any of it.',
+    heroCaption: 'A short walkthrough of ASMBS - visit the live site at the link below.',
     problemHead: 'Two systems, one staff, no spec',
     problem: [
       'An association lives in its data: memberships, certifications, events, dues. At ASMBS that data spanned an Association Management System and a WordPress content system, and the staff who depended on both had requests that had never been written down as requirements.',
-      '[ Placeholder: the specific pain — slow admin pages, manual data entry, members unable to find something — that made this work urgent. ]',
+      '[ Placeholder: the specific pain - slow admin pages, manual data entry, members unable to find something - that made this work urgent. ]',
     ],
     whatIDid: [
       {
@@ -103,7 +103,7 @@ export const caseStudies = [
       { stat: '~7 hrs', label: 'Staff time saved per week' },
     ],
     differently: [
-      '[ Placeholder: an honest lesson — e.g. I\'d push for a written system map in week one; most of my time went to rediscovering how the two systems depended on each other. ]',
+      '[ Placeholder: an honest lesson - e.g. I\'d push for a written system map in week one; most of my time went to rediscovering how the two systems depended on each other. ]',
     ],
     nextSlug: 'print-production',
     nextLabel: 'Print production',
@@ -221,7 +221,7 @@ export const caseStudies = [
     heroImage: '/images/projects/hhh/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/hhh-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/hhh-walkthrough-mobile.mp4',
-    heroCaption: 'A content-first home page that puts recipes, habits and guides in front of someone who just wants to eat better.',
+    heroCaption: 'A short walkthrough of Healthy Homemade Habits - visit the live site at the link below.',
     problemHead: 'The constraint was the collaborator',
     problem: [
       'My wife knows food and healthy habits. She does not want to open a code editor. The brief was simple: build something she can write, update and grow on her own terms, and make it look like something worth trusting.',
@@ -276,7 +276,7 @@ export const caseStudies = [
     heroImage: '/images/projects/FRDHomepage.jpg',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/frd-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/frd-walkthrough-mobile.mp4',
-    heroCaption: 'The pricing page does the selling: three fixed packages, and a comparison that shows what the same build costs elsewhere.',
+    heroCaption: 'A short walkthrough of FlatRateDev - visit the live site at the link below.',
     problemHead: 'The hard part was pricing',
     problem: [
       'Small businesses asking for a website can\'t tell the difference between a $1,500 build and a $15,000 one, so they do the only rational thing: they stall. Every discovery call I ran spent its first twenty minutes on the same three questions, and the proposals that followed were bespoke, slow to write, and easy to compare unfavorably against a template service.',
@@ -326,17 +326,17 @@ export const caseStudies = [
     facts: {
       role: 'Project lead, designer, full stack developer',
       timeline: '[ 20XX ] · [ N ] weeks to launch',
-      build: '[ Stack — e.g. .NET / React ] · donation integration · responsive',
+      build: '[ Stack - e.g. .NET / React ] · donation integration · responsive',
       outcome: '$24k raised through the site',
     },
-    heroImage: '/images/projects/albersCongress.png',
-    // heroVideo: 'https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto,f_auto,w_1280,vc_auto/portfolio/albers-desktop.mp4',
-    // mobileVideo: 'https://res.cloudinary.com/YOUR_CLOUD/video/upload/q_auto,f_auto,w_390,vc_auto/portfolio/albers-mobile.mp4',
+    heroImage: '/images/projects/albers4con/01-home-desktop-hero.png',
+    heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/a4c-walkthrough-desktop.mp4',
+    mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/a4c-walkthrough-mobile.mp4',
     heroCaption: 'Donate is never more than one tap away, on every page and at every screen size.',
     problemHead: 'The deadline was the spec',
     problem: [
       'A campaign has one date that can\'t move. Everything else (platform copy, endorsements, events, the candidate\'s photo) changes constantly, and whoever is on the team that week makes the edits, with no developer involved.',
-      '[ Placeholder: describe the starting point — no site, an old site, a template that couldn\'t take donations — and the one thing the campaign most needed the site to do. ]',
+      '[ Placeholder: describe the starting point - no site, an old site, a template that couldn\'t take donations - and the one thing the campaign most needed the site to do. ]',
     ],
     whatIDid: [
       {
@@ -357,9 +357,9 @@ export const caseStudies = [
       },
     ],
     figures: [
-      { caption: 'Every path to the donate button, tested before launch.' },
-      { caption: 'Policy positions, written for a phone screen.' },
-      { caption: 'Most visitors arrived from social on a phone.' },
+      { src: '/images/projects/albers4con/07-contact-desktop-hero.png', caption: 'Every path to the donate button, tested before launch.' },
+      { src: '/images/projects/albers4con/06-issues-desktop-hero.png', caption: 'Policy positions, written for a phone screen.' },
+      { src: '/images/projects/albers4con/03-home-mobile-hero.png', caption: 'Most visitors arrived from social on a phone.' },
     ],
     results: [
       { stat: '18', label: 'Days from kickoff to launch' },
@@ -367,7 +367,7 @@ export const caseStudies = [
       { stat: '30+', label: 'Content updates made by staff without a developer' },
     ],
     differently: [
-      '[ Placeholder: an honest lesson — e.g. I\'d build the content editing workflow first, not last, because that is the part the client lives in every day after I leave. ]',
+      '[ Placeholder: an honest lesson - e.g. I\'d build the content editing workflow first, not last, because that is the part the client lives in every day after I leave. ]',
     ],
     nextSlug: 'trstudios',
     nextLabel: 'TRStudios',
@@ -387,7 +387,7 @@ export const caseStudies = [
     heroImage: '/images/projects/trstudiosllc/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/trs-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/trs-walkthrough-mobile.mp4',
-    heroCaption: 'One studio, three offers: custom development, workshops and consultation.',
+    heroCaption: 'A short walkthrough of TRStudios - visit the live site at the link below.',
     problemHead: "Freelance doesn't scale; a studio might",
     problem: [
       'After years of freelancing I had the skills but not the structure: every engagement started from zero, and there was no way to grow past the hours I could personally bill.',
@@ -422,7 +422,7 @@ export const caseStudies = [
       { stat: '14', label: 'Workshops or consultations run' },
     ],
     differently: [
-      "[ Placeholder: an honest lesson — e.g. I'd commit to one in-house product at a time; four in parallel means none of them ships as fast as it should. ]",
+      "[ Placeholder: an honest lesson - e.g. I'd commit to one in-house product at a time; four in parallel means none of them ships as fast as it should. ]",
     ],
     nextSlug: 'teaching',
     nextLabel: 'Teaching toolkit at General Assembly',
@@ -474,7 +474,7 @@ export const caseStudies = [
       { stat: '~50%', label: 'Improvement in success and graduation rates' },
     ],
     differently: [
-      "[ Placeholder: an honest lesson — e.g. I'd version the boilerplates alongside the curriculum; drift between the two cost students time every time a dependency moved. ]",
+      "[ Placeholder: an honest lesson - e.g. I'd version the boilerplates alongside the curriculum; drift between the two cost students time every time a dependency moved. ]",
     ],
     nextSlug: 'mobile-locksmith',
     nextLabel: 'Mobile Locksmith FL',
