@@ -8,16 +8,16 @@ const jobs = [
     time: '2024 – Present',
     bullets: [
       'Own design, implementation, QA and launch for production React, Next.js and TypeScript products across political campaigns, legal, home services and consumer wellness.',
-      'Ship through Git-based CI/CD with preview deployments; write Playwright suites and run accessibility and SEO testing before every launch.',
+      'Ship through Git-based CI/CD with preview deployments; write Playwright suites and run accessibility and SEO/AEO testing before every launch.',
     ],
   },
   {
-    role: 'Lead Full Stack Developer (Contract)',
+    role: 'Manager, Software Engineering (Contract)',
     company: 'ASMBS (American Society for Metabolic and Bariatric Surgery)',
     location: '',
     time: '2025',
     bullets: [
-      'Built member-facing interfaces and admin tooling for a national medical association, working with staff directly to turn requirements into shipped features.',
+      'Led full stack work on a national medical association\'s WordPress site and Symfony member management system: updated the stack with no payment downtime, merged duplicate member records without data loss, and shipped 10+ features.',
     ],
   },
   {
@@ -27,7 +27,7 @@ const jobs = [
     time: '2019 – 2024',
     bullets: [
       'Supervised a team of 6–10 instructors and teaching assistants across concurrent remote cohorts: onboarding, scheduling, performance feedback and escalations.',
-      'Taught daily cohorts of 15–25 and mentored 150+ developers into the industry; ran Agile ceremonies and milestone planning, and shipped internal tooling.',
+      'Taught daily cohorts of 15–25 and mentored 150+ developers; ran Agile ceremonies and milestone planning, and shipped internal tooling.',
     ],
   },
   {
@@ -38,7 +38,7 @@ const jobs = [
     bullets: [
       'Branded Environments Designer, Perkins & Will (2016–19): designed, planned and implemented complex signage systems for projects worldwide alongside architects and engineers, and managed projects from the design side.',
       'Project Manager, FastSigns (2014–16): managed signage projects for large college buildings, including Northwestern University projects; led cross-functional teams on scope, schedule and resources to deliver on time and on budget.',
-      'Production and Project Manager, Quartet Digital Printing (2012–15): ran production for a crew of about 15 doing high-volume printing for colleges and Evanston businesses, plus large-format, bindery and finishing work; managed staff, inventory and equipment, and raised output and cut costs for Fortune 500 and university clients.',
+      'Production and Project Manager, Quartet Digital Printing (2012–15): ran production for a crew of about 20 across three locations doing high-volume printing for colleges and Chicago area businesses, plus large-format, bindery and finishing work; managed staff, inventory and equipment, and raised output and cut costs for Fortune 500 and university clients.',
     ],
   },
   {
@@ -47,7 +47,7 @@ const jobs = [
     location: '',
     time: 'Early career',
     bullets: [
-      'Ran the café and the used-book buy/sell desk through peak semester rushes, covering staffing, inventory, pricing and cash handling. It was my first experience owning a small operation end to end.',
+      'Ran the café and the used-book buy/sell desk through peak semester rushes, covering staffing, inventory, pricing and cash handling. It was my first experience running a small operation from top to bottom.',
     ],
   },
 ]

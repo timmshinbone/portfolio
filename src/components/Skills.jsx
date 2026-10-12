@@ -3,7 +3,7 @@ import React from 'react'
 const skillGroups = [
   {
     label: 'Leadership',
-    text: 'Team supervision & hiring · mentoring and feedback · Agile ceremonies & milestone planning · escalations · stakeholder communication',
+    text: 'Project & production management · scheduling & resourcing · budgets · vendor management · team supervision & hiring · mentoring and feedback · Agile ceremonies & milestone planning · stakeholder communication',
   },
   {
     label: 'Design',
@@ -11,7 +11,7 @@ const skillGroups = [
   },
   {
     label: 'Build',
-    text: 'React · Next.js · TypeScript · Node · Tailwind, Sass · Playwright, Jest · Git-based CI/CD · Docker · REST APIs · Godot',
+    text: 'React · Next.js · TypeScript · Node · WordPress · PHP · Symfony · Tailwind, Sass · Playwright, Jest · Git-based CI/CD · Docker · REST APIs · Godot · Unity · Unreal',
   },
 ]
 

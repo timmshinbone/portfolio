@@ -26,17 +26,17 @@ const services = [
   {
     title: 'Game & App Consulting',
     description: 'Plan features, review your tech stack, and avoid pitfalls in early-stage game or app development.',
-    price: 'Starts around $150/session (negotiable)',
+    price: 'Starts at $150/session (negotiable)',
     link: 'https://buy.stripe.com/6oUfZh5Upago1PC4K80RG00'
   },
   {
     title: 'Full Stack Development',
     description: 'Websites and mobile apps, frontend and backend, built with React, Next.js and Node.',
-    price: 'Typical range: $2,000–15,000/project (flexible)',
+    price: 'Typical range: $2,000–$15,000/project (flexible)',
     link: 'https://buy.stripe.com/28EaEXfuZewEam8gsQ0RG01'
   },
   {
-    title: 'SEO Optimization',
+    title: 'SEO/AEO Optimization',
     description: "Improve your site's speed, metadata, accessibility, and visibility on search engines.",
     price: 'Starts at $300/site (negotiable)',
     link: 'https://buy.stripe.com/9B628raaF1JS0Ly6Sg0RG02'
@@ -57,7 +57,7 @@ export default function PayMe() {
   return (
     <>
       <Head>
-        <title>Support or Hire Me | Timm's Portfolio</title>
+        <title>Payments | Timm Schoenborn</title>
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden">
         <Layout className="pt-16">
@@ -65,7 +65,7 @@ export default function PayMe() {
             className="font-serif font-bold text-dark dark:text-light tracking-[-0.02em] mb-4"
             style={{ fontSize: 'clamp(34px, 5.4vw, 68px)', lineHeight: 1.08 }}
           >
-            Support My Work or Hire Me
+            Pay for a Service or Leave a Tip
           </h1>
 
           <ThickThinRule />

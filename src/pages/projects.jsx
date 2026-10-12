@@ -111,7 +111,7 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Timm Schoenborn | Projects Page</title>
+        <title>Projects and Case Studies | Timm Schoenborn</title>
         <meta name="description" content="Projects and case studies by Timm Schoenborn, including web apps, marketing sites, developer tooling, teaching resources, and print production and signage project management." />
       </Head>
       <main className="text-dark dark:text-light">
@@ -126,7 +126,7 @@ const projects = () => {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8"
               style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
             >
-              A Selection of Some of My More Recent Work.
+              Projects I&apos;ve managed, designed and built
             </h1>
             <div
               style={{

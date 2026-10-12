@@ -60,7 +60,7 @@ export default function GameAppConsultingPage() {
                 Planning a mobile app, a browser game or a startup MVP before anyone writes code can save thousands in development costs, plus a lot of wasted time. I&apos;m a full stack developer and creative consultant, and I help small teams and solo creators get from an idea to a plan they can actually build.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
-                I&apos;ve helped indie devs, entrepreneurs, and agencies prototype games, map product logic, and build technical systems that scale. If you&apos;re stuck on which tools to use, how to scope the build, or how to turn a pile of notes into a roadmap, that&apos;s the kind of thing I help with.
+                I&apos;ve helped indie devs, entrepreneurs and agencies prototype games, map product logic and plan their technical systems. If you&apos;re stuck on which tools to use, how to scope the build, or how to turn a pile of notes into a roadmap, that&apos;s the kind of thing I help with.
               </p>
             </div>
           </section>
@@ -102,7 +102,7 @@ export default function GameAppConsultingPage() {
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                10+ years building apps, games, and educational tools
+                7+ years building apps, games and educational tools
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
                 Plain-language planning and a quick turnaround

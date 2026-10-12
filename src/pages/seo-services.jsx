@@ -6,10 +6,10 @@ export default function SEOConsultingPage() {
   return (
     <>
       <Head>
-        <title>SEO Consulting &amp; Optimization | Timm Schoenborn</title>
+        <title>SEO/AEO Consulting &amp; Optimization | Timm Schoenborn</title>
         <meta
           name="description"
-          content="SEO services from Timm Schoenborn: technical audits, page speed, and site structure work to help your site rank better on Google."
+          content="SEO/AEO services from Timm Schoenborn: technical audits, page speed, and site structure work to help your site rank better on Google."
         />
       </Head>
 
@@ -24,7 +24,7 @@ export default function SEOConsultingPage() {
               </Link>
             </p>
             <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-[14px]">
-              SEO Consulting &amp; Optimization
+              SEO/AEO Consulting &amp; Optimization
             </span>
             <h1
               className="font-serif font-semibold leading-[1.06] tracking-[-0.025em] m-0 max-w-[24ch]"
@@ -53,14 +53,14 @@ export default function SEOConsultingPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Technical and On-Page SEO
+              Technical and On-Page SEO/AEO
             </h2>
             <div style={{ maxWidth: '72ch' }}>
               <p className="font-serif text-[16px] leading-[28px] italic m-0 mb-4 text-dark/80 dark:text-light/80">
                 I look at why your pages load slowly or rank poorly, and then I fix it.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 mb-5 text-dark/85 dark:text-light/85">
-                I work with startups, agencies, and growing businesses on technical and on-page SEO, starting with an audit and carrying through to the fixes themselves. The work draws on what I&apos;ve done in performance tuning, accessibility, semantic markup, and mobile-first optimization.
+                I work with startups, agencies, and growing businesses on technical and on-page SEO/AEO, starting with an audit and carrying through to the fixes themselves. The work draws on what I&apos;ve done in performance tuning, accessibility, semantic markup, and mobile-first optimization.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
                 If you&apos;re launching a new product, rebuilding your site, or stuck on Core Web Vitals, I&apos;ll find what&apos;s slowing you down and show you how to fix it.
@@ -78,7 +78,7 @@ export default function SEOConsultingPage() {
             </h2>
             <ul className="m-0 pl-4 grid gap-2" style={{ maxWidth: '72ch' }}>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Full SEO audit (site speed, meta tags, heading structure, schema)
+                Full SEO/AEO audit (site speed, meta tags, heading structure, schema)
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
                 Keyword research and competitor analysis
@@ -111,7 +111,7 @@ export default function SEOConsultingPage() {
                 No lock-in: you can make the fixes yourself or have me do them
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                Includes performance, structure, UX and technical SEO fixes
+                Includes performance, structure, UX and technical SEO/AEO fixes
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
                 Remote and async work, with written documentation

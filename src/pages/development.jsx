@@ -53,13 +53,13 @@ export default function FullStackDevPage() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 mb-5"
               style={{ fontSize: 'clamp(22px, 2.8vw, 28px)' }}
             >
-              Start to Finish
+              What I Do
             </h2>
             <p
               className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85"
               style={{ maxWidth: '72ch' }}
             >
-              I build full stack websites and apps, from single landing pages to complex SaaS platforms. I can plan the architecture, set up cloud deployments, or refine the UI and UX on the front end, and I bring a decade of hands-on engineering and product experience to it.
+              I build full stack websites and apps, from single landing pages to complex SaaS platforms, including WordPress sites. I can plan the architecture, set up cloud deployments, or refine the UI and UX on the front end, and I bring 7+ years of hands-on engineering and product experience to it.
             </p>
           </section>
 

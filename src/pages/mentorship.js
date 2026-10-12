@@ -63,7 +63,7 @@ export default function MentorshipPage() {
                 This is for self-taught developers who&apos;ve done the tutorials and want to build something of their own, bootcamp grads looking for a first job, and designers or founders who want to get more comfortable with the technical side. We&apos;ll make a plan around your goals, and I&apos;ll keep you to it.
               </p>
               <p className="font-serif text-[16px] leading-[28px] m-0 text-dark/85 dark:text-light/85">
-                I&apos;ve spent over a decade in web development, full stack architecture, and software education, and I&apos;ve helped more than 150 developers improve their skills and get into the tech industry. I can help with JavaScript, React and Next.js, and with game engines like Unity, Unreal and Godot. We start from what you already know.
+                I&apos;ve spent 7+ years in web development and software education, and I&apos;ve taught more than 150 developers. I can help with JavaScript, React, Next.js and WordPress, and with game engines like Godot, Unity and Unreal. We start from what you already know.
               </p>
             </div>
           </section>
@@ -90,7 +90,7 @@ export default function MentorshipPage() {
                 Career Coaching: portfolios, GitHub reviews, job search strategy, mock interviews
               </li>
               <li className="font-serif text-[16px] leading-[28px] text-dark/85 dark:text-light/85">
-                SEO &amp; Performance Optimization: faster pages and better search rankings
+                SEO/AEO &amp; Performance Optimization: faster pages and better search rankings
               </li>
             </ul>
           </section>

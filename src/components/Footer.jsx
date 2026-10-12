@@ -10,7 +10,7 @@ const Footer = () => {
         />
         <div className="flex flex-wrap gap-x-7 gap-y-1 font-serif text-[13px] leading-[28px] tracking-[0.04em] uppercase text-dark/60 dark:text-light/60">
           <span>© {new Date().getFullYear()} Timm Schoenborn</span>
-          <span>Highland Park, IL</span>
+          <span>Highland Park, IL / Fox Cities, WI</span>
           <a
             href="mailto:timmschoenborn@gmail.com"
             className="hover:text-dark dark:hover:text-light hover:underline hover:underline-offset-2 transition-colors"

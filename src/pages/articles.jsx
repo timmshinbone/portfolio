@@ -74,12 +74,12 @@ const articles = () => {
   return (
     <>
         <Head>
-            <title>Timm Schoenborn | Articles Page</title>
+            <title>Articles | Timm Schoenborn</title>
             <meta name="description" content="Articles on JavaScript, React, Next.js, and full stack web development by Timm Schoenborn." />
         </Head>
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden '>
             <Layout className='pt-16'>
-                <AnimatedText text='Written to Teach' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
+                <AnimatedText text='Articles' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:text-4xl'/>
                 <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
                     <FeaturedArticle
                         title='Understanding the Core of JavaScript'
@@ -90,7 +90,7 @@ const articles = () => {
                     />
                     <FeaturedArticle
                         title='Simplifying JavaScript: The Power and Elegance of Arrow Functions'
-                        summary="Arrow functions have become a staple for developers who want cleaner, shorter code. New to programming or not, learning them well is a bit like finding a hidden shortcut in your favorite video game."
+                        summary="Arrow functions are a shorter way to write functions in JavaScript. This article covers how they work and when to use them."
                         image={art2Img}
                         link='https://medium.com/@timmschoenborn/simplifying-javascript-the-power-and-elegance-of-arrow-functions-f18e9634ec85'
                     />

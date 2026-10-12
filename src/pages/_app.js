@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
               "@type": "Person",
               "name": "Timm Schoenborn",
               "url": "https://www.timmschoenborn.com",
-              "jobTitle": "Freelance Web Developer & SEO Consultant",
+              "jobTitle": "Project Manager, Designer and Software Developer",
               "worksFor": {
                 "@type": "Organization",
                 "name": "TRStudios LLC"
@@ -42,14 +42,14 @@ export default function App({ Component, pageProps }) {
               "address": [
                 {
                   "@type": "PostalAddress",
-                  "addressLocality": "Gainesville",
-                  "addressRegion": "FL",
+                  "addressLocality": "Chicagoland",
+                  "addressRegion": "IL",
                   "addressCountry": "US"
                 },
                 {
                   "@type": "PostalAddress",
-                  "addressLocality": "Chicago",
-                  "addressRegion": "IL",
+                  "addressLocality": "Fox Cities",
+                  "addressRegion": "WI",
                   "addressCountry": "US"
                 }
               ]

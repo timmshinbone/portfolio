@@ -39,15 +39,15 @@ const caseStudies = [
     slug: 'mobile-locksmith',
     kicker: 'Local business · Case study',
     title: 'Mobile Locksmith FL',
-    body: 'A search-first site for a local service business, where the only goal is turning a stressed visitor on a phone into a call.',
-    meta: 'Design · SEO · Performance',
+    body: 'A fast, search-first site for a local locksmith, built to turn phone searches into calls. Calls from organic search rose ~40% in the first year.',
+    meta: 'Design · SEO/AEO · Performance',
   },
   {
     slug: 'asmbs',
     kicker: 'Association · Case study',
     title: 'ASMBS',
-    body: 'Member-facing interfaces and admin tooling for a national medical society, built directly with staff, without a spec to work from.',
-    meta: 'Requirements · Full stack',
+    body: 'Updated a national medical society\'s WordPress site and Symfony-based member system while dues and event payments stayed live, and merged duplicate member records without losing any.',
+    meta: 'WordPress · Symfony · PHP',
   },
   {
     slug: 'aptp',
@@ -60,35 +60,35 @@ const caseStudies = [
     slug: 'print-production',
     kicker: 'Production · Case study',
     title: 'Print production',
-    body: 'Running production for a print shop of about 15 people: high-volume work for colleges and Evanston businesses, plus large format and bindery.',
+    body: 'I ran production and managed projects for a print shop of about 20 people: high-volume work for colleges and Chicago area businesses, plus large format, bindery, and everything in between.',
     meta: 'Operations · People · Scheduling',
   },
   {
     slug: 'northwestern-signage',
     kicker: 'Signage · Case study',
     title: 'Northwestern University signage',
-    body: 'Project managing signage for Northwestern University and other large college buildings, from a small sign shop.',
+    body: 'I managed signage projects for Northwestern University and other large college buildings at a small sign shop, delivered on time and on budget. I sometimes installed them myself to keep the client happy.',
     meta: 'Project management · Clients',
   },
   {
     slug: 'hhh',
     kicker: 'Content platform · Case study',
     title: 'Healthy Homemade Habits',
-    body: 'A recipe and wellness site my wife runs independently, built so a non-technical content creator never has to call the developer.',
+    body: 'A recipe and wellness site I designed and built with my wife. She publishes and updates it herself, and it gets a little over 2,000 visits a month.',
     meta: 'Design · Build · CMS',
   },
   {
     slug: 'flatratedev',
     kicker: 'Platform · Case study',
     title: 'FlatRateDev',
-    body: 'A productized web-build service: fixed-scope packages, a pricing comparison built in Chart.js, and Playwright coverage over the whole funnel.',
+    body: 'A site for a client\'s fixed-price web build service, built to be fast and SEO/AEO friendly, with Chart.js pricing charts, an instant PDF download of his info sheet, and download tracking built in.',
     meta: 'Product · Design · Build',
   },
   {
     slug: 'albers',
     kicker: 'Campaign · Case study',
-    title: 'A congressional race',
-    body: 'A campaign site built to an immovable deadline, tested end to end, and handed to a non-technical team who had to run it alone.',
+    title: 'Albers for Congress',
+    body: 'A congressional campaign site with donations and petition sign-ups, live in less than a week. I worked flexibly with the candidate to launch with the information he wanted, and the site helped him gather the signatures he needed to get on the ballot.',
     meta: 'Delivery · Stakeholders',
   },
   {
@@ -102,7 +102,7 @@ const caseStudies = [
     slug: 'teaching',
     kicker: 'People · Case study',
     title: 'Teaching toolkit',
-    body: 'Boilerplates and teaching APIs that removed setup from project weeks and helped 150+ developers ship their first real apps.',
+    body: 'Starter projects and teaching APIs I built at General Assembly, so students could spend project weeks on features instead of setup. 150+ developers used them to ship their first real apps.',
     meta: 'Leadership · Systems',
   },
 ]
@@ -128,10 +128,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Timm Schoenborn · Developer, Designer, Project Manager</title>
+        <title>Timm Schoenborn · Project Manager, Designer, Software Developer</title>
         <meta
           name="description"
-          content="Timm Schoenborn is a full stack developer offering web, app, and SEO services. Book a consultation today."
+          content="Timm Schoenborn is a project manager, designer and software developer. Production and project management in print and signage, engineering leadership at General Assembly, and his own studio since 2024. Open to roles in the Fox Cities and central Wisconsin, Chicagoland or remote."
         />
         <script
           type="application/ld+json"
@@ -141,7 +141,7 @@ export default function Home() {
               "@type": "Person",
               name: "Timm Schoenborn",
               url: "https://timmschoenborn.com",
-              jobTitle: "Freelance Web Developer",
+              jobTitle: "Project Manager, Designer and Software Developer",
               sameAs: [
                 "https://www.linkedin.com/in/timm-schoenborn/",
                 "https://github.com/timmshinbone"
@@ -166,7 +166,7 @@ export default function Home() {
             <div>
               <h2 className="font-serif font-semibold leading-[1.1] tracking-[-0.02em] m-0"
                   style={{ fontSize: 'clamp(26px, 3.8vw, 42px)' }}>
-                A generalist, on purpose.
+                Project manager, designer and software developer
               </h2>
               <p className="font-serif text-[17px] leading-[30px] mt-8 mb-0 max-w-[46ch]">
                 Architecture taught me to think in systems, and engineering taught me what things
@@ -198,13 +198,13 @@ export default function Home() {
           {/* ── Arc ───────────────────────────────────────── */}
           <section id="arc" className="py-10">
             <span className="block font-serif text-[13px] leading-[14px] tracking-[0.08em] uppercase text-dark/70 dark:text-light/70 mb-4">
-              The long way round
+              Background
             </span>
             <h2
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8 max-w-[30ch]"
               style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
             >
-              How five disciplines ended up in one résumé
+              Where I&apos;ve worked and what I did there
             </h2>
             <div
               style={{
@@ -215,37 +215,25 @@ export default function Home() {
             >
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  The drawing board.
+                  Design.
                 </strong>{' '}
-                I earned a B.S. in Architectural Design at the University of Florida and spent years
-                as a professional designer doing print, signage and wayfinding systems, including work at
-                Perkins &amp; Will. Designing for real spaces used by real people leaves you with
-                habits: build the system underneath first, sweat every detail, and never forget
-                somebody has to live with what you made.
+                I earned a B.S. in Architectural Design at the University of Florida and spent years as a professional designer doing print, signage and wayfinding systems. At Perkins &amp; Will I was a Branded Environments Designer: I designed signage systems for projects worldwide alongside architects and engineers, and managed projects from the design side. I also developed the systems we used to track large volumes of signage elements and where each one was installed, which kept those projects accurate and efficient.
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  The shop floor.
+                  Production.
                 </strong>{' '}
-                Before Perkins &amp; Will I worked on the production side. At a print shop I was
-                production manager and project manager for a crew of about 15, running high-volume work
-                for colleges and Evanston businesses alongside large-format printing, bindery and
-                finishing. At a small sign shop I managed signage projects for big college buildings,
-                including Northwestern University&apos;s. That&apos;s where I learned to manage people,
-                schedules and clients, and I still run software projects that way.
+                Before Perkins &amp; Will I worked on the production side. At a print shop I was production manager and project manager for a crew of about 20 across three locations, running high-volume work for colleges and Chicago area businesses, including large-format printing, bindery and finishing. At a small sign shop I managed signage projects for big college buildings, including Northwestern University&apos;s, and delivered them on time and on budget. I managed people, schedules and clients in both jobs, and I run software projects the same way.
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  The keyboard.
+                  Software.
                 </strong>{' '}
-                In 2019 I went through General Assembly&apos;s Software Engineering Immersive so I
-                could build the things I had been drawing. That year taught me what work actually
-                costs: how to estimate it, how to cut scope honestly, and why any plan that ignores
-                the build is just a wish with a deadline attached.
+                I taught myself JavaScript first. In 2019 I completed General Assembly&apos;s Software Engineering Immersive to get formal training and a credential, and to make my React, Node and Python skills job ready. It also gave me a realistic sense of how long software takes to build, which is what makes an estimate or a scope cut honest.
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  The room.
+                  Teaching and leadership.
                 </strong>{' '}
                 Then five years at General Assembly, first as Lead Engineering Instructor and then as
                 Supervisor of Engineering. I set the standards our remote teams worked to, ran code
@@ -256,7 +244,7 @@ export default function Home() {
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-7 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  The whole thing.
+                  TRStudios.
                 </strong>{' '}
                 Since 2024 TRStudios has meant owning every part of a project: scoping with the
                 client, designing it, building it in React, Next.js and TypeScript, testing it,
@@ -267,11 +255,9 @@ export default function Home() {
               </p>
               <p className="font-serif text-[16px] leading-[28px] mb-0 text-pretty">
                 <strong className="font-serif font-semibold text-[13px] tracking-[0.06em] uppercase text-[#006786] dark:text-[#62c5ee]">
-                  After hours.
+                  Games.
                 </strong>{' '}
-                I publish games under my own studio, weatherstew: a children&apos;s game on Google
-                Play built end to end in Godot, and Cold Harsh Sea 2.0 in development for Steam. Same
-                muscle as the day job, used for the fun of it.
+                I also publish games under my own studio, weatherstew: a children&apos;s game on Google Play that I built myself in Godot, with Cold Harsh Sea 2.0 in development for Steam, and a new web game that I&apos;m working on which will turn into another mobile app.
               </p>
             </div>
           </section>
@@ -285,7 +271,7 @@ export default function Home() {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8"
               style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
             >
-              Things I owned end to end
+              Things I owned from start to finish
             </h2>
             <div
               style={{
@@ -307,17 +293,14 @@ export default function Home() {
                 className="font-serif italic font-normal leading-[42px] tracking-[-0.01em] max-w-[36ch] m-0"
                 style={{ fontSize: 'clamp(20px, 2.6vw, 30px)' }}
               >
-                &ldquo;After years of doing every job myself, what I want is to do one job well,
-                with people I like.&rdquo;
+                &ldquo;I&apos;m looking for a team where I can own projects from planning to delivery and build a long career doing work I love while supporting my family.&rdquo;
               </blockquote>
             </figure>
             <h3 className="font-serif font-semibold text-[22px] leading-[28px] m-0">
               What I&apos;m looking for
             </h3>
             <p className="font-serif text-[16px] leading-[28px] text-dark/80 dark:text-light/80 mt-5 mb-0 max-w-[58ch]">
-              A product, project or design leadership role on a team I can grow with for the long
-              haul. It could be in software, construction or manufacturing. I care more about the problem and the
-              people than the industry. In person or hybrid in the Fox Cities and central Wisconsin, or remote.
+              A project, production, product or design leadership role, or a software development role, on a team I can grow with. I&apos;ve done this work in software, print and signage, and architecture, and I&apos;m open to software, manufacturing, construction and print. In person or hybrid in the Fox Cities and central Wisconsin, Chicagoland, or remote.
             </p>
             <div className="flex flex-wrap gap-4 mt-7">
               <a

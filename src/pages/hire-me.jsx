@@ -7,17 +7,17 @@ const services = [
   {
     title: 'Game & App Consulting',
     description: 'Plan features, review your tech stack, and avoid pitfalls in early-stage game or app development.',
-    price: 'Starts around $150/session (negotiable based on project needs)',
+    price: 'Starts at $150/session (negotiable based on project needs)',
     serviceLink: 'consulting',
   },
   {
     title: 'Full Stack Development',
-    description: 'Websites and mobile apps, frontend and backend, built with React, Next.js and Node.',
+    description: 'Websites and mobile apps, front end and back end, built with React, Next.js, Node and WordPress.',
     price: 'Typical range: $2,000–$15,000/project (rates flexible)',
     serviceLink: 'development',
   },
   {
-    title: 'SEO Optimization',
+    title: 'SEO/AEO Optimization',
     description: "Improve your site's speed, metadata, accessibility, and visibility on search engines.",
     price: 'Starts at $300/site (negotiable based on complexity)',
     serviceLink: 'seo-services',
@@ -51,8 +51,8 @@ export default function HireMe() {
   return (
     <>
       <Head>
-        <title>Hire a Freelance Web Developer &amp; SEO Consultant | Timm Schoenborn</title>
-        <meta name="description" content="Remote full stack development, SEO consulting, and app strategy from Timm Schoenborn, an experienced engineer and former coding instructor." />
+        <title>Hire a Freelance Web Developer &amp; SEO/AEO Consultant | Timm Schoenborn</title>
+        <meta name="description" content="Remote full stack development, SEO/AEO consulting, and app strategy from Timm Schoenborn, an experienced engineer and former coding instructor." />
       </Head>
 
       <main className="text-dark dark:text-light">
@@ -67,7 +67,7 @@ export default function HireMe() {
               Services and Rates
             </h1>
             <p className="font-serif text-[18px] leading-[30px] max-w-[52ch] m-0 text-dark/80 dark:text-light/80">
-              Remote full stack development, SEO consulting, app strategy and tutoring. Rates are below, and discovery calls are free.
+              Remote full stack development, SEO/AEO consulting, app strategy and tutoring. Rates are below, and discovery calls are free.
             </p>
           </section>
 

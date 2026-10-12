@@ -337,7 +337,7 @@ export default function CaseStudy({ study }) {
                   onClick={() => setMobileModalOpen(true)}
                   className="font-serif text-[14px] text-[#006786] dark:text-[#62c5ee] hover:underline underline-offset-2"
                 >
-                  Want to see what it looks like on mobile? Quick walkthrough →
+                  Mobile walkthrough →
                 </button>
               </p>
             )}
@@ -347,7 +347,7 @@ export default function CaseStudy({ study }) {
                   onClick={() => setPoeModalOpen(true)}
                   className="font-serif text-[14px] text-[#006786] dark:text-[#62c5ee] hover:underline underline-offset-2"
                 >
-                  Want a walkthrough of Port of Entry? Quick tour →
+                  Port of Entry walkthrough →
                 </button>
               </p>
             )}
@@ -422,7 +422,7 @@ export default function CaseStudy({ study }) {
                   className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 max-w-[22ch]"
                   style={{ fontSize: 'clamp(26px, 3vw, 34px)' }}
                 >
-                  What I actually did
+                  What I did
                 </h2>
               </div>
               <div style={{ display: 'grid', gap: '28px' }}>
@@ -518,7 +518,7 @@ export default function CaseStudy({ study }) {
                   className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] m-0 max-w-[22ch]"
                   style={{ fontSize: 'clamp(26px, 3vw, 34px)' }}
                 >
-                  What I&apos;d do differently
+                  What I learned
                 </h2>
               </div>
               <div style={{ display: 'grid', gap: '28px' }}>

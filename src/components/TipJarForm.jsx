@@ -39,7 +39,7 @@ export default function TipJarForm() {
         Tip Jar
       </h2>
       <p className="font-serif text-[15px] leading-[24px] mb-5 text-dark/80 dark:text-light/80">
-        Want to just say thanks or show support? Drop a tip in the jar.
+        If you&apos;d like to say thanks, you can leave a tip here.
       </p>
       <form onSubmit={handleRedirect} className="flex flex-col gap-4" style={{ maxWidth: '360px' }}>
         <input

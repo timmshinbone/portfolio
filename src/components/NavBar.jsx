@@ -202,8 +202,8 @@ const NavBar = () => {
             <nav className="flex items-center gap-7">
               <NavLink href="/projects" title="Work" />
               <NavLink href="/about" title="About" />
-              <NavLink href="/hire-me" title="Hire Me" />
-              <NavLink href="/pay-me" title="Pay Me" />
+              <NavLink href="/hire-me" title="Services" />
+              <NavLink href="/pay-me" title="Payments" />
             </nav>
             <div className="flex items-center gap-6">
               <a
@@ -237,8 +237,8 @@ const NavBar = () => {
             <div className="flex items-center gap-6 flex-wrap">
               <NavLink href="/projects" title="Work" onClick={close} />
               <NavLink href="/about" title="About" onClick={close} />
-              <NavLink href="/hire-me" title="Hire Me" onClick={close} />
-              <NavLink href="/pay-me" title="Pay Me" onClick={close} />
+              <NavLink href="/hire-me" title="Services" onClick={close} />
+              <NavLink href="/pay-me" title="Payments" onClick={close} />
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}

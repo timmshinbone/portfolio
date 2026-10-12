@@ -3,20 +3,20 @@ export const caseStudies = [
     slug: 'mobile-locksmith',
     kicker: 'Case study · Local business & search',
     title: 'Mobile Locksmith FL: a site that has to work when someone is locked out',
-    dek: 'A local service business lives or dies on the phone ringing. I designed and built a fast, search-first site whose only job is to turn a stressed person on a phone into a call.',
+    dek: 'A local locksmith gets most of its business from people searching on a phone. I designed and built a fast, search-first site to turn those searches into calls, and calls from organic search rose ~40% in the first year.',
     facts: {
-      role: 'Designer, developer, SEO',
+      role: 'Designer, developer, SEO/AEO',
       timeline: '[ 20XX ] · TRStudios LLC',
-      build: 'Next.js · Vercel · local SEO · performance',
+      build: 'Next.js · Vercel · local SEO/AEO · performance',
       outcome: '+40% calls from organic search in year one',
     },
     heroImage: '/images/projects/mobileLocksmith/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/walkthrough-mobile.mp4',
-    heroCaption: 'A short walkthrough of Mobile Locksmith FL - visit the live site at the link below.',
-    problemHead: 'The customer is standing outside',
+    heroCaption: 'A short walkthrough of Mobile Locksmith FL. The live site is linked below.',
+    problemHead: 'Most customers are searching on a phone, in a hurry',
     problem: [
-      'Nobody browses a locksmith\'s website. They search on a phone, often at night, and pick whichever result looks trustworthy and loads first. The most important features to the client were speed, local search ranking and a visible phone number on every page.',
+      'People rarely browse a locksmith\'s website. They search on a phone, often at night, and call whichever result looks trustworthy and loads first. The client\'s priorities were speed, local search ranking and a visible phone number on every page.',
     ],
     whatIDid: [
       {
@@ -33,7 +33,7 @@ export const caseStudies = [
       },
       {
         head: 'Optimized for mobile.',
-        body: 'Most users are searching from their phone, and likely stressed out. I built this to keep it simple for their customers.',
+        body: 'Most visitors arrive on a phone and in a hurry, so every page is short and simple, and fits nicely on a small screen.',
       },
     ],
     figures: [
@@ -68,10 +68,10 @@ export const caseStudies = [
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/asmbs-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/asmbs-walkthrough-mobile.mp4',
     heroCaption: 'A short walkthrough of ASMBS. The live site is linked below.',
-    problemHead: 'Old systems, live payments, messy member data.',
+    problemHead: 'Old systems, live payments, messy member data',
     problem: [
       'A medical association lives by its data: memberships, certifications, events, dues. At ASMBS that data sat in a private Association Management System built on Symfony and a public WordPress site, and both were overdue for updates.',
-      'The catch was that members pay dues and register for events through those systems every day, so the payment portals couldn\'t go down while I worked. The AMS also had duplicate member entries that needed to be merged without losing anyone\'s history. My task was updating and designing systems that worked within these two environments, in a complex system with no documentation, without breaking anything critical.',
+      'Members pay dues and register for events through those systems every day, so the payment portals couldn\'t go down while I worked. The AMS also had duplicate member entries that needed to be merged without losing anyone\'s history. My job was to update and extend both systems without breaking anything critical, with no documentation to start from.',
     ],
     whatIDid: [
       {
@@ -88,7 +88,7 @@ export const caseStudies = [
       },
       {
         head: 'Left it maintainable.',
-        body: 'Documented what I changed and why, so the next developer after me could get up and running in half the time I did.',
+        body: 'Documented what I changed and why, so the next developer could get up to speed in half the time it took me.',
       },
     ],
     figures: [
@@ -102,7 +102,7 @@ export const caseStudies = [
       { stat: '~7 hrs', label: 'Staff time saved per week' },
     ],
     differently: [
-      'Running both upgrades side by side showed me how much the AMS and the WordPress site depend on each other. On the next system like this, I\'d start by writing a map of every place the two share data. It made this job go smoothly, and it\'s the first thing I\'d hand the next developer.',
+      'Running both upgrades side by side showed me how much the AMS and the WordPress site depend on each other. Mapping every place the two share data is what made this job go smoothly. On the next system like this, it\'s the first thing I\'ll write and the first thing I\'ll hand the next developer.',
     ],
     nextSlug: 'aptp',
     nextLabel: 'Albany Park Theater Project',
@@ -123,7 +123,7 @@ export const caseStudies = [
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/aptp-walkthrough-desktop.mp4',
     poeVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/poe-walkthrough-desktop.mp4',
     heroCaption: 'The main APTP site. Port of Entry is linked below.',
-    problemHead: 'Two sites, two stacks, one developer',
+    problemHead: 'Two WordPress sites on different stacks',
     problem: [
       'APTP has been making original plays with teenagers since 1997, and the main site holds a lot of that history. Productions, reviews, events, venues, people and a media library of more than 600 items each live in their own custom post type, on a custom theme.',
       'Port of Entry, the immersive show APTP created with Third Rail Projects, has its own site on a different host, built on the Sydney theme with Elementor Pro. Staff bring their change requests for both sites to me, and I make sure donations, ticket links and forms keep working on each.',
@@ -169,16 +169,16 @@ export const caseStudies = [
   {
     slug: 'print-production',
     kicker: 'Case study · Production & operations',
-    title: 'Print production: running the floor at a print shop of about 15-20 people across 3 locations',
-    dek: 'At Quartet Digital Printing I was the production manager and the project manager for a crew of about 15 to 20 people, spread across three locations. We did high-volume printing for colleges and Evanston businesses, plus large-format printing, bindery and finishing. My job was getting every order through the shop and out the door on time.',
+    title: 'Print production: managing production and projects for a print shop of about 20 people across three locations',
+    dek: 'At Quartet Digital Printing I was the production manager and the project manager for a crew of about 20 people, spread across three locations. We did high-volume printing for colleges and Chicago area businesses, plus large-format printing, bindery and finishing. My job was getting every order through the shop and out the door on time.',
     facts: {
       role: 'Production manager & project manager',
       timeline: '2012 – 2015 · Evanston and Chicago, IL',
       build: 'High-volume digital print · large format · bindery & finishing',
       outcome: 'Raised output and cut costs for university and Fortune 500 clients',
     },
-    heroCaption: 'High-volume print, large format and bindery, all in one shop.',
-    problemHead: 'A lot of small deadlines at once',
+    heroCaption: 'High-volume print, large format, bindery and finishing.',
+    problemHead: 'Many jobs competing for the same people and equipment',
     problem: [
       'A print shop working for colleges and local businesses always has a lot of jobs open at the same time, each with its own stock, finishing and due date, and all of them compete for the same equipment and the same people. A rush for one client turns into a delay for another unless somebody is sequencing the work.',
       'That made the job mostly a scheduling problem: knowing what each order needed, in what order, from whom, and when it had to leave the shop.',
@@ -186,11 +186,11 @@ export const caseStudies = [
     whatIDid: [
       {
         head: 'Managed the crew.',
-        body: 'Ran a team of about 15 across printing, large format and bindery: who was on which job, what came next, and what moved when a job changed.',
+        body: 'Ran a team of about 20 people across printing, large format and bindery at three locations: who was on which job, what came next, and what got moved when a job changed at the last minute.',
       },
       {
         head: 'Scheduled the work.',
-        body: "Sequenced high-volume runs for colleges and Evanston businesses around the large-format and finishing jobs that needed the same people and equipment, so one client's rush order didn't push everyone else late.",
+        body: "Sequenced high-volume runs for colleges and Chicago area businesses around the large-format and finishing jobs that needed the same people and equipment, so one client's rush order didn't push everyone else late.",
       },
       {
         head: 'Managed the projects.',
@@ -204,7 +204,7 @@ export const caseStudies = [
     figures: [
       { caption: 'Large-format work, printed and finished in the shop.' },
       { caption: 'Bindery and finishing, the last stop before a job went out.' },
-      { caption: 'High-volume work for colleges and Evanston businesses.' },
+      { caption: 'High-volume work for colleges and Chicago area businesses.' },
     ],
     results: [
       { stat: '[ 00 ]', label: 'Jobs through the shop in a typical month' },
@@ -220,7 +220,7 @@ export const caseStudies = [
   {
     slug: 'northwestern-signage',
     kicker: 'Case study · Project management',
-    title: 'Northwestern University signage: big college buildings, managed from a small sign shop',
+    title: 'Northwestern University signage: project management for large college buildings',
     dek: "At FastSigns, a small sign shop, I was the project manager on signage for large college buildings, including Northwestern University's projects. I kept scope, schedule and the client lined up from start to finish.",
     facts: {
       role: 'Project manager',
@@ -229,7 +229,7 @@ export const caseStudies = [
       outcome: 'Projects delivered on time and on budget',
     },
     heroCaption: 'Building signage for Northwestern University.',
-    problemHead: 'Big buildings, small shop',
+    problemHead: 'Building-scale signage with a small team',
     problem: [
       'A large college building needs a lot of signage, all of it consistent, and all of it ready by the date the building needs it.',
       'A small sign shop takes that on with a small team. That puts the weight on project management: scope agreed up front, a schedule the shop can actually hit, and one person the university can call.',
@@ -244,7 +244,7 @@ export const caseStudies = [
         body: 'Led cross-functional teams on scope, schedule and resources for each job, so projects landed on time and on budget.',
       },
       {
-        head: 'Took it to the design side.',
+        head: 'Managed projects at Perkins & Will.',
         body: 'After the sign shop I joined Perkins & Will as a Branded Environments Designer. I designed signage systems for projects worldwide alongside architects and engineers, and managed projects there too, this time from the design side of the same work.',
       },
     ],
@@ -267,22 +267,22 @@ export const caseStudies = [
   {
     slug: 'hhh',
     kicker: 'Case study · Personal brand & content platform',
-    title: 'Healthy Homemade Habits: a site your partner can run without calling you',
-    dek: 'My wife had the expertise: years of cooking healthy food and building habits that actually stick. She needed a platform to publish it. I designed and built it so she could create and update without touching code.',
+    title: 'Healthy Homemade Habits: a recipe and wellness site my wife runs on her own',
+    dek: 'My wife has years of experience cooking healthy food and building habits that last, and she needed a place to publish it. I designed and built a site she can write, update and grow without touching a single line of code.',
     facts: {
       role: 'Designer & developer',
       timeline: '[ 20XX ] – present · TRStudios LLC',
       build: 'Next.js · React · [ CMS / data layer ]',
-      outcome: '2,400 monthly visits and growing',
+      outcome: '2,000+ monthly visits and growing',
     },
     heroImage: '/images/projects/hhh/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/hhh-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/hhh-walkthrough-mobile.mp4',
-    heroCaption: 'A short walkthrough of Healthy Homemade Habits - visit the live site at the link below.',
-    problemHead: 'The constraint was the collaborator',
+    heroCaption: 'A short walkthrough of Healthy Homemade Habits. The live site is linked below.',
+    problemHead: 'Built for a writer who doesn\'t code',
     problem: [
       'My wife knows food and healthy habits. She does not want to open a code editor. The brief was simple: build something she can write, update and grow on her own terms, and make it look like something worth trusting.',
-      'Building for a non-technical content creator is a different problem than building for a client. There is no approval loop, no ticket queue, and no "that can be phase two." If something is hard to use, it just does not get used.',
+      'Building for a non-technical content creator is a different problem than building for a client. There\'s no approval process or ticket queue to catch problems, so if something is hard to use, it doesn\'t get used.',
     ],
     whatIDid: [
       {
@@ -291,7 +291,7 @@ export const caseStudies = [
       },
       {
         head: 'Built the interactive features.',
-        body: 'The quiz and the grocery list builder drive the most visits to the site. Both are built to work fast on a phone, with nothing in the way between "I want to know" and "here is your answer."',
+        body: 'The quiz and the grocery list builder drive the most visits to the site. I built both to load fast and work well on a phone.',
       },
       {
         head: 'Made it independent.',
@@ -303,12 +303,12 @@ export const caseStudies = [
       },
     ],
     figures: [
-      { src: '/images/projects/hhh/05-quiz-desktop-hero.png', caption: 'The quiz is the most engaging way into the site.' },
-      { src: '/images/projects/hhh/06-perfect-grocery-list-desktop-hero.png', caption: 'Grocery list builder: the tool readers keep coming back for.' },
-      { src: '/images/projects/hhh/07-about-desktop-hero.png', caption: 'The about page earns the trust the recipes need.' },
+      { src: '/images/projects/hhh/05-quiz-desktop-hero.png', caption: 'The quiz, one of the two features that bring in the most visits.' },
+      { src: '/images/projects/hhh/06-perfect-grocery-list-desktop-hero.png', caption: 'The grocery list builder, the other top feature.' },
+      { src: '/images/projects/hhh/07-about-desktop-hero.png', caption: 'The about page, where readers meet us and learn our background.' },
     ],
     results: [
-      { stat: '2,400', label: 'Monthly visits' },
+      { stat: '2,000+', label: 'Monthly visits' },
       { stat: '60+', label: 'Recipes and guides published' },
       { stat: '100%', label: 'Content updates made without developer involvement' },
     ],
@@ -326,14 +326,14 @@ export const caseStudies = [
     dek: 'A productized web-build service, taken from a vague idea to a live offer: the packaging and pricing model, the site that sells it, the tooling that proves it works, and the delivery process behind it. I was the product manager, the designer and the engineer.',
     facts: {
       role: 'Product owner, designer, lead developer',
-      timeline: '2024 – present, TRStudios LLC',
+      timeline: '2024 – present · TRStudios LLC',
       build: 'Next.js · TypeScript · Chart.js · Playwright · Vercel',
       outcome: '6 builds delivered, zero post-launch scope disputes',
     },
     heroImage: '/images/projects/FRDHomepage.jpg',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/frd-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/frd-walkthrough-mobile.mp4',
-    heroCaption: 'A short walkthrough of FlatRateDev - visit the live site at the link below.',
+    heroCaption: 'A short walkthrough of FlatRateDev. The live site is linked below.',
     problemHead: 'The hard part was pricing',
     problem: [
       'Small businesses asking for a website can\'t tell the difference between a $1,500 build and a $15,000 one, so they do the only rational thing: they stall. Every discovery call I ran spent its first twenty minutes on the same three questions, and the proposals that followed were bespoke, slow to write, and easy to compare unfavorably against a template service.',
@@ -345,16 +345,16 @@ export const caseStudies = [
         body: 'Three packages with hard scope boundaries, priced from my own delivery data: what each tier costs me in hours, where the margin is, and which requests have to fall outside it to keep the promise honest.',
       },
       {
-        head: 'Designed the argument.',
-        body: 'The site is a sales document, so it\'s structured like one: the price first, the comparison second, the proof third. I built the cost comparison as a live Chart.js graphic so the claim is legible in two seconds instead of three paragraphs.',
+        head: 'Designed the site as a sales page.',
+        body: 'The site leads with the pricing structure, then the comparison, then the proof. I built the cost comparison as a live Chart.js graphic so the difference is clear at a glance.',
       },
       {
-        head: 'Built it to be trusted.',
-        body: 'Next.js and TypeScript, with rendering chosen per page type so the marketing pages are static and fast. Playwright end-to-end suites cover the funnel. Every path a prospect can take to the contact form is tested, because a broken form on a sales site is the whole product failing.',
+        head: 'Built and tested it.',
+        body: 'Next.js and TypeScript, with rendering chosen per page type so the marketing pages are static and fast. Playwright end-to-end suites cover the funnel, including every path a prospect can take to the contact form.',
       },
       {
         head: 'Made delivery repeatable.',
-        body: 'A fixed price only works if the process is fixed too: a standard kickoff, a component library reused across builds, preview deployments for client review, and an accessibility and SEO pass before every launch.',
+        body: 'A fixed price only works if the process is fixed too: a standard kickoff, a component library reused across builds, preview deployments for client review, and an accessibility and SEO/AEO pass before every launch.',
       },
     ],
     figures: [
@@ -384,20 +384,20 @@ export const caseStudies = [
       role: 'Project lead, designer, full stack developer',
       timeline: '[ 20XX ] · [ N ] weeks to launch',
       build: '[ Stack - e.g. .NET / React ] · donation integration · responsive',
-      outcome: '$24k raised through the site',
+      outcome: 'Helped the campaign gather ballot petition signatures',
     },
     heroImage: '/images/projects/albers4con/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/a4c-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/a4c-walkthrough-mobile.mp4',
     heroCaption: 'Donate is never more than one tap away, on every page and at every screen size.',
-    problemHead: 'The deadline was the spec',
+    problemHead: 'A fixed deadline and no developer on staff',
     problem: [
       'A campaign has one date that can\'t move. Everything else (platform copy, endorsements, events, the candidate\'s photo) changes constantly, and whoever is on the team that week makes the edits, with no developer involved.',
       '[ Placeholder: describe the starting point - no site, an old site, a template that couldn\'t take donations - and the one thing the campaign most needed the site to do. ]',
     ],
     whatIDid: [
       {
-        head: 'Scoped to the calendar.',
+        head: 'Scoped to the deadline.',
         body: 'Worked backwards from launch and election day to a short list of must-haves (donate, platform, get involved) and pushed everything else to a second release. [ Placeholder: what got cut and why. ]',
       },
       {
@@ -405,8 +405,8 @@ export const caseStudies = [
         body: 'A political site is read by skeptics. Clear hierarchy, plain language, fast loads on phones, and the candidate\'s own voice up front rather than stock campaign graphics.',
       },
       {
-        head: 'Integrated the money.',
-        body: 'Wired in [ donation platform ] so contributions flowed through a compliant processor, and tested every path to the donate button end to end before launch.',
+        head: 'Integrated donations and petition sign-ups.',
+        body: 'Wired in [ donation platform ] so contributions flowed through a compliant processor, and tested every path to the donate button before launch.',
       },
       {
         head: 'Handed it off.',
@@ -419,9 +419,9 @@ export const caseStudies = [
       { src: '/images/projects/albers4con/03-home-mobile-hero.png', caption: 'Most visitors arrived from social on a phone.' },
     ],
     results: [
-      { stat: '18', label: 'Days from kickoff to launch' },
-      { stat: '$24k', label: 'Raised through the site' },
-      { stat: '30+', label: 'Content updates made by staff without a developer' },
+      { stat: '< 1 week', label: 'From kickoff to launch' },
+      { stat: '[ 00 ]', label: 'Petition signatures gathered through the site' },
+      { stat: '[ 00 ]', label: 'Donations or sign-ups through the site' },
     ],
     differently: [
       '[ Placeholder: an honest lesson - e.g. I\'d build the content editing workflow first, not last, because that is the part the client lives in every day after I leave. ]',
@@ -433,7 +433,7 @@ export const caseStudies = [
   {
     slug: 'trstudios',
     kicker: 'Case study · Running the studio',
-    title: 'TRStudios: building the studio behind the sites',
+    title: 'TRStudios: founding and running a development studio',
     dek: 'TRStudios is my development studio: client work, workshops and consultation, plus a pipeline of our own products. This case study covers the business side (positioning, process and the product roadmap) as much as the code.',
     facts: {
       role: 'Founder & lead developer',
@@ -444,11 +444,11 @@ export const caseStudies = [
     heroImage: '/images/projects/trstudiosllc/01-home-desktop-hero.png',
     heroVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_1280,vc_auto/trs-walkthrough-desktop.mp4',
     mobileVideo: 'https://res.cloudinary.com/dnxkktpk7/video/upload/q_auto,f_auto,w_390,vc_auto/trs-walkthrough-mobile.mp4',
-    heroCaption: 'A short walkthrough of TRStudios - visit the live site at the link below.',
-    problemHead: "Freelance doesn't scale; a studio might",
+    heroCaption: 'A short walkthrough of TRStudios. The live site is linked below.',
+    problemHead: "Giving my freelance work a structure",
     problem: [
       'After years of freelancing I had the skills but not the structure: every engagement started from zero, and there was no way to grow past the hours I could personally bill.',
-      "TRStudios is my answer to that: a named business with defined offers, a repeatable delivery process, and its own products so revenue isn't only tied to client hours.",
+      "I set up TRStudios as a named business with defined offers, a repeatable delivery process and its own products, so revenue isn't tied only to client hours.",
     ],
     whatIDid: [
       {
@@ -457,7 +457,7 @@ export const caseStudies = [
       },
       {
         head: 'Standardized delivery.',
-        body: 'A shared kickoff, component library, preview deployments for client review, and an accessibility and SEO pass before every launch. FlatRateDev runs on the same process.',
+        body: 'A shared kickoff, component library, preview deployments for client review, and an accessibility and SEO/AEO pass before every launch. FlatRateDev runs on the same process.',
       },
       {
         head: 'Built a product pipeline.',
@@ -470,8 +470,8 @@ export const caseStudies = [
     ],
     figures: [
       { src: '/images/projects/trstudiosllc/05-work-desktop-hero.png', caption: 'The in-house product pipeline.' },
-      { src: '/images/projects/trstudiosllc/06-workshops-desktop-hero.png', caption: 'FieldKit Sync: multi-tenant field service SaaS in progress.' },
-      { src: '/images/projects/trstudiosllc/07-marketing-desktop-hero.png', caption: 'Workshops: teaching as a line of business.' },
+      { src: '/images/projects/trstudiosllc/06-workshops-desktop-hero.png', caption: 'The workshops page, where the studio offers teaching sessions.' },
+      { src: '/images/projects/trstudiosllc/07-marketing-desktop-hero.png', caption: 'Marketing offers, including postcard direct mail campaigns.' },
     ],
     results: [
       { stat: '11', label: 'Client projects delivered' },
@@ -492,15 +492,15 @@ export const caseStudies = [
     dek: "At General Assembly I taught and supervised software engineering cohorts. The most durable thing I built there was a set of starter projects and teaching APIs that made every student's first real app less likely to fail.",
     facts: {
       role: 'Lead instructor, instructional team supervisor',
-      timeline: '2020 – 2024 · Chicago / Remote',
+      timeline: '2019 – 2024 · Chicago / Remote',
       build: 'React · Express · Mongoose · Django REST · LiquidJS',
-      outcome: '~50% improvement in student success and graduation rates',
+      outcome: 'Graduation rates rose from about 60% to 85%',
     },
     heroCaption: 'Starter projects for React, Express and Django, with auth, structure and docs already solved.',
     problemHead: 'Students were getting stuck on setup',
     problem: [
       'Project weeks kept going wrong in the same place: students burned their first days on authentication, folder structure and wiring an API, and arrived at the actual feature exhausted and behind.',
-      "The fix was to remove the parts that weren't the lesson, so students spent their time on the parts that were.",
+      "I built starter projects that already handled authentication, structure and API wiring, so students could spend project weeks on the features they were there to learn.",
     ],
     whatIDid: [
       {
@@ -526,9 +526,9 @@ export const caseStudies = [
       { caption: '[ Placeholder caption. ]' },
     ],
     results: [
-      { stat: '150+', label: 'Developers taught into the industry' },
+      { stat: '150+', label: 'Developers taught' },
       { stat: '400+', label: 'Student projects consulted' },
-      { stat: '~50%', label: 'Improvement in success and graduation rates' },
+      { stat: '85%', label: 'Graduation rate, up from about 60%' },
     ],
     differently: [
       "[ Placeholder: an honest lesson - e.g. I'd version the boilerplates alongside the curriculum; drift between the two cost students time every time a dependency moved. ]",

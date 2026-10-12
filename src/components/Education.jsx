@@ -6,7 +6,7 @@ const degrees = [
     school: 'University of Florida',
     location: 'Gainesville, FL',
     time: '2009 – 2012',
-    note: 'Foundation in design principles, project management, and building systems for physical and digital scopes.',
+    note: 'Design principles, project management and building systems.',
   },
   {
     credential: 'Software Engineering Immersive',
@@ -20,7 +20,7 @@ const degrees = [
     school: 'Santa Fe College',
     location: 'Gainesville, FL',
     time: '2007 – 2009',
-    note: 'Core computer science principles alongside design communication and creative problem-solving.',
+    note: 'Computer science fundamentals alongside design communication.',
   },
 ]
 

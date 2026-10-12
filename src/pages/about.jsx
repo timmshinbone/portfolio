@@ -48,8 +48,8 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Full Stack Developer | About Timm Schoenborn</title>
-        <meta name="description" content="Timm Schoenborn is a full stack developer offering web, app, and SEO services. Book a consultation today." />
+        <title>About Timm Schoenborn | Project Manager, Designer, Software Developer</title>
+        <meta name="description" content="Timm Schoenborn&apos;s background in project and production management, design and software development: experience, skills and education." />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -58,7 +58,7 @@ const About = () => {
               "@type": "Person",
               name: "Timm Schoenborn",
               url: "https://timmschoenborn.com",
-              jobTitle: "Freelance Web Developer",
+              jobTitle: "Project Manager, Designer and Software Developer",
               sameAs: [
                 "https://www.linkedin.com/in/timm-schoenborn/",
                 "https://github.com/timmshinbone"
@@ -89,20 +89,15 @@ const About = () => {
                 About
               </h1>
               <p className="font-serif text-[16px] leading-[28px] m-0 max-w-[58ch] text-dark/90 dark:text-light/90">
-                I&apos;m a generalist by accumulation: an architect who became a designer, a designer
-                who ran production at a print shop of about 15 people and managed Northwestern
-                University&apos;s signage projects at a sign shop, and an engineer who spent five years leading the
-                people who build software. Today I run my own studio, where I scope, design, ship
-                and answer for client products end to end. I also run{' '}
+                I&apos;ve worked as a designer, a production and project manager, and a software engineering leader. I ran production for a print shop of about 20 people, managed Northwestern University&apos;s signage projects at a sign shop, designed signage systems at Perkins &amp; Will, and spent five years at General Assembly teaching developers and supervising instructors. Since 2024 I&apos;ve run my own studio, where I scope, design, ship and support client products. I also run{' '}
                 <strong className="font-semibold">weatherstew</strong>, an indie game studio with a
-                published title. I&apos;m looking for a product, project or design leadership role
-                where all of those jobs count as one.
+                published title. I&apos;m looking for a project, production, product or design leadership role, or a senior development role.
               </p>
               <Link
                 href="/hire-me#book-me"
                 className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] bg-[#006786] dark:bg-[#62c5ee] text-[#f3f2f2] dark:text-[#201e1d] px-[18px] py-2.5 rounded-sm hover:bg-[#1186ac] dark:hover:bg-[#38a6cf] transition-colors mt-6"
               >
-                Let&apos;s Chat
+                Let&apos;s talk
               </Link>
             </div>
 
@@ -131,7 +126,7 @@ const About = () => {
           >
             <Stat value={150} label="Students Taught" />
             <Stat value={400} label="Projects Consulted" />
-            <Stat value={8} label="Years of Experience" />
+            <Stat value={14} label="Years of Experience" />
           </div>
 
           {/* ── Divider rule ─────────────────────────────── */}
