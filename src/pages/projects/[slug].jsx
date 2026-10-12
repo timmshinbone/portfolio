@@ -97,8 +97,8 @@ const HeroMedia = ({ video, image, alt }) => {
   return <ImgPlaceholder ratio="16/9" alt={alt} />
 }
 
-// Modal that plays the vertical mobile walkthrough video
-const MobileVideoModal = ({ videoUrl, onClose, prefersReduced }) => {
+// Modal that plays a walkthrough video — portrait by default, landscape when landscape=true
+const MobileVideoModal = ({ videoUrl, onClose, prefersReduced, landscape = false }) => {
   const videoRef = useRef(null)
 
   useEffect(() => {
@@ -130,7 +130,10 @@ const MobileVideoModal = ({ videoUrl, onClose, prefersReduced }) => {
           exit={prefersReduced ? false : { scale: 0.96, opacity: 0 }}
           transition={{ duration: 0.18 }}
           className="relative flex-shrink-0"
-          style={{ aspectRatio: '9 / 16', maxHeight: '85dvh', maxWidth: 'min(100%, 420px)' }}
+          style={landscape
+            ? { aspectRatio: '16 / 9', maxHeight: '85dvh', maxWidth: 'min(100%, 840px)' }
+            : { aspectRatio: '9 / 16', maxHeight: '85dvh', maxWidth: 'min(100%, 420px)' }
+          }
           onClick={(e) => e.stopPropagation()}
         >
           <video
@@ -145,6 +148,59 @@ const MobileVideoModal = ({ videoUrl, onClose, prefersReduced }) => {
           <button
             onClick={onClose}
             aria-label="Close video"
+            className="absolute top-2.5 right-2.5 w-8 h-8 flex items-center justify-center rounded-full bg-black/60 text-white text-[13px] font-sans font-bold hover:bg-black/80 transition-colors"
+          >
+            ✕
+          </button>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
+// Lightbox for enlarged figure images
+const ImageModal = ({ src, alt, onClose, prefersReduced }) => {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        key="img-lightbox-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={prefersReduced ? { duration: 0 } : { duration: 0.18 }}
+        className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/85"
+        onClick={onClose}
+      >
+        <motion.div
+          key="img-lightbox-content"
+          initial={prefersReduced ? false : { scale: 0.96, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={prefersReduced ? false : { scale: 0.96, opacity: 0 }}
+          transition={{ duration: 0.18 }}
+          className="relative"
+          style={{ maxWidth: '90vw', maxHeight: '90dvh' }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={src}
+            alt={alt}
+            className="block max-w-full max-h-[90dvh] object-contain rounded-sm"
+          />
+          <button
+            onClick={onClose}
+            aria-label="Close image"
             className="absolute top-2.5 right-2.5 w-8 h-8 flex items-center justify-center rounded-full bg-black/60 text-white text-[13px] font-sans font-bold hover:bg-black/80 transition-colors"
           >
             ✕
@@ -176,6 +232,12 @@ export default function CaseStudy({ study }) {
 
   // Mobile video modal state
   const [mobileModalOpen, setMobileModalOpen] = useState(false)
+
+  // POE video modal state
+  const [poeModalOpen, setPoeModalOpen] = useState(false)
+
+  // Image lightbox state
+  const [lightbox, setLightbox] = useState(null) // { src, alt }
 
   // Click-to-copy email state (item 8)
   const [copied, setCopied] = useState(false)
@@ -265,7 +327,7 @@ export default function CaseStudy({ study }) {
               image={study.heroImage}
               alt={study.heroCaption}
             />
-            <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px] max-w-[56ch]">
+            <figcaption className="font-serif text-[15px] leading-[28px] text-dark/70 dark:text-light/70 mt-[14px]">
               <FigLabel n={1} />
               {study.heroCaption}
             </figcaption>
@@ -279,12 +341,40 @@ export default function CaseStudy({ study }) {
                 </button>
               </p>
             )}
+            {study.poeVideo && (
+              <p className="m-0 mt-3">
+                <button
+                  onClick={() => setPoeModalOpen(true)}
+                  className="font-serif text-[14px] text-[#006786] dark:text-[#62c5ee] hover:underline underline-offset-2"
+                >
+                  Want a walkthrough of Port of Entry? Quick tour →
+                </button>
+              </p>
+            )}
           </figure>
 
           {mobileModalOpen && (
             <MobileVideoModal
               videoUrl={study.mobileVideo}
               onClose={() => setMobileModalOpen(false)}
+              prefersReduced={prefersReduced}
+            />
+          )}
+
+          {poeModalOpen && (
+            <MobileVideoModal
+              videoUrl={study.poeVideo}
+              onClose={() => setPoeModalOpen(false)}
+              prefersReduced={prefersReduced}
+              landscape
+            />
+          )}
+
+          {lightbox && (
+            <ImageModal
+              src={lightbox.src}
+              alt={lightbox.alt}
+              onClose={() => setLightbox(null)}
               prefersReduced={prefersReduced}
             />
           )}
@@ -359,11 +449,22 @@ export default function CaseStudy({ study }) {
             >
               {study.figures.map(({ src, caption }, i) => (
                 <figure key={i} className="m-0">
-                  {src && <ImgPlaceholder ratio="4/3" src={src} alt={caption} />}
-                  <figcaption className={`font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 ${src ? 'mt-3' : ''}`}>
-                    <FigLabel n={i + 2} />
-                    {caption}
-                  </figcaption>
+                  {src && (
+                    <button
+                      type="button"
+                      onClick={() => setLightbox({ src, alt: caption })}
+                      className="block w-full p-0 bg-transparent border-0 cursor-zoom-in rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006786] dark:focus-visible:outline-[#62c5ee]"
+                      aria-label={`Enlarge: ${caption}`}
+                    >
+                      <ImgPlaceholder ratio="4/3" src={src} alt={caption} />
+                    </button>
+                  )}
+                  {src && (
+                    <figcaption className="font-serif text-[14px] leading-[24px] text-dark/70 dark:text-light/70 mt-3">
+                      <FigLabel n={i + 2} />
+                      {caption}
+                    </figcaption>
+                  )}
                 </figure>
               ))}
             </div>
@@ -452,6 +553,17 @@ export default function CaseStudy({ study }) {
                   Visit the live site
                 </a>
               )}
+              {(study.moreLinks || []).map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-serif font-semibold text-[14px] leading-[1.2] border border-dark/20 dark:border-light/20 text-dark dark:text-light px-[18px] py-2.5 rounded-sm hover:bg-dark/5 dark:hover:bg-light/5 transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
               {/* Click-to-copy email (item 8) */}
               <button
                 onClick={copyEmail}

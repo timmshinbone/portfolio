@@ -126,7 +126,7 @@ const projects = () => {
               className="font-serif font-semibold leading-[1.2] tracking-[-0.015em] mb-8"
               style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}
             >
-              Things I owned end to end
+              A Selection of Some of My More Recent Work.
             </h1>
             <div
               style={{

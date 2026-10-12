@@ -50,6 +50,13 @@ const caseStudies = [
     meta: 'Requirements · Full stack',
   },
   {
+    slug: 'aptp',
+    kicker: 'Nonprofit · Case study',
+    title: 'Albany Park Theater Project',
+    body: 'I manage and maintain both WordPress sites for a Chicago youth theater company, including the theme customization, the UI work and the back end.',
+    meta: 'WordPress · PHP · Back end',
+  },
+  {
     slug: 'print-production',
     kicker: 'Production · Case study',
     title: 'Print production',
@@ -121,7 +128,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Full Stack Developer | Hire Timm Schoenborn</title>
+        <title>Timm Schoenborn · Developer, Designer, Project Manager</title>
         <meta
           name="description"
           content="Timm Schoenborn is a full stack developer offering web, app, and SEO services. Book a consultation today."
